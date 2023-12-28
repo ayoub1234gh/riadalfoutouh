@@ -58,6 +58,14 @@ body.locked {
 a {
   color: var(--alipes-gray);
 }
+/* hakimifor mobile full screan fix */      
+html, body {
+  overflow-x: hidden  !important;
+}
+body {
+  position: relative !important;
+}
+/* hakimifor mobile full screan fix */
 
 a,
 a:hover,
@@ -6605,14 +6613,14 @@ ul {
 }
 
 .new-concept__right::before {
-  content: "";
+   content: ""; 
   position: absolute;
   top: -120px;
   right: -100000px;
   bottom: -120px;
   left: 210px;
-  background-color: var(--alipes-base);
   z-index: -1;
+  background-color: var(--alipes-base);
 }
 
 .new-concept__right::after {
