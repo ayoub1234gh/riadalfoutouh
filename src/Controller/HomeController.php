@@ -16,6 +16,7 @@ class HomeController extends AbstractController
         ]);
     }
 
+
     #[Route('/contact', name: 'contact')]
     public function contact(): Response
     {
@@ -37,6 +38,39 @@ class HomeController extends AbstractController
     {
         return $this->render('default/locauxcommerciaux.html.twig', [
 
+        ]);
+    }
+
+
+    #[Route('/ainborja', name: 'app_ainborja')]
+    public function ainborja(): Response
+    {
+        return $this->render('default/ainborja.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+
+    #[Route('/hautstanding', name: 'app_hautstanding')]
+    public function hautstanding(): Response
+    {
+        return $this->render('default/hautstanding.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+
+    #[Route('/logementsocial', name: 'app_logementsocial')]
+    public function logementsocial(): Response
+    {
+        return $this->render('default/logementsocial.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+
+    #[Route('/blog', name: 'app_blog')]
+    public function blog(): Response
+    {
+        return $this->render('default/blog.html.twig', [
+            'controller_name' => 'HomeController',
         ]);
     }
 
