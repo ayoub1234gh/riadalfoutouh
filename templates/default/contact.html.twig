@@ -1,0 +1,147 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+{% block body %}
+
+            <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url({{asset('front/images/backgrounds/page-header-bg.jpg')}});">
+            </div>
+            <div class="page-header__overly"></div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="index.html">Acceuil</a></li>
+                        <li><span>/</span></li>
+                        <li>contact</li>
+                    </ul>
+                    <h2>contact</h2>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+                <!--Contact Page Start-->
+        <section class="contact-page">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="section-title__tagline">Pour nous contacter</span>
+                    <h2 class="section-title__title">Veuillez utiliser les informations suivantes :</h2>
+                </div>
+                <div class="contact-page__inner">
+                    <form action="assets/inc/sendemail.php" class="contact-page__form contact-form-validated"
+                        novalidate="novalidate">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="contact-page__input-box">
+                                    <input type="text" placeholder="Nom et Prenom" name="name">
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="contact-page__input-box">
+                                    <input type="email" placeholder="Adresse mail" name="email">
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="contact-page__input-box">
+                                    <input type="text" placeholder="Numero de telephone" name="phone">
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="contact-page__input-box">
+                                    <input type="text" placeholder="Sujet" name="Subject">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="contact-page__input-box text-message-box">
+                                    <textarea name="message" placeholder="Ecrire un message"></textarea>
+                                </div>
+                                <div class="contact-page__btn-box">
+                                    <button type="submit" class="thm-btn contact-page__btn">Envoyer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--Contact Page End-->
+
+                <!--Location Start-->
+        <section class="location">
+            <div class="location-shape-1 float-bob-x">
+                <img src="assets/images/shapes/location-shape-1.png" alt="">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <!--Location single Start-->
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="location__single">
+                            <h4 class="location__title">Adresse</h4>
+                            <p class="location__text">Rue d’Andromède, Casablanca 20250</p>
+                            {# <div class="location__phone-email">
+                                <a href="mailto:needhelp@company.com">needhelp@company.com</a> <br>
+                                <a href="tel:9200888690">+92 (0088) - 8690</a>
+                            </div> #}
+                        </div>
+                    </div>
+                    <!--Location single End-->
+                    <!--Location single Start-->
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="location__single">
+                            <h4 class="location__title">Ecrivez nous</h4>
+                            <p class="location__text">contact@riadalfoutouh.com</p>
+                            {# <div class="location__phone-email">
+                                <a href="mailto:needhelp@company.com">needhelp@company.com</a> <br>
+                                <a href="tel:9200888690">+92 (0088) - 8690</a>
+                            </div> #}
+                        </div>
+                    </div>
+                    <!--Location single End-->
+                    <!--Location single Start-->
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="location__single">
+                            <h4 class="location__title">Appelez nous </h4>
+                            <p class="location__text">0661832910 Ou 0662686868</p>
+                            {# <div class="location__phone-email">
+                                <a href="mailto:needhelp@company.com">needhelp@company.com</a> <br>
+                                <a href="tel:9200888690">+92 (0088) - 8690</a>
+                            </div> #}
+                        </div>
+                    </div>
+                    <!--Location single End-->
+                    <!--Location single Start-->
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="location__single">
+                            <h4 class="location__title">Reclamations </h4>
+                            <p class="location__text">contact@riadalfoutouh.com</p>
+                            {# <div class="location__phone-email">
+                                <a href="mailto:needhelp@company.com">needhelp@company.com</a> <br>
+                                <a href="tel:9200888690">+92 (0088) - 8690</a>
+                            </div> #}
+                        </div>
+                    </div>
+                    <!--Location single End-->
+                </div>
+            </div>
+        </section>
+        <!--Location End-->
+
+                <!--Google Map Start-->
+        <section class="contact-page-google-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
+                class="google-map__two" allowfullscreen></iframe>
+
+        </section>
+        <!--Google Map End-->
+        
+{% endblock %}
