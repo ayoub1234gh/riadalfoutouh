@@ -1,0 +1,512 @@
+{% extends 'base.html.twig' %}
+
+
+{% block stylesheets %}
+	<style></style>
+{% endblock %}
+{% block body %}
+	<!--Page Header Start-->
+	<section class="page-header">
+		<div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)"></div>
+		<div class="page-header__overly"></div>
+		<div class="container">
+			<div class="page-header__inner">
+				<ul class="thm-breadcrumb list-unstyled">
+					<li>
+						<a href="index.html">Residences</a>
+					</li>
+					<li>
+						<span>/</span>
+					</li>
+					<li>Haut standing</li>
+				</ul>
+				<h2>AIN BORJA</h2>
+			</div>
+		</div>
+	</section>
+	<!--Page Header End-->
+
+	<!--Values Two Start-->
+	<section class="values-two">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-6 col-lg-6">
+					<div class="values-two__left">
+						<div class="section-title text-left">
+							<span class="section-title__tagline">A PROPOS DU PROJET</span>
+							<h2 class="section-title__title">AIN BORJA : l'apogée du haut standing à Casablanca</h2>
+						</div>
+						<p class="values-two__text-1">Riad al foutouh – Ain Borja est un projet au sein d’une résidence innovante alliant qualité et modernité à quelques minutes du centre tachefine Le projet est proche de toutes les commodités d’un lieu de vie de standing, et propose des appartements d’exception allant de 102 m² à 124 m² à partir de 780.000Dhs seulement, avec des prestations de meilleures qualités.</p>
+						<div class="values-two__points-box">
+							{# <ul class="list-unstyled values-two__points">
+								<li>
+									<div class="icon">
+										<i class="fa fa-check"></i>
+									</div>
+									<div class="text">
+										<p>Des appartements</p>
+									</div>
+								</li>
+								<li>
+									<div class="icon">
+										<i class="fa fa-check"></i>
+									</div>
+									<div class="text">
+										<p>Consistance : 2 à 3</p>
+									</div>
+								</li>
+								<li>
+									<div class="icon">
+										<i class="fa fa-check"></i>
+									</div>
+									<div class="text">
+										<p>Cuisine équipée</p>
+									</div>
+								</li>
+							</ul> #}
+							{# <ul class="list-unstyled values-two__points values-two__points-two">
+								<li>
+									<div class="icon">
+										<i class="fa fa-check"></i>
+									</div>
+									<div class="text">
+										<p>Ascenseur SCHINDLER</p>
+									</div>
+								</li>
+								<li>
+									<div class="icon">
+										<i class="fa fa-check"></i>
+									</div>
+									<div class="text">
+										<p>Garage sous-sol</p>
+									</div>
+								</li>
+								<li>
+									<div class="icon">
+										<i class="fa fa-check"></i>
+									</div>
+									<div class="text">
+										<p>Proche de toutes</p>
+									</div>
+								</li>
+							</ul> #}
+							{# <ul class="list-unstyled values-two__points values-two__points-three">
+								<li>
+									<div class="icon">
+										<i class="fa fa-check"></i>
+									</div>
+									<div class="text">
+										<p>Magasin d’une</p>
+									</div>
+								</li>
+								<li>
+									<div class="icon">
+										<i class="fa fa-check"></i>
+									</div>
+									<div class="text">
+										<p>fashion</p>
+									</div>
+								</li>
+							</ul> #}
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6 col-lg-6">
+					<div class="values-two__right">
+						<div class="values-two__img">
+							<img src="assets/images/resources/values-2-1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+            	<div class="row">
+							<div class="col-sm-4"><ul class="list-unstyled values-two__points">
+								<li>
+									<div class="icon">
+										<i class="fa fa-check"></i>
+									</div>
+									<div class="text">
+										<p>Des appartements de 102 à 124 m²</p>
+									</div>
+								</li>
+								<li>
+									<div class="icon">
+										<i class="fa fa-check"></i>
+									</div>
+									<div class="text">
+										<p>Consistance : 2 à 3 chambres + Salon, cuisine, 2 SDB</p>
+									</div>
+								</li>
+								<li>
+									<div class="icon">
+										<i class="fa fa-check"></i>
+									</div>
+									<div class="text">
+										<p>Cuisine équipée</p>
+									</div>
+								</li>
+							</ul></div>
+							<div class="col-sm-4"><ul class="list-unstyled values-two__points values-two__points-two">
+								<li>
+									<div class="icon">
+										<i class="fa fa-check"></i>
+									</div>
+									<div class="text">
+										<p>Ascenseur SCHINDLER</p>
+									</div>
+								</li>
+								<li>
+									<div class="icon">
+										<i class="fa fa-check"></i>
+									</div>
+									<div class="text">
+										<p>Garage sous-sol</p>
+									</div>
+								</li>
+								<li>
+									<div class="icon">
+										<i class="fa fa-check"></i>
+									</div>
+									<div class="text">
+										<p>Proche de toutes les commodités : écoles, mosquée, centres commerciaux, jardins…</p>
+									</div>
+								</li>
+							</ul></div>
+							<div class="col-sm-4">	<ul class="list-unstyled values-two__points values-two__points-three">
+								<li>
+									<div class="icon">
+										<i class="fa fa-check"></i>
+									</div>
+									<div class="text">
+										<p>Magasin d’une superficie minimale de 45 m²</p>
+									</div>
+								</li>
+								<li>
+									<div class="icon">
+										<i class="fa fa-check"></i>
+									</div>
+									<div class="text">
+										<p>fashion</p>
+									</div>
+								</li>
+							</ul></div>
+						</div>  
+		</div>
+	</section>
+	<!--Values Two End-->
+
+
+	<!--Brand One Start-->
+	<section class="brand-one brand-three">
+		<div class="brand-one__wrap">
+			<div class="brand-one__shape-1 float-bob-y">
+				<img src="{{asset('front/img/brand-one-shape-1.png')}}" alt="">
+			</div>
+			<div class="brand-one__shape-2 float-bob-x">
+				<img src="{{asset('front/img/brand-one-shape-1.png')}}" alt="">
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="brand-one__inner">
+							<div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 100, "slidesPerView": 5, "autoplay": { "delay": 5000 }, "breakpoints": {
+									                        "0": {
+									                            "spaceBetween": 30,
+									                            "slidesPerView": 2
+									                        },
+									                        "375": {
+									                            "spaceBetween": 30,
+									                            "slidesPerView": 2
+									                        },
+									                        "575": {
+									                            "spaceBetween": 30,
+									                            "slidesPerView": 3
+									                        },
+									                        "767": {
+									                            "spaceBetween": 50,
+									                            "slidesPerView": 4
+									                        },
+									                        "991": {
+									                            "spaceBetween": 50,
+									                            "slidesPerView": 5
+									                        },
+									                        "1199": {
+									                            "spaceBetween": 100,
+									                            "slidesPerView": 6
+									                        }
+									                    }}'>
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="{{asset('front/img/brand-1-4.png')}}" alt="">
+									</div>
+									<!-- /.swiper-slide -->
+									<div class="swiper-slide">
+										<img src="{{asset('front/img/brand-1-4.png')}}" alt="">
+									</div>
+									<!-- /.swiper-slide -->
+									<div class="swiper-slide">
+										<img src="{{asset('front/img/brand-1-4.png')}}" alt="">
+									</div>
+									<!-- /.swiper-slide -->
+									<div class="swiper-slide">
+										<img src="{{asset('front/img/brand-1-4.png')}}" alt="">
+									</div>
+									<!-- /.swiper-slide -->
+									<div class="swiper-slide">
+										<img src="{{asset('front/img/brand-1-4.png')}}" alt="">
+									</div>
+									<!-- /.swiper-slide -->
+									<div class="swiper-slide">
+										<img src="{{asset('front/img/brand-1-4.png')}}" alt="">
+									</div>
+									<!-- /.swiper-slide -->
+									<div class="swiper-slide">
+										<img src="{{asset('front/img/brand-1-4.png')}}" alt="">
+									</div>
+									<!-- /.swiper-slide -->
+									<div class="swiper-slide">
+										<img src="{{asset('front/img/brand-1-4.png')}}" alt="">
+									</div>
+									<!-- /.swiper-slide -->
+									<div class="swiper-slide">
+										<img src="{{asset('front/img/brand-1-4.png')}}" alt="">
+									</div>
+									<!-- /.swiper-slide -->
+									<div class="swiper-slide">
+										<img src="{{asset('front/img/brand-1-4.png')}}" alt="">
+									</div>
+									<!-- /.swiper-slide -->
+									<div class="swiper-slide">
+										<img src="{{asset('front/img/brand-1-4.png')}}" alt="">
+									</div>
+									<!-- /.swiper-slide -->
+									<div class="swiper-slide">
+										<img src="{{asset('front/img/brand-1-4.png')}}" alt="">
+									</div>
+									<!-- /.swiper-slide -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--Brand One End-->
+
+	<!--About Building Start-->
+	<section class="about-building">
+		<div class="about-building__bg" style="background-image: url(assets/images/backgrounds/about-building-bg.png);"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-6 col-lg-6">
+					<div class="about-building__left">
+						<div class="about-building__img">
+							<img src="assets/images/resources/about-building-img-1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6 col-lg-6">
+					<div class="about-building__right">
+						<div class="section-title text-left">
+							<span class="section-title__tagline">A PROPOS DU PROJET</span>
+							<h2 class="section-title__title"> Des appartements conçus pour votre confort et bien-être ! </h2>
+						</div>
+						<p class="about-building__text-1">Le projet est proche de toutes les commodités d’un lieu de vie de haut standing, et propose des appartements d’exception allant de 102 m² à 124 m² à partir de 780.000Dhs seulement, avec des prestations de meilleures qualités.</p>
+						{# <p class="about-building__text-2">If you are going to use a passage of you need to be sure #}
+							                                there isn't anything embarrassing hidden in the middle of text.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--About Building End-->
+
+	<!--Video One Start-->
+	<section class="video-one video-two">
+		<div class="container">
+			<div class="video-one__img-box">
+				<div class="video-one__bg" style="background-image: url(assets/images/backgrounds/video-one-bg-img-1.jpg);"></div>
+				<div class="video-one__video-link">
+					<a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
+						<div class="video-one__video-icon">
+							<span class="fa fa-play"></span>
+							<i class="ripple"></i>
+						</div>
+					</a>
+				</div>
+				<div class="video-one__title">
+					<h3>Our building
+						<br>video tour</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--Video One End-->
+
+	<!--Amenities Start-->
+	<section class="amenities">
+		<div class="amenities__shape-1 img-bounce">
+			<img src="assets/images/shapes/ameneties-shape-1.png" alt="">
+		</div>
+		<div class="container">
+			<div class="section-title text-center">
+				<span class="section-title__tagline">Faites le premier pas pour posséder votre maison de rêve à Casablanca aujourd'hui.</span>
+				{# <h2 class="section-title__title">property amenities &
+					<br>
+					features</h2> #}
+			</div>
+			<div
+				class="row">
+				<!--Amenities Single Start-->
+				<div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+					<div class="amenities__single">
+						<div class="amenities__icon">
+							<span class="icon-town"></span>
+						</div>
+						<h3 class="amenities__title">
+							<a href="services.html">STYLE DE VIE INTELLIGENT ET HIGH-TECH</a>
+						</h3>
+						<p class="amenities__text">Il était une fois, dans le cœur effervescent de Casablanca, un style de vie où l'intelligence et la technologie fusionnent pour créer une expérience de résidence incomparable. Imaginez-vous dans un appartement de haut standing, où chaque détail est soigneusement pensé pour répondre aux besoins modernes. Cette histoire n'est pas une utopie, mais la réalité d'un style de vie intelligent et high-tech.</p>
+						<a href="services.html" class="thm-btn amenities__btn">Read More</a>
+					</div>
+				</div>
+				<!--Amenities Single End-->
+				<!--Amenities Single Start-->
+				<div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
+					<div class="amenities__single">
+						<div class="amenities__icon">
+							<span class="icon-location"></span>
+						</div>
+						<h3 class="amenities__title">
+							<a href="services.html">EMPLACEMENT ATTRACTIF</a>
+						</h3>
+						<p class="amenities__text">Dans le tracé effervescent de la ville de Casablanca, existe une réalité où la sélection de l'emplacement façonne l'essence même d'un style de vie urbain. Imaginez-vous dans un quartier vibrant, à proximité de toutes les commodités, où chaque ruelle raconte une histoire et chaque coin de rue offre une expérience unique. Ce récit, bien loin d'être une chimère, décrit la réalité d'un emplacement attractif à Casablanca.</p>
+						<a href="services.html" class="thm-btn amenities__btn">Read More</a>
+					</div>
+				</div>
+				<!--Amenities Single End-->
+				<!--Amenities Single Start-->
+				<div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
+					<div class="amenities__single">
+						<div class="amenities__icon">
+							<span class="icon-sustainable"></span>
+						</div>
+						<h3 class="amenities__title">
+							<a href="services.html">BÂTIMENT ÉCO-CHIC</a>
+						</h3>
+						<p class="amenities__text">Les bâtiments éco-chic représentent une réponse à la demande croissante d'une vie haut de gamme associée à des choix écologiques. Cette tendance, observée dans le secteur immobilier, démontre un intérêt grandissant pour des résidences qui offrent à la fois le confort luxueux et une empreinte écologique réduite.</p>
+						<a href="services.html" class="thm-btn amenities__btn">Read More</a>
+					</div>
+				</div>
+				<!--Amenities Single End-->
+			</div>
+		</div>
+	</section>
+	<!--Amenities End-->
+
+
+	<!--Gallery Three Start-->
+	<section class="gallery-three">
+		<div class="container">
+			<div class="gallery-three__title">
+				<h3>view our photo gallery</h3>
+			</div>
+			<div
+				class="row">
+				<!--Gallery Three Single Start-->
+				<div class="col-xl-2 col-lg-3 col-md-6">
+					<div class="gallery-three__single">
+						<div class="gallery-three__img">
+							<img src="{{asset('front/img/gallery-3-1.jpg')}}" alt="">
+							<div class="gallery-three__img-icon">
+								<a href="#">
+									<span class="fab fa-instagram"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Gallery Three Single End-->
+				<!--Gallery Three Single Start-->
+				<div class="col-xl-2 col-lg-3 col-md-6">
+					<div class="gallery-three__single">
+						<div class="gallery-three__img">
+							<img src="{{asset('front/img/gallery-3-1.jpg')}}" alt="">
+							<div class="gallery-three__img-icon">
+								<a href="#">
+									<span class="fab fa-instagram"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Gallery Three Single End-->
+				<!--Gallery Three Single Start-->
+				<div class="col-xl-2 col-lg-3 col-md-6">
+					<div class="gallery-three__single">
+						<div class="gallery-three__img">
+							<img src="{{asset('front/img/gallery-3-1.jpg')}}" alt="">
+							<div class="gallery-three__img-icon">
+								<a href="#">
+									<span class="fab fa-instagram"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Gallery Three Single End-->
+				<!--Gallery Three Single Start-->
+				<div class="col-xl-2 col-lg-3 col-md-6">
+					<div class="gallery-three__single">
+						<div class="gallery-three__img">
+							<img src="{{asset('front/img/gallery-3-1.jpg')}}" alt="">
+							<div class="gallery-three__img-icon">
+								<a href="#">
+									<span class="fab fa-instagram"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Gallery Three Single End-->
+				<!--Gallery Three Single Start-->
+				<div class="col-xl-2 col-lg-3 col-md-6">
+					<div class="gallery-three__single">
+						<div class="gallery-three__img">
+							<img src="{{asset('front/img/gallery-3-1.jpg')}}" alt="">
+							<div class="gallery-three__img-icon">
+								<a href="#">
+									<span class="fab fa-instagram"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Gallery Three Single End-->
+				<!--Gallery Three Single Start-->
+				<div class="col-xl-2 col-lg-3 col-md-6">
+					<div class="gallery-three__single">
+						<div class="gallery-three__img">
+							<img src="{{asset('front/img/gallery-3-1.jpg')}}" alt="">
+							<div class="gallery-three__img-icon">
+								<a href="#">
+									<span class="fab fa-instagram"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Gallery Three Single End-->
+			</div>
+		</div>
+	</section>
+	<!--Gallery Three End-->
+
+{% endblock %}
+
+{% block javascripts %}
+	 <script>
+													
+		</script>
+{% endblock %}
