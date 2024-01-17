@@ -16,6 +16,32 @@ class HomeController extends AbstractController
         ]);
     }
 
+
+    #[Route('/contact', name: 'contact')]
+    public function contact(): Response
+    {
+        return $this->render('default/contact.html.twig', [
+
+        ]);
+    }
+
+    #[Route('/residence', name: 'residence')]
+    public function residence(): Response
+    {
+        return $this->render('default/residence.html.twig', [
+
+        ]);
+    }
+
+    #[Route('/locauxcommerciaux', name: 'locauxcommerciaux')]
+    public function locauxcommerciaux(): Response
+    {
+        return $this->render('default/locauxcommerciaux.html.twig', [
+
+        ]);
+    }
+
+
     #[Route('/ainborja', name: 'app_ainborja')]
     public function ainborja(): Response
     {
@@ -47,4 +73,5 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
 }
