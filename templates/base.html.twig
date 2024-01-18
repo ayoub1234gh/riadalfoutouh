@@ -108,7 +108,7 @@
 							</a>
 							<ul class="main-menu__list">
 								<li class="dropdown current megamenu">
-									<a href="index.html">Acceuil
+									<a href="{{path('app_home')}}">Acceuil
 									</a>
 									{# <ul>
 																			<li class="current">
@@ -222,7 +222,12 @@
 											</ul>
 										</li>
 										<li>
-											<a href="{{path('app_hautstanding')}}">Moyen Standing</a>
+											<a href="#">Moyen Standing</a>
+											<ul>
+												<li><a href="{{path('app_hautstanding')}}">salam</a></li>
+												<li><a href="{{path('app_jardinsforet')}}">les jardins de la foret</a></li>
+											</ul>
+											
 										</li>
 										<li>
 											<a href="{{path('app_logementsocial')}}">Logement Social</a>
@@ -246,10 +251,6 @@
 								</li>
 								 <li>
 							    	<a href="{{path('contact')}}">Contacts</a>
-								<li>
-									<a href="about.html">Contacts</a>
-
-								</li>
 							</ul>
 						</div>
 						<div class="main-menu__right">
@@ -263,7 +264,7 @@
 									</div>
 								</div> #}
 								<div class="main-menu__btn-box">
-									<a href="contact.html" class="thm-btn main-menu__btn">Schedule a Visit</a>
+									<a href="contact.html" class="thm-btn main-menu__btn">Contact-nous</a>
 								</div>
 							</div>
 						</div>
