@@ -66,6 +66,30 @@ class HomeController extends AbstractController
         ]);
     }
 
+    #[Route('/jardinrocad', name: 'jardinrocad')]
+    public function jardinrocad(): Response
+    {
+        return $this->render('default/jardinrocad.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+
+    #[Route('/verdurelissassfa', name: 'verdurelissassfa')]
+    public function verdurelissassfa(): Response
+    {
+        return $this->render('default/verdurelissassfa.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+
+    #[Route('/naim', name: 'naim')]
+    public function naim(): Response
+    {
+        return $this->render('default/naim.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+
     #[Route('/blog', name: 'app_blog')]
     public function blog(): Response
     {
