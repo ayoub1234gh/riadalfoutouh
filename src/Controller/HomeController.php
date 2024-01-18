@@ -20,25 +20,19 @@ class HomeController extends AbstractController
     #[Route('/contact', name: 'contact')]
     public function contact(): Response
     {
-        return $this->render('default/contact.html.twig', [
-
-        ]);
+        return $this->render('default/contact.html.twig', []);
     }
 
     #[Route('/residence', name: 'residence')]
     public function residence(): Response
     {
-        return $this->render('default/residence.html.twig', [
-
-        ]);
+        return $this->render('default/residence.html.twig', []);
     }
 
     #[Route('/locauxcommerciaux', name: 'locauxcommerciaux')]
     public function locauxcommerciaux(): Response
     {
-        return $this->render('default/locauxcommerciaux.html.twig', [
-
-        ]);
+        return $this->render('default/locauxcommerciaux.html.twig', []);
     }
 
 
@@ -74,4 +68,11 @@ class HomeController extends AbstractController
         ]);
     }
 
+    #[Route('/jardinsforet', name: 'app_jardinsforet')]
+    public function jardinsforet(): Response
+    {
+        return $this->render('default/jardinsforet.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
 }
