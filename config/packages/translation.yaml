@@ -1,0 +1,16 @@
+framework:
+    default_locale: fr
+    translator:
+        default_path: '%kernel.project_dir%/translations'
+        # fallbacks:
+        #     - ar
+        providers:
+#            crowdin:
+#                dsn: '%env(CROWDIN_DSN)%'
+            loco:
+                dsn: '%env(LOCO_DSN)%'
+                domains: ['messages']
+                locales: ['en', 'fr','ar']
+
+#            lokalise:
+#                dsn: '%env(LOKALISE_DSN)%'
