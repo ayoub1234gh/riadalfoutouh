@@ -24,17 +24,17 @@
 		<div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)"></div>
 		<div class="page-header__overly"></div>
 		<div class="container">
-			<div class="page-header__inner">
+			<div class="page-header__inner" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 				<ul class="thm-breadcrumb list-unstyled">
 					<li>
-						<a href="index.html">Résidences</a>
+						<a href="index.html">{{"Résidences "|trans({},"front")}}</a>
 					</li>
 					<li>
 						<span>/</span>
 					</li>
-					<li>Moyen standing</li>
+					<li>{{"moyen standing"|trans({},"front")}}</li>
 				</ul>
-				<h2>LES JARDINS DE LA FORET</h2>
+				<h2>{{"LES JARDINS DE LA FORET"|trans({},"front")}}</h2>
 			</div>
 		</div>
 	</section>
@@ -51,23 +51,23 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-xl-5 col-lg-6">
+				<div class="col-xl-5 col-lg-6" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="new-concept-two__left">
 						<div class="section-title text-left">
-							<span class="section-title__tagline">by Riad al foutouh</span>
-							<h2 class="section-title__title">Projet La forêt : Rompez avec le stress de la ville !
+							<span class="section-title__tagline">{{"BY RIAD AL FOUTOUH"|trans({},"front")}}</span>
+							<h2 class="section-title__title"{{"Projet La forêt : Rompez avec le stress de la ville !"|trans({},"front")}}>
 							</h2>
 						</div>
-						<p class="new-concept__text">Le Projet les Jardins de la Forêt de Riad al foutouh - Mohammedia est composé d’immeubles en R+4 et propose des appartements spacieux d’une superficie variant entre 80 et 100 m², comprenant 3 chambres + salon et une cuisine équipée.
+						<p class="new-concept__text"{{"Le Projet les Jardins de la Forêt de Riad al foutouh - Mohammedia est composé d’immeubles en R+4 et propose des appartements spacieux d’une superficie variant entre 80 et 100 m², comprenant 3 chambres + salon et une cuisine équipée."|trans({},"front")}}>
 						</p>
-						<ul class="new-concept__points list-unstyled">
+						<ul class="new-concept__points list-unstyled"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 							<li>
 								<div class="icon">
 									<span class="icon-manhattan"></span>
 								</div>
 								<div class="text">
-									<h3>Un projet immobilier neuf, fermé et sécurisé</h3>
-									<p>Des résidences de standing élevé, alliant sécurité et modernité dans un environnement fermé. L'avenir de votre confort commence ici.
+									<h3>{{"Un projet immobilier neuf, fermé et sécurisé"|trans({},"front")}}</h3>
+									<p>{{"Des résidences de standing élevé, alliant sécurité et modernité dans un environnement fermé. L’avenir de votre confort commence ici."|trans({},"front")}}
 									</p>
 								</div>
 							</li>
@@ -76,8 +76,8 @@
 									<span class="icon-apartment-1"></span>
 								</div>
 								<div class="text">
-									<h3>Un projet immobilier moderne fonctionnelle et optimisée</h3>
-									<p>Notre projet immobilier redéfinit la notion d'habitat moderne. Des espaces fonctionnels, une esthétique contemporaine et une flexibilité inégalée créent un environnement qui évolue avec vous.
+									<h3>{{"Un projet immobilier moderne fonctionnelle et optimisée"|trans({},"front")}}</h3>
+									<p>{{"Notre projet immobilier redéfinit la notion d’habitat moderne. Des espaces fonctionnels, une esthétique contemporaine et une flexibilité inégalée créent un environnement qui évolue avec vous."|trans({},"front")}}
 									</p>
 								</div>
 							</li>
@@ -100,9 +100,9 @@
 	<section class="cta-two cta-four">
 		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url(assets/images/resources/cta-two-bg-img-1.jpg);"></div>
 		<div
-			class="cta-two__inner">
+			class="cta-two__inner"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 			{# <h3 class="cta-two__title">Schedule a building visit</h3> #}
-			<p class="cta-two__text">Profitez d’une situation exceptionnelle dans une zone en plein développement et à seulement quelques minutes de la plage et de la forêt, tout en bénéficiant d’un accès facile à de nombreuses commodités situées à proximité.</p>
+			<p class="cta-two__text">{{"Profitez d’une situation exceptionnelle dans une zone en plein développement et à seulement quelques minutes de la plage et de la forêt, tout en bénéficiant d’un accès facile à de nombreuses commodités situées à proximité."|trans({},"front")}}</p>
 			{# <div class="cta-two__btn-box">
 			                    <a href="contact.html" class="cta-two__btn thm-btn">Send a request</a>
 			                </div> #}
@@ -120,14 +120,14 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-xl-6 col-lg-12">
+				<div class="col-xl-6 col-lg-12"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="services-one__left">
 						<div class="section-title text-left">
-							<span class="section-title__tagline">Équipements</span>
-							<h2 class="section-title__title">RÉSIDENCES SOMPTUEUSES ET IMPRESSIONNANTES, PENSÉES POUR UNE VIE D'EXCEPTION</h2>
+							<span class="section-title__tagline">{{"Équipements"|trans({},"front")}}</span>
+							<h2 class="section-title__title">{{"RÉSIDENCES SOMPTUEUSES ET IMPRESSIONNANTES, PENSÉES POUR UNE VIE D’EXCEPTION"|trans({},"front")}}</h2>
 						</div>
 						<div class="services-one__btn-box">
-							<a href="services.html" class="thm-btn services-one__btn">planifier une visite</a>
+							<a href="services.html" class="thm-btn services-one__btn">{{"PLANIFIER UNE VISITE"|trans({},"front")}}</a>
 						</div>
 					</div>
 				</div>
@@ -139,10 +139,10 @@
 							<div class="services-one__icon">
 								<span class="icon-residential"></span>
 							</div>
-							<h3 class="services-one__title">
-								<a href="services.html">Superficie</a>
+							<h3 class="services-one__title"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+								<a href="services.html">{{"superficie"|trans({},"front")}}</a>
 							</h3>
-							<p class="services-one__text">Des appartements de 80 à 100 m²</p>
+							<p class="services-one__text" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>{{"Des appartements de 80 à 100 m²"|trans({},"front")}}</p>
 						</div>
 					</div>
 				</div>
@@ -155,17 +155,17 @@
 							<div class="services-one__icon">
 								<span class="icon-sustainable"></span>
 							</div>
-							<h3 class="services-one__title">
-								<a href="services.html">Consistance
+							<h3 class="services-one__title"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+								<a href="services.html">{{"consistance"|trans({},"front")}}
 								</a>
 							</h3>
-							<p class="services-one__text">3 chambres + Salon, cuisine, 2 SDB, balcon</p>
+							<p class="services-one__text" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>{{"3 chambres + Salon, cuisine, 2 SDB, balcon"|trans({},"front")}}</p>
 						</div>
 					</div>
 				</div>
 				<!--Services One Single End-->
 				<!--Services One Single Start-->
-				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="services-one__single">
 						<div class="services-one__single-inner">
 							<div class="services-one__single-bg" style="background-image: url(assets/images/backgrounds/services-one-single-bg.jpg);"></div>
@@ -173,15 +173,15 @@
 								<span class="icon-world"></span>
 							</div>
 							<h3 class="services-one__title">
-								<a href="services.html">Parking</a>
+								<a href="services.html">{{"Parking"|trans({},"front")}}</a>
 							</h3>
-							<p class="services-one__text">la garantie d'une sécurité optimale pour votre véhicule, alliée à la praticité d'un espace bien aménagé.</p>
+							<p class="services-one__text">{{"la garantie d’une sécurité optimale pour votre véhicule, alliée à la praticité d’un espace bien aménagé."|trans({},"front")}}</p>
 						</div>
 					</div>
 				</div>
 				<!--Services One Single End-->
 				<!--Services One Single Start-->
-				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="services-one__single">
 						<div class="services-one__single-inner">
 							<div class="services-one__single-bg" style="background-image: url(assets/images/backgrounds/services-one-single-bg.jpg);"></div>
@@ -189,15 +189,15 @@
 								<span class="icon-home-automation"></span>
 							</div>
 							<h3 class="services-one__title">
-								<a href="services.html">LOcal commercial</a>
+								<a href="services.html">{{"local commercial"|trans({},"front")}}</a>
 							</h3>
-							<p class="services-one__text">pour des opportunités professionnelles remarquables</p>
+							<p class="services-one__text">{{"pour des opportunités professionnelles remarquables"|trans({},"front")}}</p>
 						</div>
 					</div>
 				</div>
 				<!--Services One Single End-->
 				<!--Services One Single Start-->
-				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="500ms">
+				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="500ms"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="services-one__single">
 						<div class="services-one__single-inner">
 							<div class="services-one__single-bg" style="background-image: url(assets/images/backgrounds/services-one-single-bg.jpg);"></div>
@@ -205,16 +205,16 @@
 								<span class="icon-electric-appliance"></span>
 							</div>
 							<h3 class="services-one__title">
-								<a href="services.html">Ascenseur SCHINDLER
+								<a href="services.html">{{"ascenseur schindler"|trans({},"front")}}
 								</a>
 							</h3>
-							<p class="services-one__text">There are many new ways of text.</p>
+							<p class="services-one__text">{{"There are many new ways of text."|trans({},"front")}}</p>
 						</div>
 					</div>
 				</div>
 				<!--Services One Single End-->
 				<!--Services One Single Start-->
-				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="600ms">
+				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="600ms"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="services-one__single">
 						<div class="services-one__single-inner">
 							<div class="services-one__single-bg" style="background-image: url(assets/images/backgrounds/services-one-single-bg.jpg);"></div>
@@ -222,9 +222,9 @@
 								<span class="icon-swimming-pool"></span>
 							</div>
 							<h3 class="services-one__title">
-								<a href="services.html">piscine , jardin et Cuisine équipée</a>
+								<a href="services.html">{{"piscine , jardin et Cuisine équipée"|trans({},"front")}}</a>
 							</h3>
-							<p class="services-one__text">There are many new ways of text.</p>
+							<p class="services-one__text">{{"There are many new ways of text."|trans({},"front")}}</p>
 						</div>
 					</div>
 				</div>
@@ -235,32 +235,32 @@
 	<!--Services One End-->
 
 	<!--CTA Two Start-->
-	<section class="cta-two cta-four">
+	<section class="cta-two cta-four">	
 		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url(assets/images/resources/cta-two-bg-img-1.jpg);"></div>
-		<div class="cta-two__inner">
-			<h3 class="cta-two__title">Organisez votre visite sur place</h3>
-			<p class="cta-two__text">notre equipe commerciale vous acceuille 7j/7 du lundi au dimanche de 9h à 19h
+		<div class="cta-two__inner"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+			<h3 class="cta-two__title">{{"Organisez votre visite sur place"|trans({},"front")}}</h3>
+			<p class="cta-two__text">{{"notre equipe commerciale vous acceuille 7j/7 du lundi au dimanche de 9h à 19h"|trans({},"front")}}
 			</p>
-			<div class="cta-two__btn-box">
-				<a href="contact.html" class="cta-two__btn thm-btn">reserver maintenant</a>
+			<div class="cta-two__btn-box">{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}
+				<a href="contact.html" class="cta-two__btn thm-btn">{{"reserver maintenant"|trans({},"front")}}</a>
 			</div>
 		</div>
 	</section>
 	<!--CTA Two End-->
 	<!--Services Three Start-->
 	<section class="services-three">
-		<div class="container">
+		<div class="container"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 			<div class="section-title text-center">
-				<span class="section-title__tagline">oiur services</span>
-				<h2 class="section-title__title">outstanding luxury</h2>
+				<span class="section-title__tagline">{{"oiur services"|trans({},"front")}}</span>
+				<h2 class="section-title__title">{{"outstanding luxury"|trans({},"front")}}</h2>
 			</div>
 			<div
 				class="row">
 				<!--Services Three Single Start-->
 				<div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-					<div class="services-three__single">
+					<div class="services-three__single"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 						<h3 class="services-three__title">
-							<a href="services.html">Smart living</a>
+							<a href="services.html">{{"Smart living"|trans({},"front")}}</a>
 						</h3>
 						<ul class="list-unstyled services-three__list">
 							<li>
@@ -268,7 +268,7 @@
 									<i class="far fa-check-circle"></i>
 								</div>
 								<div class="text">
-									<p>Qu’il s’agisse des magasins situés sur le boulevard ou sur l’allée piétonne, cœur battant du projet, ils bénéficieront tous d’un flux de clientèle important et viendront répondre à la demande élevée de commerces de proximité pour les futurs résidents du projet les jardins de la forêt.
+									<p>{{"Qu’il s’agisse des magasins situés sur le boulevard ou sur l’allée piétonne, cœur battant du projet, ils bénéficieront tous d’un flux de clientèle important et viendront répondre à la demande élevée de commerces de proximité pour les futurs résidents du projet les jardins de la forêt."|trans({},"front")}}
 									</p>
 								</div>
 							</li>
@@ -278,10 +278,10 @@
 				</div>
 				<!--Services Three Single End-->
 				<!--Services Three Single Start-->
-				<div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+				<div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="services-three__single">
 						<h3 class="services-three__title">
-							<a href="services.html">All amenities</a>
+							<a href="services.html">{{"All amenities"|trans({},"front")}}</a>
 						</h3>
 						<ul class="list-unstyled services-three__list">
 							<li>
@@ -289,7 +289,7 @@
 									<i class="far fa-check-circle"></i>
 								</div>
 								<div class="text">
-									<p>À l’entrée de Mohammedia et à seulement 5 min de la forêt, Les jardins de la forêt se situe dans un quartier dynamique et en plein essor qui garantira la prospérité de votre activité.</p>
+									<p>{{"À l’entrée de Mohammedia et à seulement 5 min de la forêt, Les jardins de la forêt, se situe dans un quartier dynamique et en plein essor qui garantira la prospérité de votre activité."|trans({},"front")}}</p>
 								</div>
 							</li>
 
@@ -299,9 +299,9 @@
 				<!--Services Three Single End-->
 				<!--Services Three Single Start-->
 				<div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-					<div class="services-three__single">
+					<div class="services-three__single"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 						<h3 class="services-three__title">
-							<a href="services.html">Modern technology</a>
+							<a href="services.html">{{"Modern technology"|trans({},"front")}}</a>
 						</h3>
 						<ul class="list-unstyled services-three__list">
 							<li>
@@ -309,7 +309,7 @@
 									<i class="far fa-check-circle"></i>
 								</div>
 								<div class="text">
-									<p>Le projet les jardins de la forêt de Riad Al foutouh vous propose également votre futur local commercial à Mohammedia d’une superficie minimale de 27 m².</p>
+									<p>{{"Le projet les jardins de la forêt de Riad Al foutouh vous propose également votre futur local commercial à Mohammedia d’une superficie minimale de 27 m²."|trans({},"front")}}</p>
 								</div>
 							</li>
 

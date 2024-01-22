@@ -176,7 +176,7 @@
 			{# >>>>>>> dev #}
 			<div class="swiper-wrapper">
 
-				<div class="swiper-slide">
+				<div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="image-layer-three" style="background-image: url({{asset('front/img/main-slider-3-1.jpg')}});"></div>
 					<!-- /.image-layer -->
 					<div class="main-slider-three__shape-1">
@@ -186,15 +186,15 @@
 						<div class="row">
 							<div class="col-xl-12">
 								<div class="main-slider-three__content">
-									<h2 class="main-slider-three__title">Riad Al Foutouh  :
+									<h2 class="main-slider-three__title">{{"Riad Al Foutouh :"|trans({},"front")}} 
 
 										<br>
-										Des projets
+										 {{"Des projets"|trans({},"front")}} 
 										<br>
-										immobiliers d’envergure</h2>
+										 {{"immobiliers d’envergure"|trans({},"front")}} </h2>
 									<div class="main-slider-three__details-box">
 										<h5 class="main-slider-three__details-sub-title">
-											Dotés de toutes les commodités
+											 {{"Dotés de toutes les commodités"|trans({},"front")}} 
 										</h5>
 										<div class="main-slider-three__details">
 											<div class="main-slider-three__details-icon">
@@ -203,11 +203,11 @@
 											<div
 												class="main-slider-three__details-content">
 												{# <h3 class="odometer" data-count="37400"></h3> #}
-												<p class="main-slider-three__details-text">0662686868
+												<p class="main-slider-three__details-text"> {{"0662686868"|trans({},"front")}} 
 													<br>
-													ou
+													 {{"ou"|trans({},"front")}} 
 													<br>
-													0661832910</p>
+													 {{"0661832910"|trans({},"front")}} </p>
 											</div>
 										</div>
 									</div>
@@ -217,7 +217,7 @@
 					</div>
 				</div>
 
-				<div class="swiper-slide">
+				<div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="image-layer-three" style="background-image: url({{asset('front/img/main-slider-3-1.jpg')}});"></div>
 					<!-- /.image-layer -->
 					<div class="main-slider-three__shape-1">
@@ -227,15 +227,15 @@
 						<div class="row">
 							<div class="col-xl-12">
 								<div class="main-slider-three__content">
-									<h2 class="main-slider-three__title">Riad Al Foutouh  :
+									<h2 class="main-slider-three__title">{{"Riad Al Foutouh :"|trans({},"front")}} 
 
 										<br>
-										Des projets
+										 {{"Des projets"|trans({},"front")}} 
 										<br>
-										immobiliers d’envergure</h2>
+										 {{"immobiliers d’envergure"|trans({},"front")}} </h2>
 									<div class="main-slider-three__details-box">
 										<h5 class="main-slider-three__details-sub-title">
-											Dotés de toutes les commodités
+											 {{"Dotés de toutes les commodités"|trans({},"front")}} 
 										</h5>
 										<div class="main-slider-three__details">
 											<div class="main-slider-three__details-icon">
@@ -244,11 +244,11 @@
 											<div
 												class="main-slider-three__details-content">
 												{# <h3 class="odometer" data-count="37400"></h3> #}
-												<p class="main-slider-three__details-text">0662686868
+												<p class="main-slider-three__details-text"> {{"0662686868"|trans({},"front")}} 
 													<br>
-													ou
+													 {{"ou"|trans({},"front")}} 
 													<br>
-													0661832910</p>
+													 {{"0661832910"|trans({},"front")}} </p>
 											</div>
 										</div>
 									</div>
@@ -258,7 +258,7 @@
 					</div>
 				</div>
 
-				<div class="swiper-slide">
+				<div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="image-layer-three" style="background-image: url({{asset('front/img/main-slider-3-1.jpg')}});"></div>
 					<!-- /.image-layer -->
 					<div class="main-slider-three__shape-1">
@@ -268,15 +268,15 @@
 						<div class="row">
 							<div class="col-xl-12">
 								<div class="main-slider-three__content">
-									<h2 class="main-slider-three__title">Riad Al Foutouh  :
+									<h2 class="main-slider-three__title">{{"Riad Al Foutouh :"|trans({},"front")}} 
 
 										<br>
-										Des projets
+										 {{"Des projets"|trans({},"front")}} 
 										<br>
-										immobiliers d’envergure</h2>
+										 {{"immobiliers d’envergure"|trans({},"front")}} </h2>
 									<div class="main-slider-three__details-box">
 										<h5 class="main-slider-three__details-sub-title">
-											Dotés de toutes les commodités
+											 {{"Dotés de toutes les commodités"|trans({},"front")}} 
 										</h5>
 										<div class="main-slider-three__details">
 											<div class="main-slider-three__details-icon">
@@ -285,11 +285,11 @@
 											<div
 												class="main-slider-three__details-content">
 												{# <h3 class="odometer" data-count="37400"></h3> #}
-												<p class="main-slider-three__details-text">0662686868
+												<p class="main-slider-three__details-text"> {{"0662686868"|trans({},"front")}} 
 													<br>
-													ou
+													 {{"ou"|trans({},"front")}} 
 													<br>
-													0661832910</p>
+													 {{"0661832910"|trans({},"front")}} </p>
 											</div>
 										</div>
 									</div>
@@ -329,27 +329,27 @@
 								<img src="{{asset('front/img/about-3-2.jpg')}}" alt="">
 							</div>
 							<div class="about-three__shape-1"></div>
-							<div class="about-two__big-text">alipes</div>
+							<div class="about-two__big-text" dir="rtl" lang="ar"> {{"alipes"|trans({},"front")}} </div>
 						</div>
 					</div>
 				</div>
 				<div class="col-xl-6">
-					<div class="about-three__right">
+					<div class="about-three__right"{% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 						<div class="section-title text-left">
-							<span class="section-title__tagline">A PROPOS DE RIAD AL FOUTOUH</span>
-							<h2 class="section-title__title">Qui sommes-nous ?</h2>
+							<span class="section-title__tagline">{{"A PROPOS DE RIAD AL FOUTOUH"|trans({},"front")}} </span>
+							<h2 class="section-title__title"> {{"Qui sommes-nous ?"|trans({},"front")}}</h2>
 						</div>
-						<p class="about-three__text">Riad al Foutouh est un promoteur immobilier qui se spécialise dans la création de logement sociaux et du moyen standing. L’objectif principal du groupe est de concevoir et exécuter des projets immobiliers de haute qualité afin de répondre aux besoins de ses clients et de ses partenaires.</p>
-						<h2 class="section-title__title">En savoir +
+						<p class="about-three__text" > {{"Riad al Foutouh est un promoteur immobilier qui se spécialise dans la création de logement sociaux et du moyen standing. L’objectif principal du groupe est de concevoir et exécuter des projets immobiliers de haute qualité afin de répondre aux besoins de ses clients et de ses partenaires."|trans({},"front")}} </p>
+						<h2 class="section-title__title"> {{"En savoir +"|trans({},"front")}} 
 						</h2>
-						<p class="about-three__text">Riad al foutouh : Des projets de vie</p>
-						<ul class="about-three__points list-unstyled">
+						<p class="about-three__text"> {{"Riad al foutouh : Des projets de vie"|trans({},"front")}}</p>
+						<ul class="about-three__points list-unstyled" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 							<li>
 								<div class="">
 									<span class="far fa-check-circle"></span>
 								</div>
 								<div class="text">
-									<p>Projet Salam</p>
+									<p> {{"Projet Salam"|trans({},"front")}} </p>
 								</div>
 							</li>
 							<li>
@@ -357,7 +357,7 @@
 									<span class="far fa-check-circle"></span>
 								</div>
 								<div class="text">
-									<p>Projet les Jardins de la Rocade</p>
+									<p> {{"Projet les Jardins de la Rocade"|trans({},"front")}}</p>
 								</div>
 							</li>
 							<li>
@@ -365,7 +365,7 @@
 									<span class="far fa-check-circle"></span>
 								</div>
 								<div class="text">
-									<p>Projet Naim</p>
+									<p> {{"Projet Naim"|trans({},"front")}}</p>
 								</div>
 							</li>
 							<li>
@@ -373,7 +373,7 @@
 									<span class="far fa-check-circle"></span>
 								</div>
 								<div class="text">
-									<p>Projet Ain borja
+									<p> {{"Projet Ain borja"|trans({},"front")}} 
 									</p>
 								</div>
 							</li>
@@ -382,7 +382,7 @@
 									<span class="far fa-check-circle"></span>
 								</div>
 								<div class="text">
-									<p>Projet les Jardins de la Forêt</p>
+									<p> {{"Projet les Jardins de la Forêt"|trans({},"front")}}</p>
 								</div>
 							</li>
 							<li>
@@ -390,7 +390,7 @@
 									<span class="far fa-check-circle"></span>
 								</div>
 								<div class="text">
-									<p>Projet la Verdure de Lissassfa</p>
+									<p> {{"Projet la Verdure de Lissassfa"|trans({},"front")}}</p>
 								</div>
 							</li>
 						</ul>
@@ -459,11 +459,11 @@
 	<section class="cta-two">
 		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url(assets/images/resources/cta-two-bg-img-1.jpg);"></div>
 		<div class="cta-two__inner">
-			<h3 class="cta-two__title">Découvrez la meilleure agence immobilière à Casablanca
+			<h3 class="cta-two__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}> {{"Découvrez la meilleure agence immobilière à Casablanca"|trans({},"front")}}
 			</h3>
-			<p class="cta-two__text">pour des conseils d'experts et des transactions immobilières réussies.</p>
-			<div class="cta-two__btn-box">
-				<a href="contact.html" class="cta-two__btn thm-btn">Contact nous</a>
+			<p {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %} class="cta-two__text"> {{"pour des conseils d experts et des transactions immobilières réussies."|trans({},"front")}} </p>
+			<div class="cta-two__btn-box" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+				<a href="contact.html" class="cta-two__btn thm-btn"> {{"Contact nous"|trans({},"front")}}</a>
 			</div>
 		</div>
 	</section>
@@ -482,9 +482,9 @@
 						</div>
 					</a>
 				</div>
-				<div class="video-one__title">
-					<h3>Our building
-						<br>video tour</h3>
+				<div class="video-one__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+					<h3> {{"Our building"|trans({},"front")}} 
+						<br> {{"video tour"|trans({},"front")}} </h3>
 				</div>
 			</div>
 		</div>
@@ -501,11 +501,11 @@
 		<div class="container">
 			<div class="news-three__top">
 				<div class="row">
-					<div class="col-xl-6 col-lg-6">
+					<div class="col-xl-6 col-lg-6" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 						<div
 							class="section-title text-left">
 							{# <span class="section-title__tagline">What’s Happening</span> #}
-							<h2 class="section-title__title">Equipe Riad Al Foutouh</h2>
+							<h2 class="section-title__title"> {{"Equipe Riad Al Foutouh"|trans({},"front")}}</h2>
 						</div>
 					</div>
 					<div
@@ -523,7 +523,7 @@
 								<img src="{{asset('front/img/news-1-1.jpg')}}" alt="">
 							</div>
 							<div class="news-one__date">
-								<p>20 Sep</p>
+								<p dir="rtl" lang="ar"> {{"20 Sep"|trans({},"front")}}</p>
 							</div>
 							{# <div class="news-one__content">
 																													<ul class="news-one__meta list-unstyled">
@@ -656,37 +656,37 @@
 								<img src="{{asset('front/img/about-3-2.jpg')}}" alt="">
 							</div>
 							<div class="about-three__shape-1"></div>
-							<div class="about-two__big-text">alipes</div>
+							<div class="about-two__big-text" dir="rtl" lang="ar"> {{"alipes"|trans({},"front")}}</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-xl-6">
 					<div class="about-three__right">
 						<div
-							class="section-title text-left">
+							class="section-title text-left" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 							{# <span class="section-title__tagline">our building overview</span> #}
-							<h2 class="section-title__title">Nos valeurs
+							<h2 class="section-title__title"> {{"Nos valeurs"|trans({},"front")}} 
 							</h2>
-						</div>
-						<p class="about-three__text">La passion, la transparence, la minutie, le niveau d’exigence, la recherche constante de l’excellence et le respect des engagements. Ce sont les valeurs principales qui nous animent et nous permettent d’établir et de maintenir une relation de confiance durable avec tous nos clients et partenaires.
+						</div {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+						<p class="about-three__text" > {{"La passion, la transparence, la minutie, le niveau d’exigence, la recherche constante de l’excellence et le respect des engagements. Ce sont les valeurs principales qui nous animent et nous permettent d’établir et de maintenir une relation de confiance durable avec tous nos clients et partenaires."|trans({},"front")}} 
 						</p>
 
 					</div>
 					<div class="about-three__right">
 						<div
-							class="section-title text-left">
+							class="section-title text-left" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 							{# <span class="section-title__tagline">our building overview</span> #}
-							<h2 class="section-title__title">Nos engagements
+							<h2 class="section-title__title"> {{"Nos engagements"|trans({},"front")}} 
 							</h2>
 						</div>
 						
-						<ul class="b">
-							<li>En assurant la gestion complète de nos projets, depuis leur conception jusqu'à leur mise sur le marché, nous nous engageons à respecter nos promesses, en mettant toujours en priorité la satisfaction totale de nos clients.</li>
-							<li>Élaborer un espace de vie minutieusement conçu.</li>
-							<li>Offrir un service après-vente authentique.</li>
-							<li>Garantir la ponctualité des livraisons prévues.</li>
-							<li>Maintenir une stricte conformité aux normes tout au long de la réalisation de nos projets.</li>
-							<li>Améliorer la gestion des copropriétés.</li>
+						<ul class="b" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+							<li> {{"En assurant la gestion complète de nos projets, depuis leur conception jusqu à leur mise sur le marché, nous nous engageons à respecter nos promesses, en mettant toujours en priorité la satisfaction totale de nos clients."|trans({},"front")}} </li>
+							<li> {{"Élaborer un espace de vie minutieusement conçu."|trans({},"front")}} </li>
+							<li> {{"Offrir un service après-vente authentique."|trans({},"front")}} </li>
+							<li> {{"Garantir la ponctualité des livraisons prévues."|trans({},"front")}}</li>
+							<li> {{"Maintenir une stricte conformité aux normes tout au long de la réalisation de nos projets."|trans({},"front")}} </li>
+							<li> {{"Améliorer la gestion des copropriétés."|trans({},"front")}} </li>
 						</ul>
 
 					</div>
@@ -704,11 +704,11 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-xl-5 col-lg-6">
+				<div class="col-xl-5 col-lg-6" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="new-concept-left">
 						<div class="section-title text-left">
-							<span class="section-title__tagline">A PROPOS DE RIAD AL FOUTOUH</span>
-							<h2 class="section-title__title">Pourquoi Riad al Foutouh ?</h2>
+							<span class="section-title__tagline"> {{"A PROPOS DE RIAD AL FOUTOUH"|trans({},"front")}} </span>
+							<h2 class="section-title__title"> {{"A PROPOS DE RIAD AL FOUTOUH"|trans({},"front")}}</h2>
 						</div>
 						<ul class="new-concept__points list-unstyled">
 							<li>
@@ -716,9 +716,9 @@
 									<span class="icon-manhattan"></span>
 								</div>
 								<div class="text">
-									<h3>Qualités de logement 
+									<h3> {{"Qualités de logement"|trans({},"front")}} 
 									</h3>
-									<p>Riad El Foutouh vous offre l'opulence et le prestige pour une expérience résidentielle incomparable avec le projet Ain Borja
+									<p> {{"Riad El Foutouh vous offre l opulence et le prestige pour une expérience résidentielle incomparable avec le projet Ain Borja"|trans({},"front")}} 
 									</p>
 								</div>
 							</li>
@@ -727,8 +727,8 @@
 									<span class="icon-apartment-1"></span>
 								</div>
 								<div class="text">
-									<h3>Différentes offres </h3>
-									<p>Que vous cherchiez une escapade romantique, une aventure en famille ou une retraite bien-être, nos options variées garantissent une expérience sur mesure pour chaque visiteur.
+									<h3> {{"Différentes offres"|trans({},"front")}} </h3>
+									<p> {{"Que vous cherchiez une escapade romantique, une aventure en famille ou une retraite bien-être, nos options variées garantissent une expérience sur mesure pour chaque visiteur."|trans({},"front")}}
 									</p>
 								</div>
 							</li>
@@ -737,9 +737,9 @@
 									<span class="icon-manhattan"></span>
 								</div>
 								<div class="text">
-									<h3>Facilité de paiment 
+									<h3> {{"Facilité de paiment"|trans({},"front")}} 
 									</h3>
-									<p>Profitez de notre facilité de paiement flexible, conçue pour vous offrir une expérience sans souci.
+									<p> {{"Profitez de notre facilité de paiement flexible, conçue pour vous offrir une expérience sans souci."|trans({},"front")}}
 									</p>
 								</div>
 							</li>
@@ -766,8 +766,8 @@
 		<div class="neighborhoods__shape-1" style="background-image: url(assets/images/shapes/neighborhoods-shape-1.png);"></div>
 		<div class="container">
 			<div class="section-title text-center">
-				<span class="section-title__tagline">nearby areas</span>
-				<h2 class="section-title__title">neighborhood</h2>
+				<span class="section-title__tagline" dir="rtl" lang="ar"> {{"nearby areas"|trans({},"front")}}</span>
+				<h2 class="section-title__title" dir="rtl" lang="ar"> {{"neighborhood"|trans({},"front")}}</h2>
 			</div>
 			<div class="row">
 				<div class="col-xl-8 col-lg-7">
@@ -783,8 +783,8 @@
 								<div class="neighborhoods__popup-box">
 									<div class="neighborhoods__popup">
 										<div class="neighborhoods__popup-inner">
-											<h5 class="neighborhoods__popup-title">Shoppping centers</h5>
-											<span class="neighborhoods__popup-km">13.5KM</span>
+											<h5 class="neighborhoods__popup-title">{{"Shoppping centers"|trans({},"front")}}</h5>
+											<span class="neighborhoods__popup-km">{{"13.5KM"|trans({},"front")}}</span>
 										</div>
 									</div>
 								</div>
@@ -831,11 +831,11 @@
 							<div class="accrodion-grp" data-grp-name="faq-one-accrodion">
 								<div class="accrodion active">
 									<div class="accrodion-title">
-										<h4>Restaurants</h4>
+										<h4 dir="rtl" lang="ar">{{"Restaurants"|trans({},"front")}}  </h4>
 									</div>
 									<div class="accrodion-content">
-										<div class="inner">
-											<p>Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod
+										<div class="inner" dir="rtl" lang="ar">
+											<p>{{"Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod"|trans({},"front")}} 
 																																																												                                                    tempor inci simply free.</p>
 										</div>
 										<!-- /.inner -->
@@ -843,11 +843,11 @@
 								</div>
 								<div class="accrodion">
 									<div class="accrodion-title">
-										<h4>Central park</h4>
+										<h4 dir="rtl" lang="ar">{{"Central park"|trans({},"front")}} </h4>
 									</div>
 									<div class="accrodion-content">
 										<div class="inner">
-											<p>Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod
+											<p dir="rtl" lang="ar">{{"Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod"|trans({},"front")}}
 																																																												                                                    tempor inci simply free.</p>
 										</div>
 										<!-- /.inner -->
@@ -904,9 +904,9 @@
 				<div class="row">
 					<div class="col-xl-6 col-lg-6">
 						<div
-							class="section-title text-left">
+							class="section-title text-left" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 							{# <span class="section-title__tagline">What’s Happening</span> #}
-							<h2 class="section-title__title">la Test news updates & articles</h2>
+							<h2 class="section-title__title"> {{"la Test news updates & articles"|trans({},"front")}}</h2>
 						</div>
 					</div>
 					<div
@@ -923,8 +923,8 @@
 							<div class="news-one__img">
 								<img src="{{asset('front/img/news-1-1.jpg')}}" alt="">
 							</div>
-							<div class="news-one__date">
-								<p>20 Sep</p>
+							<div class="news-one__date" dir="rtl" lang="ar">
+								<p> {{"20 Sep"|trans({},"front")}} </p>
 							</div>
 							{# <div class="news-one__content">
 																													<ul class="news-one__meta list-unstyled">
@@ -1044,8 +1044,8 @@
 	<!--Gallery Three Start-->
 	<section class="gallery-three" id="gallery">
 		<div class="container">
-			<div class="gallery-three__title">
-				<h3>Nos partenaires
+			<div class="gallery-three__title" dir="rtl" lang="ar">
+				<h3>{{"Nos partenaires"|trans({},"front")}}
 				</h3>
 			</div>
 			<div
@@ -1148,13 +1148,13 @@
 			<div class="row">
 				<div class="col-xl-6 col-lg-8">
 					<div class="cta-three__left">
-						<p class="cta-three__sub-title">Don’t hestitate to contact us</p>
-						<h3 class="cta-three__title">Make an appointment now</h3>
+						<p class="cta-three__sub-title" dir="rtl" lang="ar">{{"Don’t hestitate to contact us"|trans({},"front")}} </p>
+						<h3 class="cta-three__title" dir="rtl" lang="ar">{{"Make an appointment now"|trans({},"front")}} </h3>
 					</div>
 				</div>
 				<div class="col-xl-6 col-lg-4">
 					<div class="cta-three__btn-box">
-						<a href="contact.html" class="thm-btn cta-three__btn">Schedule a visit</a>
+						<a href="contact.html" class="thm-btn cta-three__btn" dir="rtl" lang="ar">{{"Contact nous"|trans({},"front")}}</a>
 					</div>
 				</div>
 			</div>
