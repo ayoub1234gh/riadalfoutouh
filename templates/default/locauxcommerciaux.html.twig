@@ -15,13 +15,13 @@
             </div>
             <div class="page-header__overly"></div>
             <div class="container">
-                <div class="page-header__inner">
+                <div class="page-header__inner" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                     <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">Offres</a></li>
+                        <li><a href="index.html">{{"Offres"|trans({},"front")}}</a></li>
                         <li><span>/</span></li>
-                        <li>Professionnelles</li>
+                        <li>{{"Professionnelles"|trans({},"front")}}</li>
                     </ul>
-                    <h2>Locaux Commerciaux</h2>
+                    <h2>{{"Locaux Commerciaux"|trans({},"front")}}</h2>
                 </div>
             </div>
         </section>
@@ -32,7 +32,7 @@
             <div class="container">
                 <div class="row">
                     <!--Apartment One Single Start-->
-                    <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="col-xl-4 col-lg-6 col-md-6" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                         <div class="apartment-one__single">
                             <div class="apartment-one__img-box">
                                 <div class="apartment-one__img">
@@ -40,7 +40,7 @@
                                 </div>
                                 <div class="apartment-one__content">
                                     <div class="apartment-one__title-box">
-                                        <h3 class="apartment-one__title"><a href="apartment-details-1.html">AIN BORJA</a></h3>
+                                        <h3 class="apartment-one__title"><a href="apartment-details-1.html">{{"AIN BORJA"|trans({},"front")}}</a></h3>
                                     </div>
                                     <div class="apartment-one__arrow">
                                         <a href="apartment-details-1.html"><span class="icon-right-arrow"></span></a>
@@ -54,7 +54,7 @@
                     </div>
                     <!--Apartment One Single End-->
                     <!--Apartment One Single Start-->
-                    <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="col-xl-4 col-lg-6 col-md-6"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                         <div class="apartment-one__single">
                             <div class="apartment-one__img-box">
                                 <div class="apartment-one__img">
@@ -62,7 +62,7 @@
                                 </div>
                                 <div class="apartment-one__content">
                                     <div class="apartment-one__title-box">
-                                        <h3 class="apartment-one__title"><a href="apartment-details-1.html">SALAM</a></h3>
+                                        <h3 class="apartment-one__title"><a href="apartment-details-1.html">{{"SALAM"|trans({},"front")}}</a></h3>
                                     </div>
                                     <div class="apartment-one__arrow">
                                         <a href="apartment-details-1.html"><span class="icon-right-arrow"></span></a>
@@ -76,7 +76,7 @@
                     </div>
                     <!--Apartment One Single End-->
                     <!--Apartment One Single Start-->
-                    <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="col-xl-4 col-lg-6 col-md-6"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                         <div class="apartment-one__single">
                             <div class="apartment-one__img-box">
                                 <div class="apartment-one__img">
@@ -84,7 +84,7 @@
                                 </div>
                                 <div class="apartment-one__content">
                                     <div class="apartment-one__title-box">
-                                        <h3 class="apartment-one__title"><a href="apartment-details-1.html">LES JARDINS DE LA FORET</a></h3>
+                                        <h3 class="apartment-one__title"><a href="apartment-details-1.html">{{"LES JARDINS DE LA FORET"|trans({},"front")}}</a></h3>
                                     </div>
                                     <div class="apartment-one__arrow">
                                         <a href="apartment-details-1.html"><span class="icon-right-arrow"></span></a>
@@ -98,7 +98,7 @@
                     </div>
                     <!--Apartment One Single End-->
                     <!--Apartment One Single Start-->
-                    <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="col-xl-4 col-lg-6 col-md-6"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                         <div class="apartment-one__single">
                             <div class="apartment-one__img-box">
                                 <div class="apartment-one__img">
@@ -106,7 +106,7 @@
                                 </div>
                                 <div class="apartment-one__content">
                                     <div class="apartment-one__title-box">
-                                        <h3 class="apartment-one__title"><a href="apartment-details-1.html">LA ROCADE</a></h3>
+                                        <h3 class="apartment-one__title"><a href="apartment-details-1.html">{{"LA ROCADE"|trans({},"front")}}</a></h3>
                                     </div>
                                     <div class="apartment-one__arrow">
                                         <a href="apartment-details-1.html"><span class="icon-right-arrow"></span></a>
@@ -120,7 +120,7 @@
                     </div>
                     <!--Apartment One Single End-->
                     <!--Apartment One Single Start-->
-                    <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="col-xl-4 col-lg-6 col-md-6"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                         <div class="apartment-one__single">
                             <div class="apartment-one__img-box">
                                 <div class="apartment-one__img">
@@ -128,7 +128,7 @@
                                 </div>
                                 <div class="apartment-one__content">
                                     <div class="apartment-one__title-box">
-                                        <h3 class="apartment-one__title"><a href="apartment-details-1.html">LA VERDURE DE LISASSFA</a></h3>
+                                        <h3 class="apartment-one__title"><a href="apartment-details-1.html">{{"LA VERDURE DE LISASSFA"|trans({},"front")}}</a></h3>
                                     </div>
                                     <div class="apartment-one__arrow">
                                         <a href="apartment-details-1.html"><span class="icon-right-arrow"></span></a>
@@ -142,7 +142,7 @@
                     </div>
                     <!--Apartment One Single End-->
                     <!--Apartment One Single Start-->
-                    <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="col-xl-4 col-lg-6 col-md-6"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                         <div class="apartment-one__single">
                             <div class="apartment-one__img-box">
                                 <div class="apartment-one__img">
@@ -150,7 +150,7 @@
                                 </div>
                                 <div class="apartment-one__content">
                                     <div class="apartment-one__title-box">
-                                        <h3 class="apartment-one__title"><a href="apartment-details-1.html">NAIM</a></h3>
+                                        <h3 class="apartment-one__title"><a href="apartment-details-1.html">{{"NAIM"|trans({},"front")}}</a></h3>
                                     </div>
                                     <div class="apartment-one__arrow">
                                         <a href="apartment-details-1.html"><span class="icon-right-arrow"></span></a>

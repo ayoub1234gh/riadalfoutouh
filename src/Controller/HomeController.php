@@ -8,7 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class HomeController extends AbstractController
 {
-    #[Route('/', name: 'app_home')]
+    #[Route('/{_locale}', name: 'app_home', requirements: ['_locale' => 'fr|ar'], defaults: ["_locale" => "fr"])]
     public function index(): Response
     {
         return $this->render('default/home.html.twig', [
@@ -17,26 +17,26 @@ class HomeController extends AbstractController
     }
 
 
-    #[Route('/contact', name: 'contact')]
+    #[Route('/{_locale}/contact', name: 'app_contact', requirements: ['_locale' => 'fr|ar',])]
     public function contact(): Response
     {
         return $this->render('default/contact.html.twig', []);
     }
 
-    #[Route('/residence', name: 'residence')]
+    #[Route('/{_locale}/residence', name: 'residence', requirements: ['_locale' => 'fr|ar',])]
     public function residence(): Response
     {
         return $this->render('default/residence.html.twig', []);
     }
 
-    #[Route('/locauxcommerciaux', name: 'locauxcommerciaux')]
+    #[Route('/{_locale}/locauxcommerciaux', name: 'locauxcommerciaux', requirements: ['_locale' => 'fr|ar',])]
     public function locauxcommerciaux(): Response
     {
         return $this->render('default/locauxcommerciaux.html.twig', []);
     }
 
 
-    #[Route('/ainborja', name: 'app_ainborja')]
+    #[Route('/{_locale}/ainborja', name: 'app_ainborja', requirements: ['_locale' => 'fr|ar',])]
     public function ainborja(): Response
     {
         return $this->render('default/ainborja.html.twig', [
@@ -44,7 +44,7 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/hautstanding', name: 'app_hautstanding')]
+    #[Route('/{_locale}/hautstanding', name: 'app_hautstanding', requirements: ['_locale' => 'fr|ar',])]
     public function hautstanding(): Response
     {
         return $this->render('default/hautstanding.html.twig', [
@@ -60,7 +60,7 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/jardinrocad', name: 'jardinrocad')]
+    #[Route('/{_locale}/jardinrocad', name: 'jardinrocad', requirements: ['_locale' => 'fr|ar',])]
     public function jardinrocad(): Response
     {
         return $this->render('default/jardinrocad.html.twig', [
@@ -68,7 +68,7 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/verdurelissassfa', name: 'verdurelissassfa')]
+    #[Route('/{_locale}/verdurelissassfa', name: 'verdurelissassfa', requirements: ['_locale' => 'fr|ar',])]
     public function verdurelissassfa(): Response
     {
         return $this->render('default/verdurelissassfa.html.twig', [
@@ -76,7 +76,7 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/naim', name: 'naim')]
+    #[Route('/{_locale}/naim', name: 'naim', requirements: ['_locale' => 'fr|ar',])]
     public function naim(): Response
     {
         return $this->render('default/naim.html.twig', [
@@ -84,7 +84,7 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/blog', name: 'app_blog')]
+    #[Route('/{_locale}/blog', name: 'app_blog', requirements: ['_locale' => 'fr|ar',])]
     public function blog(): Response
     {
         return $this->render('default/blog.html.twig', [
@@ -92,7 +92,7 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/jardinsforet', name: 'app_jardinsforet')]
+    #[Route('/{_locale}/jardinsforet', name: 'app_jardinsforet', requirements: ['_locale' => 'fr|ar',])]
     public function jardinsforet(): Response
     {
         return $this->render('default/jardinsforet.html.twig', [

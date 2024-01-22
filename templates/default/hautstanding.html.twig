@@ -18,12 +18,12 @@
             <div class="page-header__overly"></div>
             <div class="container">
                 <div class="page-header__inner">
-                    <ul class="thm-breadcrumb list-unstyled">
+                    <ul class="thm-breadcrumb list-unstyled"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                         {# <li><a href="index.html">Home</a></li> #}
                         {# <li><span>/</span></li> #}
-                        <li>Résidences / Moyen standing</li>
+                        <li>{{"Résidences / Moyen standing"|trans({},"front")}}</li>
                     </ul>
-                    <h2>SALAM</h2>
+                    <h2>{{"SALAM"|trans({},"front")}}</h2>
                 </div>
             </div>
         </section>
@@ -39,21 +39,21 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-5 col-lg-6">
+                    <div class="col-xl-5 col-lg-6" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                         <div class="new-concept-two__left">
                             <div class="section-title text-left">
-                                <span class="section-title__tagline">by Riad al foutouh</span>
-                                <h2 class="section-title__title">Salam : Alliez qualité de vie et centralité !</h2>
+                                <span class="section-title__tagline">{{"BY RIAD AL FOUTOUH"|trans({},"front")}}</span>
+                                <h2 class="section-title__title">{{"Salam : Alliez qualité de vie et centralité !"|trans({},"front")}}</h2>
                             </div>
-                            <p class="new-concept__text">Située au cœur du quartier résidentiel de Sidi Moumen, la résidence Salam a réalisé avec brio un magnifique projet immobilier. Elle propose des appartements spacieux comprenant trois chambres et un salon, tous équipés d'ascenseurs pour garantir un confort optimal. Les appartements se démarquent par leur design moderne et fonctionnel, ainsi que par une finition de qualité supérieure.</p>
+                            <p class="new-concept__text">{{"Située au cœur du quartier résidentiel de Sidi Moumen, la résidence Salam a réalisé avec brio un magnifique projet immobilier. Elle propose des appartements spacieux comprenant trois chambres et un salon, tous équipés d’ascenseurs pour garantir un confort optimal. Les appartements se démarquent par leur design moderne et fonctionnel, ainsi que par une finition de qualité supérieure."|trans({},"front")}}</p>
                             <ul class="new-concept__points list-unstyled">
                                 <li>
                                     <div class="icon">
                                         <span class="icon-manhattan"></span>
                                     </div>
                                     <div class="text">
-                                        <h3> Des résidences nichées à proximité de toutes les commodités </h3>
-                                        <p> Idéalement situées à proximité de toutes les commodités et nichées dans un cadre qui allie confort contemporain à  praticité quotidienne, nos résidences offrent une expérience de vie agréable et abordable.</p>
+                                        <h3>{{"Des résidences nichées à proximité de toutes les commodités "|trans({},"front")}} </h3>
+                                        <p>{{"Idéalement situées à proximité de toutes les commodités et nichées dans un cadre qui allie confort contemporain à  praticité quotidienne, nos résidences offrent une expérience de vie agréable et abordable."|trans({},"front")}} </p>
                                     </div>
                                 </li>
                                 <li>
@@ -61,8 +61,8 @@
                                         <span class="icon-apartment-1"></span>
                                     </div>
                                     <div class="text">
-                                        <h3>Center At City Downtown</h3>
-                                        <p>Services address a range of simply free aplication and infrastructure needs.
+                                        <h3>{{"Center At City Downtown"|trans({},"front")}}</h3>
+                                        <p>{{"Services address a range of simply free aplication and infrastructure needs."|trans({},"front")}}
                                         </p>
                                     </div>
                                 </li>
@@ -91,20 +91,20 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-6 col-lg-12">
+                    <div class="col-xl-6 col-lg-12" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                         <div class="services-one__left">
                             <div class="section-title text-left">
-                                <span class="section-title__tagline">Équipements</span>
-                                <h2 class="section-title__title">"APPARTEMENTS LUXUEUX ET ÉPOUSTOUFLANTS, CONÇUS POUR LA VIE"</h2>
+                                <span class="section-title__tagline">{{"Équipements"|trans({},"front")}}</span>
+                                <h2 class="section-title__title">{{"APPARTEMENTS LUXUEUX ET ÉPOUSTOUFLANTS, CONÇUS POUR LA VIE"|trans({},"front")}}</h2>
                             </div>
                             <div class="services-one__btn-box">
-                                <a href="services.html" class="thm-btn services-one__btn">Planifier une visite</a>
+                                <a href="services.html" class="thm-btn services-one__btn">{{"Planifier une visite"|trans({},"front")}}</a>
                             </div>
                         </div>
                     </div>
                     <!--Services One Single Start-->
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                        <div class="services-one__single">
+                        <div class="services-one__single" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                             <div class="services-one__single-inner">
                                 <div class="services-one__single-bg"
                                     style="background-image: url(assets/images/backgrounds/services-one-single-bg.jpg);">
@@ -112,15 +112,15 @@
                                 <div class="services-one__icon">
                                     <span class="icon-residential"></span>
                                 </div>
-                                <h3 class="services-one__title"><a href="services.html">Superficie</a></h3>
-                                <p class="services-one__text">Des appartements de 73 à 83 m²</p>
+                                <h3 class="services-one__title"><a href="services.html">{{"Superficie"|trans({},"front")}}</a></h3>
+                                <p class="services-one__text">{{"Des appartements de 73 à 83 m²"|trans({},"front")}}</p>
                             </div>
                         </div>
                     </div>
                     <!--Services One Single End-->
                     <!--Services One Single Start-->
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="services-one__single">
+                        <div class="services-one__single" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                             <div class="services-one__single-inner">
                                 <div class="services-one__single-bg"
                                     style="background-image: url(assets/images/backgrounds/services-one-single-bg.jpg);">
@@ -128,15 +128,15 @@
                                 <div class="services-one__icon">
                                     <span class="icon-sustainable"></span>
                                 </div>
-                                <h3 class="services-one__title"><a href="services.html">Consistance </a></h3>
-                                <p class="services-one__text">3 chambres + Salon, cuisine, 2 SDB</p>
+                                <h3 class="services-one__title"><a href="services.html">{{"Consistance"|trans({},"front")}} </a></h3>
+                                <p class="services-one__text">{{"3 chambres + Salon, cuisine, 2 SDB"|trans({},"front")}}</p>
                             </div>
                         </div>
                     </div>
                     <!--Services One Single End-->
                     <!--Services One Single Start-->
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="services-one__single">
+                        <div class="services-one__single" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                             <div class="services-one__single-inner">
                                 <div class="services-one__single-bg"
                                     style="background-image: url(assets/images/backgrounds/services-one-single-bg.jpg);">
@@ -144,15 +144,15 @@
                                 <div class="services-one__icon">
                                     <span class="icon-world"></span>
                                 </div>
-                                <h3 class="services-one__title"><a href="services.html">Garage sous-sol </a></h3>
-                                <p class="services-one__text">la garantie d'une sécurité optimale pour votre véhicule, alliée à la praticité d'un espace bien aménagé.</p>
+                                <h3 class="services-one__title"><a href="services.html">{{"Garage sous-sol "|trans({},"front")}}</a></h3>
+                                <p class="services-one__text">{{"la garantie d’une sécurité optimale pour votre véhicule, alliée à la praticité d’un espace bien aménagé."|trans({},"front")}}</p>
                             </div>
                         </div>
                     </div>
                     <!--Services One Single End-->
                     <!--Services One Single Start-->
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                        <div class="services-one__single">
+                        <div class="services-one__single" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                             <div class="services-one__single-inner">
                                 <div class="services-one__single-bg"
                                     style="background-image: url(assets/images/backgrounds/services-one-single-bg.jpg);">
@@ -160,8 +160,8 @@
                                 <div class="services-one__icon">
                                     <span class="icon-home-automation"></span>
                                 </div>
-                                <h3 class="services-one__title"><a href="services.html">Local commercial</a></h3>
-                                <p class="services-one__text">Magasin d’une superficie minimale de 15 m²</p>
+                                <h3 class="services-one__title"><a href="services.html">{{"Local commercial"|trans({},"front")}}</a></h3>
+                                <p class="services-one__text">{{"Magasin d’une superficie minimale de 15 m²"|trans({},"front")}}</p>
                             </div>
                         </div>
                     </div>
@@ -176,8 +176,8 @@
                                 <div class="services-one__icon">
                                     <span class="icon-electric-appliance"></span>
                                 </div>
-                                <h3 class="services-one__title"><a href="services.html">Ascenseur SCHINDLER </a></h3>
-                                <p class="services-one__text">Élévation de qualité assurée pour votre confort et votre commodité.</p>
+                                <h3 class="services-one__title"><a href="services.html">{{"ascenseur schindler"|trans({},"front")}}</a></h3>
+                                <p class="services-one__text">{{"Élévation de qualité assurée pour votre confort et votre commodité."|trans({},"front")}}</p>
                             </div>
                         </div>
                     </div>
@@ -192,8 +192,8 @@
                                 <div class="services-one__icon">
                                     <span class="icon-swimming-pool"></span>
                                 </div>
-                                <h3 class="services-one__title"><a href="services.html">Accessibilité totale</a></h3>
-                                <p class="services-one__text">Proche de toutes les commodités : écoles, mosquée, centres commerciaux, jardins…</p>
+                                <h3 class="services-one__title"><a href="services.html">{{"Accessibilité totale"|trans({},"front")}}</a></h3>
+                                <p class="services-one__text">{{"Proche de toutes les commodités : écoles, mosquée, centres commerciaux, jardins…"|trans({},"front")}}</p>
                             </div>
                         </div>
                     </div>
@@ -207,12 +207,14 @@
              <!--CTA Two Start-->
         <section class="cta-two cta-four">
             <div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-                style="background-image: url({{asset('/front/images/resources/cta-two-bg-img-1.jpg')}};"></div>
-            <div class="cta-two__inner">
-                <h3 class="cta-two__title">Organisez votre visite sur place</h3>
-                <p class="cta-two__text">notre equipe commerciale vous acceuille 7j/7 du lundi au dimanche de 9h à 19h </p>
+
+                style="background-image: url(assets/images/resources/cta-two-bg-img-1.jpg);"></div>
+            <div class="cta-two__inner" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+                <h3 class="cta-two__title"{{"organisez votre visite sur place"|trans({},"front")}}></h3>
+                <p class="cta-two__text" {{"notre equipe commerciale vous acceuille 7j/7 du lundi au dimanche de 9h à 19h"|trans({},"front")}}></p>
+
                 <div class="cta-two__btn-box">
-                    <a href="contact.html" class="cta-two__btn thm-btn">reserver maintenant</a>
+                    <a href="contact.html" class="cta-two__btn thm-btn" {{" reserver maintenant "|trans({},"front")}}></a>
                 </div>
             </div>
         </section>
