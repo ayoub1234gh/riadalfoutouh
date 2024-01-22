@@ -7,7 +7,7 @@
 {% block body %}
 	<!--Page Header Start-->
 	<section class="page-header">
-		<div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)"></div>
+		<div class="page-header-bg" style="background-image: url({{asset('front/images/backgrounds/page-header-bg.jpg')}});"></div>
 		<div class="page-header__overly"></div>
 		<div class="container">
 			<div class="page-header__inner">
@@ -114,7 +114,7 @@
 				<div class="col-xl-6 col-lg-6">
 					<div class="values-two__right">
 						<div class="values-two__img">
-							<img src="assets/images/resources/values-2-1.jpg" alt="">
+							<img  src="{{asset('/front/images/resources/values-2-1.jpg')}}" alt="">
 						</div>
 					</div>
 				</div>
