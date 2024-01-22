@@ -13,15 +13,15 @@
 			height: 60vh;
 		}
 
-        .services-one__single-inner {
-            height: 60vh;
-        }
+		.services-one__single-inner {
+			height: 60vh;
+		}
 	</style>
 {% endblock %}
 {% block body %}
 	<!--Page Header Start-->
 	<section class="page-header">
-		<div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)"></div>
+		<div class="page-header-bg" style="background-image: url({{asset('front/images/backgrounds/page-header-bg.jpg')}});"></div>
 		<div class="page-header__overly"></div>
 		<div class="container">
 			<div class="page-header__inner" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
@@ -39,15 +39,15 @@
 		</div>
 	</section>
 	<!--Page Header End-->
-
+		
 
 	<!--New Concept Two Start-->
 	<section class="new-concept-two">
 		<div class="new-concept-two__shape-1 float-bob-y">
-			<img src="assets/images/shapes/new-concept-two-shape-1.png" alt="">
+			<img src="{{asset('front/images/shapes/new-concept-two-shape-1.png')}}" alt="">
 		</div>
 		<div class="new-concept-two__shape-2 float-bob-x">
-			<img src="assets/images/shapes/new-concept-two-shape-2.png" alt="">
+			<img src="{{asset('front/images/shapes/new-concept-two-shape-2.png')}}" alt="">
 		</div>
 		<div class="container">
 			<div class="row">
@@ -87,7 +87,7 @@
 				<div class="col-xl-7 col-lg-6">
 					<div class="new-concept-two__right">
 						<div class="new-concept-two__img">
-							<img src="assets/images/resources/new-concept-two-img-1.jpg" alt="">
+							<img src="{{asset('/front/images/resources/new-concept-two-img-1.jpg')}}" alt="">
 						</div>
 					</div>
 				</div>
@@ -98,14 +98,14 @@
 
 	<!--CTA Two Start-->
 	<section class="cta-two cta-four">
-		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url(assets/images/resources/cta-two-bg-img-1.jpg);"></div>
+		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url({{asset('/front/images/resources/new-concept-two-img-1.jpg')}});"></div>
 		<div
 			class="cta-two__inner"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 			{# <h3 class="cta-two__title">Schedule a building visit</h3> #}
 			<p class="cta-two__text">{{"Profitez d’une situation exceptionnelle dans une zone en plein développement et à seulement quelques minutes de la plage et de la forêt, tout en bénéficiant d’un accès facile à de nombreuses commodités situées à proximité."|trans({},"front")}}</p>
 			{# <div class="cta-two__btn-box">
-			                    <a href="contact.html" class="cta-two__btn thm-btn">Send a request</a>
-			                </div> #}
+						                    <a href="contact.html" class="cta-two__btn thm-btn">Send a request</a>
+						                </div> #}
 		</div>
 	</section>
 	<!--CTA Two End-->
@@ -135,7 +135,7 @@
 				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
 					<div class="services-one__single">
 						<div class="services-one__single-inner">
-							<div class="services-one__single-bg" style="background-image: url(assets/images/backgrounds/services-one-single-bg.jpg);"></div>
+							<div class="services-one__single-bg" style="background-image: url({{asset('/front/images/backgrounds/services-one-single-bg.jpg')}});"></div>
 							<div class="services-one__icon">
 								<span class="icon-residential"></span>
 							</div>
@@ -151,7 +151,7 @@
 				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
 					<div class="services-one__single">
 						<div class="services-one__single-inner">
-							<div class="services-one__single-bg" style="background-image: url(assets/images/backgrounds/services-one-single-bg.jpg);"></div>
+							<div class="services-one__single-bg" style="background-image: url({{asset('/front/images/backgrounds/services-one-single-bg.jpg')}});"></div>
 							<div class="services-one__icon">
 								<span class="icon-sustainable"></span>
 							</div>
@@ -168,7 +168,7 @@
 				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="services-one__single">
 						<div class="services-one__single-inner">
-							<div class="services-one__single-bg" style="background-image: url(assets/images/backgrounds/services-one-single-bg.jpg);"></div>
+							<div class="services-one__single-bg" style="background-image: url({{asset('/front/images/backgrounds/services-one-single-bg.jpg')}});"></div>
 							<div class="services-one__icon">
 								<span class="icon-world"></span>
 							</div>
@@ -184,7 +184,7 @@
 				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="services-one__single">
 						<div class="services-one__single-inner">
-							<div class="services-one__single-bg" style="background-image: url(assets/images/backgrounds/services-one-single-bg.jpg);"></div>
+							<div class="services-one__single-bg" style="background-image: url({{asset('/front/images/backgrounds/services-one-single-bg.jpg')}});"></div>
 							<div class="services-one__icon">
 								<span class="icon-home-automation"></span>
 							</div>
@@ -200,7 +200,7 @@
 				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="500ms"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="services-one__single">
 						<div class="services-one__single-inner">
-							<div class="services-one__single-bg" style="background-image: url(assets/images/backgrounds/services-one-single-bg.jpg);"></div>
+							<div class="services-one__single-bg" style="background-image: url({{asset('/front/images/backgrounds/services-one-single-bg.jpg')}});"></div>
 							<div class="services-one__icon">
 								<span class="icon-electric-appliance"></span>
 							</div>
@@ -217,7 +217,7 @@
 				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="600ms"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="services-one__single">
 						<div class="services-one__single-inner">
-							<div class="services-one__single-bg" style="background-image: url(assets/images/backgrounds/services-one-single-bg.jpg);"></div>
+							<div class="services-one__single-bg" style="background-image: url({{asset('/front/images/backgrounds/services-one-single-bg.jpg')}});"></div>
 							<div class="services-one__icon">
 								<span class="icon-swimming-pool"></span>
 							</div>
@@ -316,54 +316,54 @@
 						</ul>
 					</div>
 				</div>
-		
+
 				{# <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-				                        <div class="services-three__single">
-				                            <h3 class="services-three__title"><a href="services.html">Attractive location</a></h3>
-				                            <ul class="list-unstyled services-three__list">
-				                                <li>
-				                                    <div class="icon">
-				                                        <i class="fa fa-check"></i>
-				                                    </div>
-				                                    <div class="text">
-				                                        <p>24-hour Reception</p>
-				                                    </div>
-				                                </li>
-				                                <li>
-				                                    <div class="icon">
-				                                        <i class="fa fa-check"></i>
-				                                    </div>
-				                                    <div class="text">
-				                                        <p>Check in-out</p>
-				                                    </div>
-				                                </li>
-				                                <li>
-				                                    <div class="icon">
-				                                        <i class="fa fa-check"></i>
-				                                    </div>
-				                                    <div class="text">
-				                                        <p>Breakfast Buffet</p>
-				                                    </div>
-				                                </li>
-				                                <li>
-				                                    <div class="icon">
-				                                        <i class="fa fa-check"></i>
-				                                    </div>
-				                                    <div class="text">
-				                                        <p>Lunch from 11.00</p>
-				                                    </div>
-				                                </li>
-				                                <li>
-				                                    <div class="icon">
-				                                        <i class="fa fa-check"></i>
-				                                    </div>
-				                                    <div class="text">
-				                                        <p>Dinner from 17.30</p>
-				                                    </div>
-				                                </li>
-				                            </ul>
-				                        </div>
-				                    </div> #}
+								                        <div class="services-three__single">
+								                            <h3 class="services-three__title"><a href="services.html">Attractive location</a></h3>
+								                            <ul class="list-unstyled services-three__list">
+								                                <li>
+								                                    <div class="icon">
+								                                        <i class="fa fa-check"></i>
+								                                    </div>
+								                                    <div class="text">
+								                                        <p>24-hour Reception</p>
+								                                    </div>
+								                                </li>
+								                                <li>
+								                                    <div class="icon">
+								                                        <i class="fa fa-check"></i>
+								                                    </div>
+								                                    <div class="text">
+								                                        <p>Check in-out</p>
+								                                    </div>
+								                                </li>
+								                                <li>
+								                                    <div class="icon">
+								                                        <i class="fa fa-check"></i>
+								                                    </div>
+								                                    <div class="text">
+								                                        <p>Breakfast Buffet</p>
+								                                    </div>
+								                                </li>
+								                                <li>
+								                                    <div class="icon">
+								                                        <i class="fa fa-check"></i>
+								                                    </div>
+								                                    <div class="text">
+								                                        <p>Lunch from 11.00</p>
+								                                    </div>
+								                                </li>
+								                                <li>
+								                                    <div class="icon">
+								                                        <i class="fa fa-check"></i>
+								                                    </div>
+								                                    <div class="text">
+								                                        <p>Dinner from 17.30</p>
+								                                    </div>
+								                                </li>
+								                            </ul>
+								                        </div>
+								                    </div> #}
 				<!--Services Three Single End-->
 			</div>
 		</div>
