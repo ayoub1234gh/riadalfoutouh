@@ -463,7 +463,7 @@
 			</h3>
 			<p {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %} class="cta-two__text"> {{"pour des conseils d experts et des transactions immobilières réussies."|trans({},"front")}} </p>
 			<div class="cta-two__btn-box" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-				<a href="{{path('app_contact')}}" class="cta-two__btn thm-btn"> {{"Contact nous"|trans({},"front")}}</a>
+				<a href="{{path('app_contact')}}" class="cta-two__btn thm-btn"> {{"Contactez nous"|trans({},"front")}}</a>
 			</div>
 		</div>
 	</section>
@@ -766,8 +766,8 @@
 		<div class="neighborhoods__shape-1" style="background-image: url(assets/images/shapes/neighborhoods-shape-1.png);"></div>
 		<div class="container">
 			<div class="section-title text-center">
-				<span class="section-title__tagline" dir="rtl" lang="ar"> {{"Localisation"|trans({},"front")}}</span>
-				<h2 class="section-title__title" dir="rtl" lang="ar"> {{"Où sommes nous ?"|trans({},"front")}}</h2>
+				<span class="section-title__tagline"> {{"Localisation"|trans({},"front")}}</span>
+				<h2 {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %} class="section-title__title"> {{"Où sommes nous ?"|trans({},"front")}}</h2>
 			</div>
 			<div class="row">
 				<div class="col-xl-8 col-lg-7">
@@ -1154,7 +1154,7 @@
 				</div>
 				<div class="col-xl-6 col-lg-4">
 					<div class="cta-three__btn-box">
-						<a href="{{path('app_contact')}}" class="thm-btn cta-three__btn" dir="rtl" lang="ar">{{"Contact nous"|trans({},"front")}}</a>
+						<a href="{{path('app_contact')}}" class="thm-btn cta-three__btn" dir="rtl" lang="ar">{{"Contactez nous"|trans({},"front")}}</a>
 					</div>
 				</div>
 			</div>
