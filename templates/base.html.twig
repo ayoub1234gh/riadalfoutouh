@@ -222,7 +222,7 @@
 																		</ul> #}
 								</li>
 								<li class="dropdown">
-									<a href="about.html">{{"Projets"|trans({},"front")}}</a>
+									<a href="#">{{"Projets"|trans({},"front")}}</a>
 									<ul class="shadow-box">
 										<li class="dropdown">
 											<a href="#">{{"Haut standing"|trans({},"front")}}</a>
@@ -263,9 +263,11 @@
 								<li>
 									<a href="{{path('app_blog')}}">{{"blog"|trans({},"front")}}</a>
 								</li>
-								 <li>
+								{# <li>
 							    	<a href="{{path('app_contact')}}">{{"contact"|trans({},"front")}}</a>
+								</li> #}
 							</ul>
+							
 						</div>
 						<div class="main-menu__right">
 							<div class="main-menu__search-cart-btn">
@@ -278,10 +280,15 @@
 									</div>
 								</div> #}
 								<div class="main-menu__btn-box">
-									<a href="contact.html" class="thm-btn main-menu__btn">{{"Contact nous"|trans({},"front")}}</a>
+									<a href="{{path('app_contact')}}" class="thm-btn main-menu__btn">{{"Contact nous"|trans({},"front")}}</a>
 								</div>
 							</div>
 						</div>
+
+						<select id="combo"  onchange="redirectToSelectedURL()" style="background-color: #221c13;border: 1px solid rgb(197, 197, 197);border-radius: 5px;box-sizing: border-box;color:white;display: block;font-family: SourceSansPro, Helvetica, Arial, sans-serif;font-size: 14px;font-weight: 600;height: 26px;  min-width: 80px;padding: 0 20px 0 16px;outline: none;">
+								<option {% if '/fr' in app.request.uri %} selected {% endif %}  value="{{ path(app.request.get('_route'), {'_locale': 'fr'}) }}">FR</option>
+								<option {% if '/ar' in app.request.uri %} selected {% endif %}  value="{{ path(app.request.get('_route'), {'_locale': 'ar'}) }}">AR</option>
+                        </select>
 					</div>
 				</div>
 			</nav>
@@ -303,7 +310,7 @@
 							<div class="col-xl-2 col-lg-2 col-md-6 wow fadeInUp" data-wow-delay="100ms">
 								<div class="footer-widget__column footer-widget__about">
 									<div class="footer-widget__logo">
-										<a href="index.html"><img src="{{asset('/front/img/logo.png')}}" alt="" class="logo"></a>
+										<a href="{{path('app_home')}}"><img src="{{asset('/front/img/logo.png')}}" alt="" class="logo"></a>
 									</div>
 								</div>
 							</div>
