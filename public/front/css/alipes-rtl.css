@@ -6117,7 +6117,7 @@ ul {
   bottom: 0;
   left: 0;
   border-top: 321px solid transparent;
-  border-left: 419px solid var(--alipes-base);
+  /* border-left: 419px solid var(--alipes-base); */
   z-index: 1;
 }
 
