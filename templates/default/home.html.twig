@@ -177,10 +177,10 @@
 			<div class="swiper-wrapper">
 
 				<div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-					<div class="image-layer-three" style="background-image: url({{asset('front/img/main-slider-3-1.jpg')}});"></div>
+					<div class="image-layer-three" style="background-image: url({{asset('front/images/resources/slider1.png')}});"></div>
 					<!-- /.image-layer -->
 					<div class="main-slider-three__shape-1">
-						<img src="{{asset('front/img/main-slider-three-shape-1.png')}}" alt="">
+						<img src="{{asset('front/img/main-slider-three-shape-1.png')}}" alt="Riad-AL-Foutouh-agence-immobilière-Casablanca">
 					</div>
 					<div class="container">
 						<div class="row">
@@ -218,10 +218,10 @@
 				</div>
 
 				<div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-					<div class="image-layer-three" style="background-image: url({{asset('front/img/main-slider-3-1.jpg')}});"></div>
+					<div class="image-layer-three" style="background-image: url({{asset('front/images/resources/slider2.png')}});"></div>
 					<!-- /.image-layer -->
 					<div class="main-slider-three__shape-1">
-						<img src="{{asset('front/img/main-slider-three-shape-1.png')}}" alt="">
+						<img src="{{asset('front/img/main-slider-three-shape-1.png')}}" alt="Riad-AL-Foutouh-agence-immobilière-Casablanca">
 					</div>
 					<div class="container">
 						<div class="row">
@@ -259,10 +259,10 @@
 				</div>
 
 				<div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-					<div class="image-layer-three" style="background-image: url({{asset('front/img/main-slider-3-1.jpg')}});"></div>
+					<div class="image-layer-three" style="background-image: url({{asset('front/images/resources/slider3.png')}});"></div>
 					<!-- /.image-layer -->
 					<div class="main-slider-three__shape-1">
-						<img src="{{asset('front/img/main-slider-three-shape-1.png')}}" alt="">
+						<img src="{{asset('front/img/main-slider-three-shape-1.png')}}" alt="Riad-AL-Foutouh-agence-immobilière-Casablanca">
 					</div>
 					<div class="container">
 						<div class="row">
@@ -323,10 +323,10 @@
 					<div class="about-three__left">
 						<div class="about-three__img-box">
 							<div class="about-three__img-1">
-								<img src="{{asset('front/img/about-3-1.jpg')}}" alt="">
+								<img src="{{asset('front/images/resources/a_propos_2.png')}}" alt="ppartement-Riad-Al-Foutouh">
 							</div>
 							<div class="about-three__img-2">
-								<img src="{{asset('front/img/about-3-2.jpg')}}" alt="">
+								<img src="{{asset('front/images/resources/a_propos_1.png')}}" alt="meilleure-agence-immo-Casablanca">
 							</div>
 							<div class="about-three__shape-1"></div>
 							<div class="about-two__big-text" dir="rtl" lang="ar"> {{"alipes"|trans({},"front")}} </div>
@@ -457,7 +457,7 @@
 
 	<!--CTA Two Start-->
 	<section class="cta-two">
-		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url(assets/images/resources/cta-two-bg-img-1.jpg);"></div>
+		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url({{asset('/front/images/resources/contact_home.png')}});"></div>
 		<div class="cta-two__inner">
 			<h3 class="cta-two__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}> {{"Découvrez la meilleure agence immobilière à Casablanca"|trans({},"front")}}
 			</h3>
@@ -520,11 +520,11 @@
 					<div class="news-one__single">
 						<div class="news-one__img-box">
 							<div class="news-one__img">
-								<img src="{{asset('front/img/news-1-1.jpg')}}" alt="">
+								<img src="{{asset('front/images/resources/equipe_1.png')}}" alt="Omar sefrioui -PDG Riad Al Foutouh">
 							</div>
-							<div class="news-one__date">
-								<p dir="rtl" lang="ar"> {{"20 Sep"|trans({},"front")}}</p>
-							</div>
+							{# <div class="news-one__date"> #}
+								{# <p dir="rtl" lang="ar"> {{"20 Sep"|trans({},"front")}}</p>
+							</div> #}
 							{# <div class="news-one__content">
 																													<ul class="news-one__meta list-unstyled">
 																														<li>
@@ -556,7 +556,7 @@
 				</div>
 				<!--news One Single End-->
 				<!--news One Single Start-->
-				<div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
+				{# <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
 					<div class="news-one__single">
 						<div class="news-one__img-box">
 							<div class="news-one__img">
@@ -564,7 +564,7 @@
 							</div>
 							<div class="news-one__date">
 								<p>20 Sep</p>
-							</div>
+							</div> #}
 							{# <div class="news-one__content">
 																													<ul class="news-one__meta list-unstyled">
 																														<li>
@@ -591,12 +591,12 @@
 																														</div>
 																													</div>
 																												</div> #}
-						</div>
+						{# </div>
 					</div>
-				</div>
+				</div> #}
 				<!--news One Single End-->
 				<!--news One Single Start-->
-				<div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
+				{# <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
 					<div class="news-one__single">
 						<div class="news-one__img-box">
 							<div class="news-one__img">
@@ -604,7 +604,7 @@
 							</div>
 							<div class="news-one__date">
 								<p>20 Sep</p>
-							</div>
+							</div> #}
 							{# <div class="news-one__content">
 																													<ul class="news-one__meta list-unstyled">
 																														<li>
@@ -631,9 +631,9 @@
 																														</div>
 																													</div>
 																												</div> #}
-						</div>
+						{# </div>
 					</div>
-				</div>
+				</div> #}
 				<!--news One Single End-->
 			</div>
 		</div>
@@ -650,10 +650,10 @@
 					<div class="about-three__left">
 						<div class="about-three__img-box">
 							<div class="about-three__img-1">
-								<img src="{{asset('front/img/about-3-1.jpg')}}" alt="">
+								<img src="{{asset('front/images/resources/a_propos_2.png')}}" alt="">
 							</div>
 							<div class="about-three__img-2">
-								<img src="{{asset('front/img/about-3-2.jpg')}}" alt="">
+								<img src="{{asset('front/images/resources/a_propos_1.png')}}" alt="">
 							</div>
 							<div class="about-three__shape-1"></div>
 							<div class="about-two__big-text" dir="rtl" lang="ar"> {{"alipes"|trans({},"front")}}</div>
@@ -750,7 +750,7 @@
 					<div class="new-concept__right">
 						<div class="new-concept__img-box">
 							<div class="new-concept__img">
-								<img src="{{asset('front/img/new-concept-1-1.jpg')}}" alt="">
+								<img src="{{asset('front/images/resources/pourquoi_home.png')}}" alt="">
 							</div>
 						</div>
 					</div>
@@ -921,11 +921,11 @@
 					<div class="news-one__single">
 						<div class="news-one__img-box">
 							<div class="news-one__img">
-								<img src="{{asset('front/img/news-1-1.jpg')}}" alt="">
+								<img src="{{asset('front/images/resources/offre1.png')}}" alt="">
 							</div>
-							<div class="news-one__date" dir="rtl" lang="ar">
+							{# <div class="news-one__date" dir="rtl" lang="ar">
 								<p> {{"20 Sep"|trans({},"front")}} </p>
-							</div>
+							</div> #}
 							{# <div class="news-one__content">
 																													<ul class="news-one__meta list-unstyled">
 																														<li>
@@ -961,11 +961,11 @@
 					<div class="news-one__single">
 						<div class="news-one__img-box">
 							<div class="news-one__img">
-								<img src="{{asset('front/img/news-1-1.jpg')}}" alt="">
+								<img src="{{asset('front/images/resources/logo_offre.png')}}" alt="">
 							</div>
-							<div class="news-one__date">
+							{# <div class="news-one__date">
 								<p>20 Sep</p>
-							</div>
+							</div> #}
 							{# <div class="news-one__content">
 																													<ul class="news-one__meta list-unstyled">
 																														<li>
@@ -1001,11 +1001,11 @@
 					<div class="news-one__single">
 						<div class="news-one__img-box">
 							<div class="news-one__img">
-								<img src="{{asset('front/img/news-1-1.jpg')}}" alt="">
+								<img src="{{asset('front/images/resources/offre3.png')}}" alt="">
 							</div>
-							<div class="news-one__date">
+							{# <div class="news-one__date">
 								<p>20 Sep</p>
-							</div>
+							</div> #}
 							{# <div class="news-one__content">
 																													<ul class="news-one__meta list-unstyled">
 																														<li>
