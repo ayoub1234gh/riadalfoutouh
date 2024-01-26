@@ -1033,3 +1033,15 @@
   $('select:not(.ignore)').niceSelect();
 
 })(jQuery);
+
+
+function redirectToSelectedURL() {
+	
+	var selectElement = document.getElementById("combo");
+	var selectedValue = selectElement.value;
+  
+	// Check if a valid option is selected
+	if (selectedValue !== "") {
+	  window.location.href = selectedValue;
+	}
+}

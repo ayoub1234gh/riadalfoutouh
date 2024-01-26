@@ -40,29 +40,29 @@
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="contact-page__input-box">
-                                    <input type="text" placeholder="Nom et Prenom" name="name">
+                                    <input type="text"{% set searchString = '/ar/' %} dir="rtl" lang="ar" {% if searchString in app.request.uri %} placeholder="الإسم واللقب"  {% else %}  placeholder="Nom et Prenom"  {% endif %} name="name">
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="contact-page__input-box">
-                                    <input type="email" placeholder="Adresse mail" name="email">
+                                    <input type="email" {% set searchString = '/ar/' %} dir="rtl" lang="ar" {% if searchString in app.request.uri %} placeholder="عنوان البريد الإلكتروني"  {% else %}  placeholder="Adresse mail"  {% endif %} name="email">
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="contact-page__input-box">
-                                    <input type="text" placeholder="Numero de telephone" name="phone">
+                                    <input type="text" {% set searchString = '/ar/' %} dir="rtl" lang="ar" {% if searchString in app.request.uri %} placeholder="رقم الهاتف"  {% else %}  placeholder="Numero de telephone"  {% endif %} name="phone">
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="contact-page__input-box">
-                                    <input type="text" placeholder="Sujet" name="Subject">
+                                    <input type="text" {% set searchString = '/ar/' %} dir="rtl" lang="ar" {% if searchString in app.request.uri %} placeholder="فاعل"  {% else %}  placeholder="Sujet"  {% endif %} name="Subject">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="contact-page__input-box text-message-box">
-                                    <textarea name="message" placeholder="Ecrire un message"></textarea>
+                                    <textarea name="message"{% set searchString = '/ar/' %} dir="rtl" lang="ar" {% if searchString in app.request.uri %} placeholder="العنوان الإلكتروني"  {% else %}  placeholder="Ecrire un message"  {% endif %} placeholder="Ecrire un message"></textarea>
                                 </div>
                                 <div class="contact-page__btn-box">
                                     <button type="submit" class="thm-btn contact-page__btn">{{"Envoyer"|trans({},"front")}}</button>
