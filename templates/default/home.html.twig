@@ -151,6 +151,39 @@
 			color: white !important;
 
 		}
+
+		#text {
+			display: none;
+		}
+		.btn-container {
+			margin: auto;
+			height: 44px;
+			width: 166.23px;
+		}
+		a:active {
+			color: #ffd323;
+		}
+
+		button {
+			user-select: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			cursor: pointer;
+			border: none;
+			padding: 8px;
+			font-size: 20px;
+			color: white;
+			font-family: cursive;
+			box-sizing: border-box;
+		}
+
+		.about-three__points {
+    		position: relative;
+    		display: block;
+    		margin-top: 5px;
+		}
+
 	</style>
 {% endblock %}
 
@@ -158,21 +191,12 @@
 
 	<section class="main-slider-three clearfix" id="home">
 		<div
-			class="swiper-container thm-swiper__slider" data-swiper-options='{"slidesPerView": 1, "loop": true,
-				
-												  "effect": "fade",
+			class="swiper-container thm-swiper__slider" data-swiper-options='{"slidesPerView": 1, "loop": true,"effect": "fade",
 												  "pagination": {
 												  "el": "#main-slider-pagination",
 												  "type": "bullets",
 												  "clickable": true
-												  },
-												  "navigation": {
-												  "nextEl": "#main-slider__swiper-button-next",
-												  "prevEl": "#main-slider__swiper-button-prev"
-												  },
-												  "autoplay": {
-												  "delay": 5000
-												                                                                          }}'>
+												  },"navigation": {"nextEl": "#main-slider__swiper-button-next","prevEl": "#main-slider__swiper-button-prev"}, "autoplay": { "delay": 5000}}'>
 			{# >>>>>>> dev #}
 			<div class="swiper-wrapper">
 
@@ -339,10 +363,16 @@
 							<span class="section-title__tagline">{{"A PROPOS DE RIAD AL FOUTOUH"|trans({},"front")}} </span>
 							<h2 class="section-title__title"> {{"Qui sommes-nous ?"|trans({},"front")}}</h2>
 						</div>
-						<p class="about-three__text" > {{"Riad al Foutouh est un promoteur immobilier qui se spécialise dans la création de logement sociaux et du moyen standing. L’objectif principal du groupe est de concevoir et exécuter des projets immobiliers de haute qualité afin de répondre aux besoins de ses clients et de ses partenaires."|trans({},"front")}} </p>
-						<h2 class="section-title__title"> {{"En savoir +"|trans({},"front")}} 
-						</h2>
-						<p class="about-three__text"> {{"Riad al foutouh : Des projets de vie"|trans({},"front")}}</p>
+						<div id="content">
+							<p class="about-three__text"> {{"Riad al Foutouh est un promoteur immobilier qui se spécialise dans la création de logement sociaux et du moyen standing. L’objectif principal du groupe est de concevoir et exécuter des projets immobiliers de haute qualité afin de répondre aux besoins de ses clients et de ses partenaires."|trans({},"front")}} </p>
+							<span id="text">Riad al Foutouh met en avant sa polyvalence et son savoir-faire pour proposer une vaste gamme de produits et de services, tout en s’engageant à améliorer l’environnement urbain au Maroc grâce à ses réalisations.</span>
+						</div>
+						{# <a href=""><p class="about-three__text text-decoration-underline"> 
+						</p></a> #}
+						<div class="pt-3">
+							<button id="toggle" class="thm-btn amenities__btn">Read More</button>
+						</div>
+						<h2 class="section-title__title pt-3"> {{"Riad al foutouh : Des projets de vie"|trans({},"front")}}</h2>
 						<ul class="about-three__points list-unstyled" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 							<li>
 								<div class="">
@@ -456,12 +486,12 @@
 	<!--Counter Two End-->
 
 	<!--CTA Two Start-->
-	<section class="cta-two">
+	<section class="cta-two mt-5">
 		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url({{asset('/front/images/resources/contact_home.png')}});"></div>
 		<div class="cta-two__inner">
-			<h3 class="cta-two__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}> {{"Découvrez la meilleure agence immobilière à Casablanca"|trans({},"front")}}
+			<h3 class="cta-two__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}> {{"Découvrez Le meilleur promotteur immobilier à Casablanca"|trans({},"front")}}
 			</h3>
-			<p {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %} class="cta-two__text"> {{"pour des conseils d experts et des transactions immobilières réussies."|trans({},"front")}} </p>
+			<p {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %} class="cta-two__text"> {{"Pour des transactions immobilières réussies."|trans({},"front")}} </p>
 			<div class="cta-two__btn-box" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 				<a href="{{path('app_contact')}}" class="cta-two__btn thm-btn"> {{"Contactez nous"|trans({},"front")}}</a>
 			</div>
@@ -473,9 +503,9 @@
 	<section class="video-one">
 		<div class="container">
 			<div class="video-one__img-box">
-				<div class="video-one__bg" style="background-image: url(assets/images/backgrounds/video-one-bg-img-1.jpg);"></div>
+				<div class="video-one__bg" style="background-image: url({{asset('/front/images/backgrounds/video-one-bg-img-1.jpg')}});"></div>
 				<div class="video-one__video-link">
-					<a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
+					<a href="https://www.youtube.com/watch?v=NXz0FOrPXv8" class="video-popup">
 						<div class="video-one__video-icon">
 							<span class="fa fa-play"></span>
 							<i class="ripple"></i>
@@ -497,31 +527,31 @@
 
 
 <!--News Three Start-->
-	<section class="news-three" id="news">
+	{# <section class="news-three" id="news">
 		<div class="container">
 			<div class="news-three__top">
 				<div class="row">
 					<div class="col-xl-6 col-lg-6" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 						<div
 							class="section-title text-left">
-							{# <span class="section-title__tagline">What’s Happening</span> #}
+							<span class="section-title__tagline">What’s Happening</span>
 							<h2 class="section-title__title"> {{"Equipe Riad Al Foutouh"|trans({},"front")}}</h2>
 						</div>
 					</div>
 					<div
-						class="col-xl-6 col-lg-6">{# <p class="news-three__text"></p> #}
+						class="col-xl-6 col-lg-6"><p class="news-three__text"></p>
 					</div>
 				</div>
 			</div>
 			<div
-				class="row">
+				class="row"> #}
 				<!--news One Single Start-->
-				<div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+				{# <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
 					<div class="news-one__single">
 						<div class="news-one__img-box">
 							<div class="news-one__img">
-								<img src="{{asset('front/images/resources/equipe_1.png')}}" alt="Omar sefrioui -PDG Riad Al Foutouh">
-							</div>
+								<img src="{{asset('/front/images/resources/equipe_1.png')}}" alt="Omar sefrioui PDG Riad Al Foutouh">
+							</div> #}
 							{# <div class="news-one__date"> #}
 								{# <p dir="rtl" lang="ar"> {{"20 Sep"|trans({},"front")}}</p>
 							</div> #}
@@ -551,9 +581,9 @@
 																														</div>
 																													</div>
 																												</div> #}
-						</div>
+						{# </div>
 					</div>
-				</div>
+				</div> #}
 				<!--news One Single End-->
 				<!--news One Single Start-->
 				{# <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
@@ -635,10 +665,22 @@
 					</div>
 				</div> #}
 				<!--news One Single End-->
+			{# </div>
+		</div>
+	</section> #}
+	<!--News Three End-->
+
+	<section>
+		<div class="container pt-5">
+			<div class="row">
+				<div class="col-xl-12" style="text-align: center;z-index: 9999;">
+					<h2 class="section-title__title"> {{"Equipe Riad Al Foutouh"|trans({},"front")}}</h2>
+					<p>Notre succès repose sur notre équipe dévouée de professionnels qualifiés. 
+					Spécialisés dans la vente, la location et l'évaluation de biens immobiliers, ils sont le cœur battant de Riad Al Foutouh, apportant expertise et passion à chaque projet.</p>
+				</div>
 			</div>
 		</div>
 	</section>
-	<!--News Three End-->
 
 
 	<!--About Three Start-->
@@ -676,7 +718,7 @@
 						<div
 							class="section-title text-left" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 							{# <span class="section-title__tagline">our building overview</span> #}
-							<h2 class="section-title__title"> {{"Nos engagements"|trans({},"front")}} 
+							<h2 class="section-title__title pt-5"> {{"Nos engagements"|trans({},"front")}} 
 							</h2>
 						</div>
 						
@@ -708,7 +750,7 @@
 					<div class="new-concept-left">
 						<div class="section-title text-left">
 							<span class="section-title__tagline"> {{"A PROPOS DE RIAD AL FOUTOUH"|trans({},"front")}} </span>
-							<h2 class="section-title__title"> {{"A PROPOS DE RIAD AL FOUTOUH"|trans({},"front")}}</h2>
+							<h2 class="section-title__title"> {{"Ce que nous assurons"|trans({},"front")}}</h2>
 						</div>
 						<ul class="new-concept__points list-unstyled">
 							<li>
@@ -763,7 +805,7 @@
 
 	<!--Neighborhoods Start-->
 	<section class="neighborhoods">
-		<div class="neighborhoods__shape-1" style="background-image: url(assets/images/shapes/neighborhoods-shape-1.png);"></div>
+		<div class="neighborhoods__shape-1" style="background-image: url({{asset('/front/images/shapes/neighborhoods-shape-1.png')}});"></div>
 		<div class="container">
 			<div class="section-title text-center">
 				<span class="section-title__tagline"> {{"Localisation"|trans({},"front")}}</span>
@@ -914,10 +956,10 @@
 					</div>
 				</div>
 			</div>
-			<div
-				class="row">
+			<div class="row">
 				<!--news One Single Start-->
 				<div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+					<a class="text-center" href="{{path('residence')}}"><h2 class="pb-2">Appartements</h2></a>
 					<div class="news-one__single">
 						<div class="news-one__img-box">
 							<div class="news-one__img">
@@ -957,7 +999,8 @@
 				</div>
 				<!--news One Single End-->
 				<!--news One Single Start-->
-				<div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
+				<div class="col-xl-4 col-lg-4 wow fadeInUp pt-2" data-wow-delay="200ms">
+					<br>
 					<div class="news-one__single">
 						<div class="news-one__img-box">
 							<div class="news-one__img">
@@ -998,6 +1041,7 @@
 				<!--news One Single End-->
 				<!--news One Single Start-->
 				<div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
+					<a class="text-center" href="{{path('locauxcommerciaux')}}"><h2 class="pb-2">Locaux commerciaux</h2></a>
 					<div class="news-one__single">
 						<div class="news-one__img-box">
 							<div class="news-one__img">
@@ -1164,7 +1208,21 @@
 {% endblock %}
 
 {% block javascripts %}
-	 <script>
-														
-			</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+		$(document).ready(function() {
+		  $("#toggle").click(function() {
+		    var elem = $("#toggle").text();
+		    if (elem == "Read More") {
+		      //Stuff to do when btn is in the read more state
+		      $("#toggle").text("Read Less");
+		      $("#text").slideDown();
+		    } else {
+		      //Stuff to do when btn is in the read less state
+		      $("#toggle").text("Read More");
+		      $("#text").slideUp();
+		    }
+		  });
+		});													
+	</script>
 {% endblock %}

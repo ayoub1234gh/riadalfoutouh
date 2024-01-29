@@ -44,10 +44,10 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/{_locale}/hautstanding', name: 'app_hautstanding', requirements: ['_locale' => 'fr|ar',])]
+    #[Route('/{_locale}/salam', name: 'app_salam', requirements: ['_locale' => 'fr|ar',])]
     public function hautstanding(): Response
     {
-        return $this->render('default/hautstanding.html.twig', [
+        return $this->render('default/salam.html.twig', [
             'controller_name' => 'HomeController',
         ]);
     }

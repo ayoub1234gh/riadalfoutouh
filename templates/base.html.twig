@@ -58,6 +58,11 @@
 				.logo {
     				width: 80px;			
 				}
+
+				ul.link li>a::before {
+					display: none !important;
+				}
+
 			</style>
 		{% block stylesheets %}
 			
@@ -126,21 +131,21 @@
 									<ul class="shadow-box">
 										<li class="dropdown">
 											<a href="#">{{"Haut standing"|trans({},"front")}}</a>
-											<ul>
+											<ul class="link">
 												<li><a href="{{path('app_ainborja')}}">{{"AIN BORJA"|trans({},"front")}}</a></li>
 											</ul>
 										</li>
 										<li>
 											<a href="#">{{"Moyen standing"|trans({},"front")}}</a>
-											<ul>
-												<li><a href="{{path('app_hautstanding')}}">{{"SALAM"|trans({},"front")}}</a></li>
+											<ul class="link">
+												<li><a href="{{path('app_salam')}}">{{"SALAM"|trans({},"front")}}</a></li>
 												<li><a href="{{path('app_jardinsforet')}}">{{"LES JARDINS DE LA FORET"|trans({},"front")}}</a></li>
 											</ul>
 											
 										</li>
 										<li>
 											<a href="{{path('app_logementsocial')}}">{{"LOGEMENT SOCIAL"|trans({},"front")}}</a>
-											<ul>
+											<ul class="link">
 												<li><a href="{{path('jardinrocad')}}">{{"les jardins de la rocade"|trans({},"front")}}</a></li>
 												<li><a href="{{path('verdurelissassfa')}}">{{"la verdure de Lissassfa"|trans({},"front")}}</a></li>
 												<li><a href="{{path('naim')}}">{{"Naim"|trans({},"front")}}</a></li>
@@ -201,7 +206,7 @@
 		<!--Site Footer Start-->
 		<footer class="site-footer">
 			<div class="site-footer__shape-1 float-bob-x">
-				<img src="{{asset('assets/img/shapes/site-footer-shape-1.png')}}" alt="">
+				<img src="{{asset('/img/shapes/site-footer-shape-1.png')}}" alt="">
 			</div>
 			<div class="container">
 				<div class="site-footer__inner">
@@ -225,7 +230,7 @@
 												<a href="{{path('app_home')}}">{{"Acceuil"|trans({},"front")}}</a>
 											</li>
 											<li>
-												<a href="{{path('app_hautstanding')}}">{{"Projets"|trans({},"front")}}</a>
+												<a href="{{path('app_salam')}}">{{"Projets"|trans({},"front")}}</a>
 											</li>
 											<li>
 												<a href="{{path('residence')}}">{{"Offres Immobilières"|trans({},"front")}}</a>
