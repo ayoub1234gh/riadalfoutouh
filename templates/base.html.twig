@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>
+			{% block title %}Riad Al Foutouh
+			{% endblock %}
+		</title>
+
+
+		<link rel="apple-touch-icon" sizes="180x180" href="{{asset('front/images/favicons/logo_riad_alfoutouh.png')}}"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="{{asset('front/images/favicons/logo_riad_alfoutouh.png')}}"/>
+		<link rel="icon" type="image/png" sizes="16x16" href="{{asset('front/images/favicons/logo_riad_alfoutouh.png')}}"/>
+		<link rel="manifest" href="{{asset('front/images/favicons/site.webmanifest')}}"/>
+		<meta name="description" content="alipes HTML 5 Template "/>
+
+		<link
+		href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+		<!-- fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+		<link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+		<link rel="stylesheet" href="{{asset('front/vendors/bootstrap/css/bootstrap.min.css')}}"/>
+		<link rel="stylesheet" href="{{asset('front/vendors/animate/animate.min.css')}}"/>
+		<link rel="stylesheet" href="{{asset('front/vendors/animate/custom-animate.css')}}"/>
+		<link rel="stylesheet" href="{{asset('front/vendors/fontawesome/css/all.min.css')}}"/>
+		<link rel="stylesheet" href="{{asset('front/vendors/jarallax/jarallax.css')}}"/>
+		<link rel="stylesheet" href="{{asset('front/vendors/jquery-magnific-popup/jquery.magnific-popup.css')}}"/>
+		<link rel="stylesheet" href="{{asset('front/vendors/nouislider/nouislider.min.css')}}"/>
+		<link rel="stylesheet" href="{{asset('front/vendors/nouislider/nouislider.pips.css')}}"/>
+		<link rel="stylesheet" href="{{asset('front/vendors/odometer/odometer.min.css')}}"/>
+		<link rel="stylesheet" href="{{asset('front/vendors/swiper/swiper.min.css')}}"/>
+		<link rel="stylesheet" href="{{asset('front/vendors/alipes-icons/style.css')}}">
+		<link rel="stylesheet" href="{{asset('front/vendors/tiny-slider/tiny-slider.min.css')}}"/>
+		<link rel="stylesheet" href="{{asset('front/vendors/reey-font/stylesheet.css')}}"/>
+		<link rel="stylesheet" href="{{asset('front/vendors/owl-carousel/owl.carousel.min.css')}}"/>
+		<link rel="stylesheet" href="{{asset('front/vendors/owl-carousel/owl.theme.default.min.css')}}"/>
+		<link rel="stylesheet" href="{{asset('front/vendors/bxslider/jquery.bxslider.css')}}"/>
+		<link rel="stylesheet" href="{{asset('front/vendors/bootstrap-select/css/bootstrap-select.min.css')}}"/>
+		<link rel="stylesheet" href="{{asset('front/vendors/vegas/vegas.min.css')}}"/>
+		<link rel="stylesheet" href="{{asset('front/vendors/jquery-ui/jquery-ui.css')}}"/>
+		<link
+		rel="stylesheet" href="{{asset('front/vendors/timepicker/timePicker.css')}}"/>
+
+		<!-- template styles -->
+		<link rel="stylesheet" href="{{asset('front/css/alipes.css')}}"/>
+		<link rel="stylesheet" href="{{asset('front/css/alipes-responsive.css')}}"/>
+		<style>
+			.logo {
+				width: 80px;
+			}
+
+			ul.link li > a::before {
+				display: none !important;
+			}
+		</style>
+		{% block stylesheets %}{% endblock %}
+
+		<header class="main-header" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+			<div class="main-header__top">
+				<div class="main-header__top-inner">
+					<div class="main-header__top-left">
+						<div class="main-menu__social">
+							<a href="https://www.facebook.com/Riadalfoutouhofficial?mibextid=ZbWKwL">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="https://www.instagram.com/riadalfoutouh?igsh=MTFqamVybms4ZTgxaw%3D%3D">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</div>
+						<p class="main-header__top-time">{{"lun au Sam: 8.00 am - 7.00 pm"|trans({},"front")}}</p>
+					</div>
+					<div class="main-header__top-right">
+						<ul class="list-unstyled main-header__contact-list">
+							<li>
+								<div class="icon">
+									<i class="fas fa-map-marker-alt"></i>
+								</div>
+								<div class="text">
+									<p>{{"Rue d’Andromède, Casablanca 20250"|trans({},"front")}}
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="icon">
+									<i class="fas fa-envelope"></i>
+								</div>
+								<div class="text">
+									<p>
+										<a href="mailto:needhelp@company.com">{{"contact@riadalfoutouh.com"|trans({},"front")}}</a>
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<nav class="main-menu">
+				<div class="main-menu__wrapper">
+					<div class="main-menu__wrapper-inner">
+						<div class="main-menu__left">
+							<div class="main-menu__logo">
+								<a href="{{path('app_home')}}"><img src="{{asset('/front/images/resources/logo_riad_alfoutouh.png')}}" class="logo" alt=""></a>
+							</div>
+						</div>
+						<div class="main-menu__main-menu-box">
+							<a href="#" class="mobile-nav__toggler">
+								<i class="fa fa-bars"></i>
+							</a>
+							<ul class="main-menu__list">
+								<li class="dropdown current megamenu">
+									<a href="{{path('app_home')}}">{{"Acceuil"|trans({},"front")}}
+									</a>
+
+								</li>
+								<li class="dropdown">
+									<a href="#">{{"Projets"|trans({},"front")}}</a>
+									<ul class="shadow-box">
+										<li class="dropdown">
+											<a href="#">{{"Haut standing"|trans({},"front")}}</a>
+											<ul class="link">
+												<li>
+													<a href="{{path('app_ainborja')}}">{{"AIN BORJA"|trans({},"front")}}</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">{{"Moyen standing"|trans({},"front")}}</a>
+											<ul class="link">
+												<li>
+													<a href="{{path('app_salam')}}">{{"SALAM"|trans({},"front")}}</a>
+												</li>
+												<li>
+													<a href="{{path('app_jardinsforet')}}">{{"LES JARDINS DE LA FORêT"|trans({},"front")}}</a>
+												</li>
+											</ul>
+
+										</li>
+										<li>
+											<a href="{{path('app_logementsocial')}}">{{"LOGEMENT SOCIAL"|trans({},"front")}}</a>
+											<ul class="link">
+												<li>
+													<a href="{{path('jardinrocad')}}">{{"les jardins de la rocade"|trans({},"front")}}</a>
+												</li>
+												<li>
+													<a href="{{path('verdurelissassfa')}}">{{"la verdure de Lissassfa"|trans({},"front")}}</a>
+												</li>
+												<li>
+													<a href="{{path('naim')}}">{{"Naim"|trans({},"front")}}</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#">{{"Offres Immobilières"|trans({},"front")}}</a>
+									<ul class="shadow-box link">
+										<li>
+											<a href="{{path('residence')}}">{{"Résidences"|trans({},"front")}}</a>
+										</li>
+										<li>
+											<a href="{{path('locauxcommerciaux')}}">{{"OFFRES PROFESSIONNELLES"|trans({},"front")}}</a>
+										</li>
+
+									</ul>
+								</li>
+								<li>
+									<a href="{{path('app_blog')}}">{{"blog"|trans({},"front")}}</a>
+								</li>
+								{# <li>
+															    	<a href="{{path('app_contact')}}">{{"contact"|trans({},"front")}}</a>
+																</li> #}
+							</ul>
+
+						</div>
+						<div class="main-menu__right">
+							<div
+								class="main-menu__search-cart-btn">
+								{# <div class="main-menu__search-cart-box">
+																	<div class="main-menu__search-box">
+																		<a href="#" class="main-menu__search search-toggler icon-magnifying-glass"></a>
+																	</div>
+																	<div class="main-menu__cart-box">
+																		<a href="cart.html" class="main-menu__cart icon-shopping-cart"></a>
+																	</div>
+																</div> #}
+								<div class="main-menu__btn-box">
+									<a href="{{path('app_contact')}}" class="thm-btn main-menu__btn">{{"Contactez nous"|trans({},"front")}}</a>
+								</div>
+							</div>
+						</div>
+
+						<select id="combo" onchange="redirectToSelectedURL()" style="background-color: #221c13; border: 1px solid rgb(197, 197, 197); border-radius: 5px; box-sizing: border-box; color: white; display: block; font-family: SourceSansPro, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 600; height: 26px; min-width: 80px; padding: 0 20px 0 16px; outline: none;">
+							<option {% if '/fr' in app.request.uri %} selected {% endif %} value="{{ path(app.request.get('_route'), {'_locale': 'fr', 'id': app.request.get('id') ?? null}) }}">FR</option>
+							<option {% if '/ar' in app.request.uri %} selected {% endif %} value="{{ path(app.request.get('_route'), {'_locale': 'ar', 'id': app.request.get('id') ?? null}) }}">AR</option>
+						</select>
+
+
+						{# <select id="combo"  onchange="redirectToSelectedURL()" style="background-color: #221c13;border: 1px solid rgb(197, 197, 197);border-radius: 5px;box-sizing: border-box;color:white;display: block;font-family: SourceSansPro, Helvetica, Arial, sans-serif;font-size: 14px;font-weight: 600;height: 26px;  min-width: 80px;padding: 0 20px 0 16px;outline: none;">
+														<option {% if '/fr' in app.request.uri %} selected {% endif %}  value="{{ path(app.request.get('_route'), {'_locale': 'fr'}) }}">FR</option>
+														<option {% if '/ar' in app.request.uri %} selected {% endif %}  value="{{ path(app.request.get('_route'), {'_locale': 'ar'}) }}">AR</option>
+						                        </select> #}
+					</div>
+				</div>
+			</nav>
+		</header>
+
+
+		{% block body %}{% endblock %}
+
+
+		<!--Site Footer Start-->
+		<footer class="site-footer">
+			<div class="site-footer__shape-1 float-bob-x">
+				<img src="{{asset('/img/shapes/site-footer-shape-1.png')}}" alt="">
+			</div>
+			<div class="container">
+				<div class="site-footer__inner">
+					<div class="site-footer__top">
+						<div class="row">
+							<div class="col-xl-2 col-lg-2 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+								<div class="footer-widget__column footer-widget__about">
+									<div class="footer-widget__logo">
+										<a href="{{path('app_home')}}"><img src="{{asset('/front/images/resources/logo_riad_alfoutouh.png')}}" alt="" class="logo"></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+								<div class="footer-widget__column footer-widget__explore">
+									<div class="footer-widget__title-box">
+										<h3 class="footer-widget__title">{{"MENU"|trans({},"front")}}</h3>
+									</div>
+									<div class="footer-widget__explore-list-box">
+										<ul class="footer-widget__explore-list list-unstyled">
+											<li>
+												<a href="{{path('app_home')}}">{{"Acceuil"|trans({},"front")}}</a>
+											</li>
+											<li>
+												<a href="{{path('app_salam')}}">{{"Projets"|trans({},"front")}}</a>
+											</li>
+											<li>
+												<a href="{{path('residence')}}">{{"Offres Immobilières"|trans({},"front")}}</a>
+											</li>
+											<li>
+												<a href="{{path('app_blog')}}">{{"Blog"|trans({},"front")}}</a>
+											</li>
+											<li>
+												<a href="{{path('app_contact')}}">{{"Contact"|trans({},"front")}}</a>
+											</li>
+										</ul>
+
+
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+								<div class="footer-widget__column footer-widget__contact">
+									<div class="footer-widget__title-box">
+										<h3 class="footer-widget__title">{{"contact"|trans({},"front")}}</h3>
+									</div>
+									<p class="footer-widget__contact-text">{{"Rue d’Andromède, Casablanca 20250"|trans({},"front")}}</p>
+									<ul class="footer-widget__contact-list list-unstyled">
+										<li>
+											<div class="icon">
+												<span class="fas fa-envelope"></span>
+											</div>
+											<div class="text">
+												<p>
+													<a href="mailto:needhelp@company.com">{{"contact@riadalfoutouh.com"|trans({},"front")}}</a>
+												</p>
+											</div>
+										</li>
+										<li>
+											<div class="icon">
+												<span class="icon-telephone"></span>
+											</div>
+											<div class="text">
+												<p>
+													<a href="tel:+9288006780">{{"0661832910-0662686868"|trans({},"front")}}</a>
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+								<div class="footer-widget__column footer-widget__newsletter">
+									<div class="footer-widget__title-box">
+										<h3 class="footer-widget__title">{{"newsletter"|trans({},"front")}}</h3>
+									</div>
+									<form class="footer-widget__email-box">
+										<div class="footer-widget__email-input-box">
+											<input type="email" placeholder="Email Address" name="email">
+										</div>
+										<button type="submit" class="footer-widget__subscribe-btn thm-btn">{{"Envoyer"|trans({},"front")}}</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="site-footer__bottom">
+						<div
+							class="site-footer__bottom-inner">
+							{# <div class="site-footer__bottom-left">
+															<p class="site-footer__bottom-text">{{"© All Copyright 2022 by"|trans({},"front")}}
+																<a href="#">{{"Company.com"|trans({},"front")}}</a>
+															</p>
+														</div> #}
+							<div class="site-footer__bottom-right">
+								<div class="site-footer__social">
+									<a href="https://www.facebook.com/Riadalfoutouhofficial?mibextid=ZbWKwL">
+										<i class="fab fa-facebook"></i>
+									</a>
+									<a href="https://www.instagram.com/riadalfoutouh?igsh=MTFqamVybms4ZTgxaw%3D%3D">
+										<i class="fab fa-instagram"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--Site Footer End-->
+
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+
+
+		 <script src="{{asset('front/vendors/jquery/jquery-3.6.0.min.js')}}"></script>
+	 <script src="{{asset('front/vendors/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+		 <script src="{{asset('front/vendors/jarallax/jarallax.min.js')}}"></script>
+		 <script src="{{asset('front/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js')}}"></script>
+		 <script src="{{asset('front/vendors/jquery-appear/jquery.appear.min.js')}}"></script>
+		 <script src="{{asset('front/vendors/jquery-circle-progress/jquery.circle-progress.min.js')}}"></script>
+		 <script src="{{asset('front/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js')}}"></script>
+		 <script src="{{asset('front/vendors/jquery-validate/jquery.validate.min.js')}}"></script>
+		 <script src="{{asset('front/vendors/nouislider/nouislider.min.js')}}"></script>
+		 <script src="{{asset('front/vendors/odometer/odometer.min.js')}}"></script>
+		 <script src="{{asset('front/vendors/swiper/swiper.min.js')}}"></script>
+		 <script src="{{asset('front/vendors/tiny-slider/tiny-slider.min.js')}}"></script>
+		 <script src="{{asset('front/vendors/wnumb/wNumb.min.js')}}"></script>
+		 <script src="{{asset('front/vendors/wow/wow.js')}}"></script>
+		 <script src="{{asset('front/vendors/isotope/isotope.js')}}"></script>
+		 <script src="{{asset('front/vendors/countdown/countdown.min.js')}}"></script>
+		 <script src="{{asset('front/vendors/owl-carousel/owl.carousel.min.js')}}"></script>
+		 <script src="{{asset('front/vendors/bxslider/jquery.bxslider.min.js')}}"></script>
+		 <script src="{{asset('front/vendors/bootstrap-select/js/bootstrap-select.min.js')}}"></script>
+		 <script src="{{asset('front/vendors/vegas/vegas.min.js')}}"></script>
+		 <script src="{{asset('front/vendors/jquery-ui/jquery-ui.js')}}"></script>
+		 <script src="{{asset('front/vendors/timepicker/timePicker.js')}}"></script>
+		 <script src="{{asset('front/vendors/circleType/jquery.circleType.js')}}"></script>
+		 <script src="{{asset('front/vendors/circleType/jquery.lettering.min.js')}}"></script>
+		<!-- template js -->
+		 <script src="{{asset('front/js/alipes.js')}}"></script>
+	</head>
+</html>

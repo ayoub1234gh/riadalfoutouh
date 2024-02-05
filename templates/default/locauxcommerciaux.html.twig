@@ -1,0 +1,172 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Locaux Commerciaux
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+{% block body %}
+
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url({{asset('/front/images/resources/banner_lc.png')}})">
+            </div>
+            <div class="page-header__overly"></div>
+            <div class="container">
+                <div class="page-header__inner" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="index.html">{{"Offres"|trans({},"front")}}</a></li>
+                        <li><span>/</span></li>
+                        <li>{{"Professionnelles"|trans({},"front")}}</li>
+                    </ul>
+                    <h2>{{"Locaux Commerciaux"|trans({},"front")}}</h2>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+                <!--Apartments Two Page Start-->
+        <section class="apartments-two-page">
+            <div class="container">
+                <div class="row">
+                    <!--Apartment One Single Start-->
+                    <div class="col-xl-4 col-lg-6 col-md-6" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+                        <div class="apartment-one__single">
+                            <div class="apartment-one__img-box">
+                                <div class="apartment-one__img">
+                                    <img src="{{asset('front/images/resources/lc_1.png')}}" alt="Riad-Al-Foutouh-Local-commercial-a-louer-Ain-Borja-Casablanca">
+                                </div>
+                                <div class="apartment-one__content">
+                                    <div class="apartment-one__title-box">
+                                        <h3 class="apartment-one__title"><a href="{{path('app_ainborja')}}">{{"AIN BORJA"|trans({},"front")}}</a></h3>
+                                    </div>
+                                    <div class="apartment-one__arrow">
+                                        <a href="{{path('app_ainborja')}}"><span class="icon-right-arrow"></span></a>
+                                    </div>
+                                </div>
+                                <div class="apartment-one__btn-box">
+                                    <p class="thm-btn apartment-one__btn">+45 m2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Apartment One Single End-->
+                    <!--Apartment One Single Start-->
+                    <div class="col-xl-4 col-lg-6 col-md-6"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+                        <div class="apartment-one__single">
+                            <div class="apartment-one__img-box">
+                                <div class="apartment-one__img">
+                                    <img src="{{asset('front/images/resources/lc_2.png')}}" alt="Riad-Al-Foutouh-Local-commercial-a-louer-Salam-Casablanca">
+                                </div>
+                                <div class="apartment-one__content">
+                                    <div class="apartment-one__title-box">
+                                        <h3 class="apartment-one__title"><a href="{{path('app_salam')}}">{{"SALAM"|trans({},"front")}}</a></h3>
+                                    </div>
+                                    <div class="apartment-one__arrow">
+                                        <a href="{{path('app_salam')}}"><span class="icon-right-arrow"></span></a>
+                                    </div>
+                                </div>
+                                <div class="apartment-one__btn-box">
+                                    <p class="thm-btn apartment-one__btn">+15 m2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Apartment One Single End-->
+                    <!--Apartment One Single Start-->
+                    <div class="col-xl-4 col-lg-6 col-md-6"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+                        <div class="apartment-one__single">
+                            <div class="apartment-one__img-box">
+                                <div class="apartment-one__img">
+                                    <img src="{{asset('front/images/resources/lc_3.png')}}" alt="Riad-Al-Foutouh-Local-commercial-a-louer-les-jardins-de-la-foret-Casablanca">
+                                </div>
+                                <div class="apartment-one__content">
+                                    <div class="apartment-one__title-box">
+                                        <h3 class="apartment-one__title"><a href="{{path('app_jardinsforet')}}l">{{"LES JARDINS DE LA FORêT"|trans({},"front")}}</a></h3>
+                                    </div>
+                                    <div class="apartment-one__arrow">
+                                        <a href="{{path('app_jardinsforet')}}"><span class="icon-right-arrow"></span></a>
+                                    </div>
+                                </div>
+                                <div class="apartment-one__btn-box">
+                                    <p class="thm-btn apartment-one__btn">+27 m2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Apartment One Single End-->
+                    <!--Apartment One Single Start-->
+                    <div class="col-xl-4 col-lg-6 col-md-6"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+                        <div class="apartment-one__single">
+                            <div class="apartment-one__img-box">
+                                <div class="apartment-one__img">
+                                    <img src="{{asset('front/images/resources/lc_4.png')}}" alt="Riad-Al-Foutouh-Local-commercial-a-louer-La-rocade-Casablanca">
+                                </div>
+                                <div class="apartment-one__content">
+                                    <div class="apartment-one__title-box">
+                                        <h3 class="apartment-one__title"><a href="{{path('jardinrocad')}}">{{"les jardins de LA ROCADE"|trans({},"front")}}</a></h3>
+                                    </div>
+                                    <div class="apartment-one__arrow">
+                                        <a href="{{path('jardinrocad')}}"><span class="icon-right-arrow"></span></a>
+                                    </div>
+                                </div>
+                                <div class="apartment-one__btn-box">
+                                    <p class="thm-btn apartment-one__btn">+12 m2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Apartment One Single End-->
+                    <!--Apartment One Single Start-->
+                    <div class="col-xl-4 col-lg-6 col-md-6"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+                        <div class="apartment-one__single">
+                            <div class="apartment-one__img-box">
+                                <div class="apartment-one__img">
+                                    <img src="{{asset('front/images/resources/lc_5.png')}}" alt="Riad-Al-Foutouh-Local-commercial-a-louer-La-verdure-de-lissassfa-Casablanca">
+                                </div>
+                                <div class="apartment-one__content">
+                                    <div class="apartment-one__title-box">
+                                        <h3 class="apartment-one__title"><a href="{{path('verdurelissassfa')}}">{{"LA VERDURE DE LISASSFA"|trans({},"front")}}</a></h3>
+                                    </div>
+                                    <div class="apartment-one__arrow">
+                                        <a href="{{path('verdurelissassfa')}}"><span class="icon-right-arrow"></span></a>
+                                    </div>
+                                </div>
+                                <div class="apartment-one__btn-box">
+                                    <p class="thm-btn apartment-one__btn">10 à 250 m2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Apartment One Single End-->
+                    <!--Apartment One Single Start-->
+                    <div class="col-xl-4 col-lg-6 col-md-6"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+                        <div class="apartment-one__single">
+                            <div class="apartment-one__img-box">
+                                <div class="apartment-one__img">
+                                    <img src="{{asset('front/images/resources/lc_6.png')}}" alt="Riad-Al-Foutouh-Local-commercial-a-louer-Naim-Casablanca">
+                                </div>
+                                <div class="apartment-one__content">
+                                    <div class="apartment-one__title-box">
+                                        <h3 class="apartment-one__title"><a href="{{path('naim')}}">{{"HAY NAIM"|trans({},"front")}}</a></h3>
+                                    </div>
+                                    <div class="apartment-one__arrow">
+                                        <a href="{{path('naim')}}"><span class="icon-right-arrow"></span></a>
+                                    </div>
+                                </div>
+                                <div class="apartment-one__btn-box">
+                                    <p class="thm-btn apartment-one__btn">+39 m2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Apartment One Single End-->
+                </div>
+            </div>
+        </section>
+        <!--Apartments Two Page End-->
+
+
+{% endblock %}

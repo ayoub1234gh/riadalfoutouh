@@ -1,0 +1,336 @@
+{% extends 'base.html.twig' %}
+
+
+{% block stylesheets %}
+	<style>
+
+		.services-one__single-inner {
+			height: 60vh;
+		}
+		@media(min-width: 1200px) {
+			.col-xl-7 {
+				margin-top: 15rem;
+			}
+		}
+	</style>
+{% endblock %}
+{% block body %}
+
+	<!--Page Header Start-->
+	<section class="page-header">
+		<div class="page-header-bg" style="background-image: url({{asset('front/images/resources/banner_salam.png')}});"></div>
+		<div class="page-header__overly"></div>
+		<div class="container">
+			<div class="page-header__inner">
+				<ul class="thm-breadcrumb list-unstyled" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+					{# <li><a href="index.html">Home</a></li> #}
+					{# <li><span>/</span></li> #}<li>{{"Résidences / Moyen standing"|trans({},"front")}}
+				</li>
+				</ul><h2>{{"SALAM"|trans({},"front")}}
+			</h2>
+		</div>
+	</div>
+	</section>
+	<!--Page Header End-->
+
+	<!--New Concept Two Start-->
+		<section class="new-concept-two"> <div class="new-concept-two__shape-1 float-bob-y">
+			<img src="{{asset('/front/images/shapes/new-concept-two-shape-1.png')}}" alt="">
+		</div>
+		<div class="new-concept-two__shape-2 float-bob-x">
+			<img src="{{asset('/front/images/shapes/new-concept-two-shape-2.png')}}" alt="">
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-5 col-lg-6" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+					<div class="new-concept-two__left">
+						<div class="section-title text-left">
+							<span class="section-title__tagline">{{"Projet signé : Riad al Foutouh"|trans({},"front")}}</span>
+							<h2 class="section-title__title">{{"Salam : Alliez qualité de vie et centralité !"|trans({},"front")}}</h2>
+						</div>
+						<p class="new-concept__text">{{"Située au cœur du quartier résidentiel de Sidi Moumen, la résidence Salam a réalisé avec brio un magnifique projet immobilier. Elle propose des appartements spacieux comprenant trois chambres et un salon, tous équipés d’ascenseurs pour garantir un confort optimal. Les appartements se démarquent par leur design moderne et fonctionnel, ainsi que par une finition de qualité supérieure."|trans({},"front")}}</p>
+						<ul class="new-concept__points list-unstyled">
+							<li>
+								<div class="icon">
+									<span class="icon-manhattan"></span>
+								</div>
+								<div class="text">
+									<h3>{{"Des résidences fermées et sécurisées"|trans({},"front")}}
+									</h3>
+									<p>{{"Nos résidences fermées et sécurisées incarnent un équilibre subtil entre le confort moderne et une tranquillité préservée, créant ainsi un cadre de vie où la sérénité et la sécurité sont les maîtres-mots."|trans({},"front")}}
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="icon">
+									<span class="icon-apartment-1"></span>
+								</div>
+								<div class="text">
+									<h3>{{"Des résidences nichées à proximité de toutes les commodités"|trans({},"front")}}</h3>
+									<p>{{"Idéalement situées à proximité de toutes les commodités et nichées dans un cadre qui allie confort contemporain à  praticité quotidienne, nos résidences offrent une expérience de vie agréable et abordable."|trans({},"front")}}
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xl-7 col-lg-6">
+					<div class="new-concept-two__right">
+						<div class="new-concept-two__img">
+							<img src="{{asset('/front//images/resources/salam_section_1.png')}}" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--New Concept Two End-->
+
+	<!--Services One Start-->
+	<section class="services-one">
+		<div class="services-one__shape-1 float-bob-x">
+			<img src="{{asset('/front/images/shapes/new-concept-two-shape-1.png')}}" alt="">
+		</div>
+		<div class="services-one__shape-2 float-bob-x">
+			<img src="{{asset('/front/images/shapes/new-concept-two-shape-2.png')}}" alt="">
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-6 col-lg-12" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+					<div class="services-one__left">
+						<div class="section-title text-left">
+							<span class="section-title__tagline">{{"Équipements"|trans({},"front")}}</span>
+							<h2 class="section-title__title">{{"APPARTEMENTS LUXUEUX ET ÉPOUSTOUFLANTS, CONÇUS POUR LA VIE"|trans({},"front")}}</h2>
+						</div>
+						<div class="services-one__btn-box">
+							<a href="{{path('app_contact')}}" class="thm-btn services-one__btn">{{"Planifier une visite"|trans({},"front")}}</a>
+						</div>
+					</div>
+				</div>
+				<!--Services One Single Start-->
+				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+					<div class="services-one__single" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+						<div class="services-one__single-inner">
+							<div class="services-one__single-bg"></div>
+							<div class="services-one__icon">
+								<span class="icon-residential"></span>
+							</div>
+							<h3 class="services-one__title">
+								<a>{{"Superficie"|trans({},"front")}}</a>
+							</h3>
+							<p class="services-one__text">{{"Des appartements de 73 à 83 m²"|trans({},"front")}}</p>
+						</div>
+					</div>
+				</div>
+				<!--Services One Single End-->
+				<!--Services One Single Start-->
+				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+					<div class="services-one__single" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+						<div class="services-one__single-inner">
+							<div class="services-one__single-bg"></div>
+							<div class="services-one__icon">
+								<span class="icon-sustainable"></span>
+							</div>
+							<h3 class="services-one__title">
+								<a>{{"Consistance"|trans({},"front")}}
+								</a>
+							</h3>
+							<p class="services-one__text">{{"3 chambres + Salon, cuisine, 2 SDB"|trans({},"front")}}</p>
+						</div>
+					</div>
+				</div>
+				<!--Services One Single End-->
+				<!--Services One Single Start-->
+				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+					<div class="services-one__single" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+						<div class="services-one__single-inner">
+							<div class="services-one__single-bg"></div>
+							<div class="services-one__icon">
+								<span class="icon-world"></span>
+							</div>
+							<h3 class="services-one__title">
+								<a>{{"Garage sous-sol "|trans({},"front")}}</a>
+							</h3>
+							<p class="services-one__text">{{"la garantie d’une sécurité optimale pour votre véhicule, alliée à la praticité d’un espace bien aménagé."|trans({},"front")}}</p>
+						</div>
+					</div>
+				</div>
+				<!--Services One Single End-->
+				<!--Services One Single Start-->
+				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+					<div class="services-one__single" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+						<div class="services-one__single-inner">
+							<div class="services-one__single-bg"></div>
+							<div class="services-one__icon">
+								<span class="icon-home-automation"></span>
+							</div>
+							<h3 class="services-one__title">
+								<a>{{"Local commercial"|trans({},"front")}}</a>
+							</h3>
+							<p class="services-one__text">{{"Magasin d’une superficie minimale de 15 m²"|trans({},"front")}}</p>
+						</div>
+					</div>
+				</div>
+				<!--Services One Single End-->
+				<!--Services One Single Start-->
+				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="500ms">
+					<div class="services-one__single">
+						<div class="services-one__single-inner">
+							<div class="services-one__single-bg"></div>
+							<div class="services-one__icon">
+								<span class="icon-electric-appliance"></span>
+							</div>
+							<h3 class="services-one__title">
+								<a>{{"ascenseur schindler"|trans({},"front")}}</a>
+							</h3>
+							<p class="services-one__text">{{"Élévation de qualité assurée pour votre confort et votre commodité."|trans({},"front")}}</p>
+						</div>
+					</div>
+				</div>
+				<!--Services One Single End-->
+				<!--Services One Single Start-->
+				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="600ms">
+					<div class="services-one__single">
+						<div class="services-one__single-inner">
+							<div class="services-one__single-bg" style="background-image: url({{asset('/front/images/backgrounds/services-one-single-bg.jpg')}};"></div>
+							<div class="services-one__icon">
+								<span class="icon-swimming-pool"></span>
+							</div>
+							<h3 class="services-one__title">
+								<a>{{"Accessibilité totale"|trans({},"front")}}</a>
+							</h3>
+							<p class="services-one__text">{{"Proche de toutes les commodités : écoles, mosquée, centres commerciaux, jardins…"|trans({},"front")}}</p>
+						</div>
+					</div>
+				</div>
+				<!--Services One Single End-->
+			</div>
+		</div>
+	</section>
+	<!--Services One End-->
+
+	<!--CTA Two Start-->
+	<section class="cta-two">
+		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url({{asset('front/images/backgrounds/section_contact_salam.png')}});"></div>
+		<div class="cta-two__inner">
+			<h3 class="cta-two__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+				{{"ORGANISEZ VOTRE VISITE SUR PLACE"|trans({},"front")}}
+			</h3>
+			<p {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %} class="cta-two__text">
+				{{"notre équipe  commerciale vous acceuille 7j/7 du lundi au dimanche de 9h à 19h"|trans({},"front")}}
+			</p>
+			<div class="cta-two__btn-box" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+				<a href="{{path('app_contact')}}" class="cta-two__btn thm-btn">
+					{{"Contactez nous"|trans({},"front")}}</a>
+			</div>
+		</div>
+	</section>
+	<!--CTA Two End-->
+
+	<!--Gallery Three Start-->
+	<section class="gallery-three mt-5">
+		<div class="container" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+			<div class="gallery-three__title">
+				<h3>{{"Voir la galerie de photos"|trans({},"front")}}</h3>
+			</div>
+			<div
+				class="row">
+				<!--Gallery Three Single Start-->
+				<div class="col-xl-2 col-lg-3 col-md-6">
+					<div class="gallery-three__single">
+						<div class="gallery-three__img">
+							<img
+							src="{{asset('front/images/resources/galerie1_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+						{# <div class="gallery-three__img-icon">
+														<a href="#">
+															<span class="fab fa-instagram"></span>
+														</a>
+													</div> #}
+						</div>
+					</div>
+				</div>
+				<!--Gallery Three Single End-->
+				<!--Gallery Three Single Start-->
+				<div class="col-xl-2 col-lg-3 col-md-6">
+					<div class="gallery-three__single">
+						<div class="gallery-three__img">
+							<img
+							src="{{asset('front/images/resources/galerie2_ain_borja.png')}}" alt="Ain_Borja-Riad-al-Foutouh-cuisine-appartement">
+						{# <div class="gallery-three__img-icon">
+														<a href="#">
+															<span class="fab fa-instagram"></span>
+														</a>
+													</div> #}
+						</div>
+					</div>
+				</div>
+				<!--Gallery Three Single End-->
+				<!--Gallery Three Single Start-->
+				<div class="col-xl-2 col-lg-3 col-md-6">
+					<div class="gallery-three__single">
+						<div class="gallery-three__img">
+							<img
+							src="{{asset('front/images/resources/galerie3_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
+						{# <div class="gallery-three__img-icon">
+														<a href="#">
+															<span class="fab fa-instagram"></span>
+														</a>
+													</div> #}
+						</div>
+					</div>
+				</div>
+				<!--Gallery Three Single End-->
+				<!--Gallery Three Single Start-->
+				<div class="col-xl-2 col-lg-3 col-md-6">
+					<div class="gallery-three__single">
+						<div class="gallery-three__img">
+							<img
+							src="{{asset('front/images/resources/galerie4_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
+						{# <div class="gallery-three__img-icon">
+														<a href="#">
+															<span class="fab fa-instagram"></span>
+														</a>
+													</div> #}
+						</div>
+					</div>
+				</div>
+				<!--Gallery Three Single End-->
+				<!--Gallery Three Single Start-->
+				<div class="col-xl-2 col-lg-3 col-md-6">
+					<div class="gallery-three__single">
+						<div class="gallery-three__img">
+							<img
+							src="{{asset('front/images/resources/galerie5_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-cuisine-appartements-Casablanca">
+						{# <div class="gallery-three__img-icon">
+														<a href="#">
+															<span class="fab fa-instagram"></span>
+														</a>
+													</div> #}
+						</div>
+					</div>
+				</div>
+				<!--Gallery Three Single End-->
+				<!--Gallery Three Single Start-->
+				<div class="col-xl-2 col-lg-3 col-md-6">
+					<div class="gallery-three__single">
+						<div class="gallery-three__img">
+							<img
+							src="{{asset('front/images/resources/galerie6_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salle-de-bain-appartements-Casablanca">
+						{# <div class="gallery-three__img-icon">
+														<a href="#">
+															<span class="fab fa-instagram"></span>
+														</a>
+													</div> #}
+						</div>
+					</div>
+				</div>
+				<!--Gallery Three Single End-->
+			</div>
+		</div>
+	</section>
+	<!--Gallery Three End-->
+
+{% endblock %}
+{% block javascripts %}
+	 <script></script>
+{% endblock %}

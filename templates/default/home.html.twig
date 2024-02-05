@@ -1,0 +1,1231 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+	<style>
+
+		#top {
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: revert;
+
+			border-radius: 0 0 73px 73px;
+			background-image: url('{{ asset('front/images/apropos.png') }}');
+			top: 140px;
+			margin-bottom: 15%;
+		}
+
+		hr {
+			width: 36px;
+			height: 3px !important;
+			background: #00008F;
+			margin: 1.5rem 0;
+			border: 0;
+			opacity: 1;
+		}
+
+		.imageslide {
+			color: #FFF;
+			font-family: Poppins;
+			font-size: 40px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 188%;
+		}
+		button a {
+			color: white;
+			font-size: 16px;
+			font-weight: 600;
+		}
+		.acc-body p {
+			font-size: 13px;
+		}
+		#btnslide {
+
+			background-color: transparent;
+			width: 250px;
+			height: 75px;
+
+			position: relative;
+			box-shadow: 0 20px 73px rgba(173.19, 173.19, 173.19, 0.50);
+			border-radius: 10px;
+			border: 2px #FFEE9D solid;
+
+		}
+
+		#btnslide1 {
+			background-color: transparent;
+			width: 250px;
+			height: 75px;
+
+			position: relative;
+
+			border: 2px transparent solid;
+
+
+		}
+		.cont {
+			max-width: 800px;
+		}
+		h1.header-title.text-center {
+			color: white;
+		}
+		.dot {
+			position: relative;
+			height: 200px;
+			width: 200px;
+			background-color: white;
+			border-radius: 50%;
+			display: inline-block;
+			top: -240px;
+			left: -76px;
+			opacity: 0.10;
+		}
+		p.text-center.text-after-header {
+			color: white;
+			font-size: 13px;
+			font-weight: 400;
+			line-height: 30.08px;
+			word-wrap: break-word;
+		}
+
+
+		.panel {
+			padding: 20px;
+
+		}
+		.accordionMainTitle {
+			background: #c1e3ff;
+			border: 2px solid #ddd;
+			border-radius: 10px 10px 0 0;
+			padding: 20px 35px;
+			font-family: 'Raleway', sans-serif;
+			font-size: 25px;
+		}
+
+		.acc-header {
+			cursor: pointer;
+			padding: 25px;
+			color: white;
+			font-weight: bold;
+			background-color: transparent;
+			display: block;
+			font-family: 'Raleway', sans-serif;
+			margin-bottom: 0;
+			border-bottom: 1px solid;
+		}
+
+		.acc-body {
+			padding: 20px;
+			line-height: 1.9;
+			background-color: transparent;
+			border-radius: 0 0 10px 10px;
+			font-family: 'Raleway', sans-serif;
+		}
+		#accordion .acc-body {
+			display: none;
+		}
+
+		#accordion .active .acc-body {
+			display: block;
+		}
+
+		#panel-wrapper {
+			top: -10px;
+			position: relative;
+			display: block;
+			background: #3f2a72d1;
+		}
+		div#panel-wrapper .active {
+			background: #3f2a72d1 !important;
+		}
+		.iconFixer {
+			float: right;
+		}
+		.acc-header:hover {
+			background-color: #397BB5 !important;
+			color: white !important;
+		}
+
+		.panel:hover .acc-header {
+			background-color: #397BB5 !important;
+			color: white !important;
+
+		}
+
+		#text {
+			display: none;
+		}
+		.btn-container {
+			margin: auto;
+			height: 44px;
+			width: 166.23px;
+		}
+		a:active {
+			color: #ffd323;
+		}
+
+		button {
+			user-select: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			cursor: pointer;
+			border: none;
+			padding: 8px;
+			font-size: 20px;
+			color: white;
+			font-family: cursive;
+			box-sizing: border-box;
+		}
+
+		.about-three__points {
+    		position: relative;
+    		display: block;
+    		margin-top: 5px;
+		}
+
+	</style>
+{% endblock %}
+
+{% block body %}
+
+	<section class="main-slider-three clearfix" id="home">
+		<div
+			class="swiper-container thm-swiper__slider" data-swiper-options='{"slidesPerView": 1, "loop": true,"effect": "fade",
+												  "pagination": {
+												  "el": "#main-slider-pagination",
+												  "type": "bullets",
+												  "clickable": true
+												  },"navigation": {"nextEl": "#main-slider__swiper-button-next","prevEl": "#main-slider__swiper-button-prev"}, "autoplay": { "delay": 5000}}'>
+			{# >>>>>>> dev #}
+			<div class="swiper-wrapper">
+
+				<div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+					<div class="image-layer-three" style="background-image: url({{asset('front/images/resources/slider1.png')}});"></div>
+					<!-- /.image-layer -->
+					<div class="main-slider-three__shape-1">
+						<img src="{{asset('front/img/main-slider-three-shape-1.png')}}" alt="Riad-AL-Foutouh-agence-immobilière-Casablanca">
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-12">
+								<div class="main-slider-three__content">
+									<h2 class="main-slider-three__title">{{"Riad Al Foutouh :"|trans({},"front")}} 
+
+										<br>
+										 {{"Des projets"|trans({},"front")}} 
+										<br>
+										 {{"immobiliers d’envergure"|trans({},"front")}} </h2>
+									<div class="main-slider-three__details-box">
+										<h5 class="main-slider-three__details-sub-title">
+											 {{"Dotés de toutes les commodités"|trans({},"front")}} 
+										</h5>
+										<div class="main-slider-three__details">
+											<div class="main-slider-three__details-icon">
+												<span class="icon-apartment"></span>
+											</div>
+											<div
+												class="main-slider-three__details-content">
+												{# <h3 class="odometer" data-count="37400"></h3> #}
+												<p class="main-slider-three__details-text"> {{"0662686868"|trans({},"front")}} 
+													<br>
+													 {{"ou"|trans({},"front")}} 
+													<br>
+													 {{"0661832910"|trans({},"front")}} </p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+					<div class="image-layer-three" style="background-image: url({{asset('front/images/resources/slider2.png')}});"></div>
+					<!-- /.image-layer -->
+					<div class="main-slider-three__shape-1">
+						<img src="{{asset('front/img/main-slider-three-shape-1.png')}}" alt="Riad-AL-Foutouh-agence-immobilière-Casablanca">
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-12">
+								<div class="main-slider-three__content">
+									<h2 class="main-slider-three__title">{{"Riad Al Foutouh :"|trans({},"front")}} 
+
+										<br>
+										 {{"Des projets"|trans({},"front")}} 
+										<br>
+										 {{"immobiliers d’envergure"|trans({},"front")}} </h2>
+									<div class="main-slider-three__details-box">
+										<h5 class="main-slider-three__details-sub-title">
+											 {{"Dotés de toutes les commodités"|trans({},"front")}} 
+										</h5>
+										<div class="main-slider-three__details">
+											<div class="main-slider-three__details-icon">
+												<span class="icon-apartment"></span>
+											</div>
+											<div
+												class="main-slider-three__details-content">
+												{# <h3 class="odometer" data-count="37400"></h3> #}
+												<p class="main-slider-three__details-text"> {{"0662686868"|trans({},"front")}} 
+													<br>
+													 {{"ou"|trans({},"front")}} 
+													<br>
+													 {{"0661832910"|trans({},"front")}} </p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+					<div class="image-layer-three" style="background-image: url({{asset('front/images/resources/slider3.png')}});"></div>
+					<!-- /.image-layer -->
+					<div class="main-slider-three__shape-1">
+						<img src="{{asset('front/img/main-slider-three-shape-1.png')}}" alt="Riad-AL-Foutouh-agence-immobilière-Casablanca">
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-12">
+								<div class="main-slider-three__content">
+									<h2 class="main-slider-three__title">{{"Riad Al Foutouh :"|trans({},"front")}} 
+
+										<br>
+										 {{"Des projets"|trans({},"front")}} 
+										<br>
+										 {{"immobiliers d’envergure"|trans({},"front")}} </h2>
+									<div class="main-slider-three__details-box">
+										<h5 class="main-slider-three__details-sub-title">
+											 {{"Dotés de toutes les commodités"|trans({},"front")}} 
+										</h5>
+										<div class="main-slider-three__details">
+											<div class="main-slider-three__details-icon">
+												<span class="icon-apartment"></span>
+											</div>
+											<div
+												class="main-slider-three__details-content">
+												{# <h3 class="odometer" data-count="37400"></h3> #}
+												<p class="main-slider-three__details-text"> {{"0662686868"|trans({},"front")}} 
+													<br>
+													 {{"ou"|trans({},"front")}} 
+													<br>
+													 {{"0661832910"|trans({},"front")}} </p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+			<!-- If we need navigation buttons -->
+			<div class="main-slider-three__nav">
+				<div class="swiper-button-prev" id="main-slider__swiper-button-next">
+					<i class="icon-left-arrow"></i>
+				</div>
+				<div class="swiper-button-next" id="main-slider__swiper-button-prev">
+					<i class="icon-right-arrow"></i>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!--About Three Start-->
+	<section class="about-three" id="about">
+		<div class="about-three__shape-2 float-bob-y"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-6">
+					<div class="about-three__left">
+						<div class="about-three__img-box">
+							<div class="about-three__img-1">
+								<img src="{{asset('front/images/resources/a_propos_2.png')}}" alt="ppartement-Riad-Al-Foutouh">
+							</div>
+							<div class="about-three__img-2">
+								<img src="{{asset('front/images/resources/a_propos_1.png')}}" alt="meilleure-agence-immo-Casablanca">
+							</div>
+							<div class="about-three__shape-1"></div>
+							<div class="about-two__big-text" dir="rtl" lang="ar"> {{"alipes"|trans({},"front")}} </div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6">
+					<div class="about-three__right"{% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+						<div class="section-title text-left">
+							<span class="section-title__tagline">{{"à PROPOS DE RIAD AL FOUTOUH"|trans({},"front")}} </span>
+							<h2 class="section-title__title"> {{"Qui sommes-nous ?"|trans({},"front")}}</h2>
+						</div>
+						<div id="content">
+							<p class="about-three__text"> {{"Riad al Foutouh est un promoteur immobilier qui se spécialise dans la création de logement sociaux et du moyen standing. L’objectif principal du groupe est de concevoir et exécuter des projets immobiliers de haute qualité afin de répondre aux besoins de ses clients et de ses partenaires."|trans({},"front")}} </p>
+							<span id="text">Riad al Foutouh met en avant sa polyvalence et son savoir-faire pour proposer une vaste gamme de produits et de services, tout en s’engageant à améliorer l’environnement urbain au Maroc grâce à ses réalisations.</span>
+						</div>
+						{# <a href=""><p class="about-three__text text-decoration-underline"> 
+						</p></a> #}
+						<div class="pt-3">
+							<button id="toggle" class="thm-btn amenities__btn">Voir Plus</button>
+						</div>
+						<h2 class="section-title__title pt-3"> {{"Riad al foutouh : Des projets de vie"|trans({},"front")}}</h2>
+						<ul class="about-three__points list-unstyled" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+							<li>
+								<div class="">
+									<span class="far fa-check-circle"></span>
+								</div>
+								<div class="text">
+									<a href="{{path('app_salam')}}"><p> {{"Projet Salam"|trans({},"front")}} </p></a>
+								</div>
+							</li>
+							<li>
+								<div class="">
+									<span class="far fa-check-circle"></span>
+								</div>
+								<div class="text">
+									<a href="{{path('jardinrocad')}}"><p> {{"Projet les Jardins de la Rocade"|trans({},"front")}}</p></a>
+								</div>
+							</li>
+							<li>
+								<div class="">
+									<span class="far fa-check-circle"></span>
+								</div>
+								<div class="text">
+									<a href="{{path('naim')}}"><p> {{"Projet Naim"|trans({},"front")}}</p></a>
+								</div>
+							</li>
+							<li>
+								<div class="">
+									<span class="far fa-check-circle"></span>
+								</div>
+								<div class="text">
+									<a href="{{path('app_ainborja')}}"><p> {{"Projet Ain borja"|trans({},"front")}} </p></a>
+								</div>
+							</li>
+							<li>
+								<div class="">
+									<span class="far fa-check-circle"></span>
+								</div>
+								<div class="text">
+									<a href="{{path('app_jardinsforet')}}"><p> {{"Projet les Jardins de la Forêt"|trans({},"front")}}</p></a>
+								</div>
+							</li>
+							<li>
+								<div class="">
+									<span class="far fa-check-circle"></span>
+								</div>
+								<div class="text">
+									<a href="{{path('verdurelissassfa')}}"><p> {{"Projet la Verdure de Lissassfa"|trans({},"front")}}</p></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--About Three End-->
+
+	<!--Counter Two Start-->
+	<section class="counter-two">
+		<div class="counter-two__shape-1 float-bob-x">
+			<img src="{{asset('front/img/counter-two-shape-1.png')}}" alt="">
+		</div>
+		<div
+			class="container">{# <div class="row">
+																<div class="col-xl-12">
+																	<div class="counter-two__inner">
+																		<ul class="list-unstyled counter-two__list">
+																			<li class="counter-two__single wow fadeInLeft" data-wow-delay="100ms">
+																				<div class="counter-two__icon">
+																					<span class="icon-ruler"></span>
+																				</div>
+																				<div class="counter-two__content-box">
+																					<h3 class="odometer" data-count="34,000">00</h3>
+																					<p class="counter-two__text">Total sqft areas</p>
+																				</div>
+																			</li>
+																			<li class="counter-two__single wow fadeInLeft" data-wow-delay="200ms">
+																				<div class="counter-two__icon">
+																					<span class="icon-car-parking"></span>
+																				</div>
+																				<div class="counter-two__content-box">
+																					<h3 class="odometer" data-count="680">00</h3>
+																					<p class="counter-two__text">Total car parkings</p>
+																				</div>
+																			</li>
+																			<li class="counter-two__single wow fadeInLeft" data-wow-delay="300ms">
+																				<div class="counter-two__icon">
+																					<span class="icon-condominium"></span>
+																				</div>
+																				<div class="counter-two__content-box">
+																					<h3 class="odometer" data-count="390">00</h3>
+																					<p class="counter-two__text">luxury apartments</p>
+																				</div>
+																			</li>
+																			<li class="counter-two__single wow fadeInLeft" data-wow-delay="400ms">
+																				<div class="counter-two__icon">
+																					<span class="icon-bedroom"></span>
+																				</div>
+																				<div class="counter-two__content-box">
+																					<h3 class="odometer" data-count="726">00</h3>
+																					<p class="counter-two__text">deluxe bedrooms</p>
+																				</div>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div> #}
+		</div>
+	</section>
+	<!--Counter Two End-->
+
+	<!--CTA Two Start-->
+	<section class="cta-two mt-5">
+		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url({{asset('/front/images/resources/contact_home.png')}});"></div>
+		<div class="cta-two__inner">
+			<h3 class="cta-two__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}> {{"Découvrez Le meilleur promotteur immobilier à Casablanca"|trans({},"front")}}
+			</h3>
+			<p {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %} class="cta-two__text"> {{"pour un investissement immoblier réussi."|trans({},"front")}} </p>
+			<div class="cta-two__btn-box" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+				<a href="{{path('app_contact')}}" class="cta-two__btn thm-btn"> {{"Contactez nous"|trans({},"front")}}</a>
+			</div>
+		</div>
+	</section>
+	<!--CTA Two End-->
+
+	<!--Video One Start-->
+	<section class="video-one">
+		<div class="container">
+			<div class="video-one__img-box">
+				<div class="video-one__bg" style="background-image: url({{asset('/front/images/resources/videos_home.png')}});"></div>
+				<div class="video-one__video-link">
+					<a href="https://www.youtube.com/watch?v=NXz0FOrPXv8" class="video-popup">
+						<div class="video-one__video-icon">
+							<span class="fa fa-play"></span>
+							<i class="ripple"></i>
+						</div>
+					</a>
+				</div>
+				{# <div class="video-one__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+					<h3> {{"Our building"|trans({},"front")}} 
+						<br> {{"video tour"|trans({},"front")}} </h3>
+				</div> #}
+			</div>
+		</div>
+	</section>
+	<!--Video One End-->
+
+	<!--CTA Two Start-->
+	<section class=""></section>
+	<!--CTA Two End-->
+
+
+<!--News Three Start-->
+	{# <section class="news-three" id="news">
+		<div class="container">
+			<div class="news-three__top">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+						<div
+							class="section-title text-left">
+							<span class="section-title__tagline">What’s Happening</span>
+							<h2 class="section-title__title"> {{"éQUIPE  Riad Al Foutouh"|trans({},"front")}}</h2>
+						</div>
+					</div>
+					<div
+						class="col-xl-6 col-lg-6"><p class="news-three__text"></p>
+					</div>
+				</div>
+			</div>
+			<div
+				class="row"> #}
+				<!--news One Single Start-->
+				{# <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+					<div class="news-one__single">
+						<div class="news-one__img-box">
+							<div class="news-one__img">
+								<img src="{{asset('/front/images/resources/éQUIPE _1.png')}}" alt="Omar sefrioui PDG Riad Al Foutouh">
+							</div> #}
+							{# <div class="news-one__date"> #}
+								{# <p dir="rtl" lang="ar"> {{"20 Sep"|trans({},"front")}}</p>
+							</div> #}
+							{# <div class="news-one__content">
+																													<ul class="news-one__meta list-unstyled">
+																														<li>
+																															<a href="news-details.html">
+																																<i class="fas fa-tag"></i>Apartment</a>
+																														</li>
+																														<li>
+																															<a href="news-details.html">
+																																<i class="fas fa-user-circle"></i>
+																																by Admin</a>
+																														</li>
+																													</ul>
+																													<h3 class="news-one__title">
+																														<a href="news-details.html">the different types of
+																																									                                            luxury spaces</a>
+																													</h3>
+																													<div class="news-one__bottom">
+																														<div class="news-one__button">
+																															<a href="news-details.html">Voir Plus</a>
+																														</div>
+																														<div class="news-one__comment">
+																															<a href="news-details.html">
+																																<i class="fas fa-comments"></i>02</a>
+																														</div>
+																													</div>
+																												</div> #}
+						{# </div>
+					</div>
+				</div> #}
+				<!--news One Single End-->
+				<!--news One Single Start-->
+				{# <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
+					<div class="news-one__single">
+						<div class="news-one__img-box">
+							<div class="news-one__img">
+								<img src="{{asset('front/img/news-1-1.jpg')}}" alt="">
+							</div>
+							<div class="news-one__date">
+								<p>20 Sep</p>
+							</div> #}
+							{# <div class="news-one__content">
+																													<ul class="news-one__meta list-unstyled">
+																														<li>
+																															<a href="news-details.html">
+																																<i class="fas fa-tag"></i>Apartment</a>
+																														</li>
+																														<li>
+																															<a href="news-details.html">
+																																<i class="fas fa-user-circle"></i>
+																																by Admin</a>
+																														</li>
+																													</ul>
+																													<h3 class="news-one__title">
+																														<a href="news-details.html">Lorem ipsum dolor sit amet,
+																																									                                            consectetur</a>
+																													</h3>
+																													<div class="news-one__bottom">
+																														<div class="news-one__button">
+																															<a href="news-details.html">Voir Plus</a>
+																														</div>
+																														<div class="news-one__comment">
+																															<a href="news-details.html">
+																																<i class="fas fa-comments"></i>02</a>
+																														</div>
+																													</div>
+																												</div> #}
+						{# </div>
+					</div>
+				</div> #}
+				<!--news One Single End-->
+				<!--news One Single Start-->
+				{# <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
+					<div class="news-one__single">
+						<div class="news-one__img-box">
+							<div class="news-one__img">
+								<img src="{{asset('front/img/news-1-1.jpg')}}" alt="">
+							</div>
+							<div class="news-one__date">
+								<p>20 Sep</p>
+							</div> #}
+							{# <div class="news-one__content">
+																													<ul class="news-one__meta list-unstyled">
+																														<li>
+																															<a href="news-details.html">
+																																<i class="fas fa-tag"></i>Apartment</a>
+																														</li>
+																														<li>
+																															<a href="news-details.html">
+																																<i class="fas fa-user-circle"></i>
+																																by Admin</a>
+																														</li>
+																													</ul>
+																													<h3 class="news-one__title">
+																														<a href="news-details.html">Nullam dolor est, interdum a
+																																									                                            faucibus</a>
+																													</h3>
+																													<div class="news-one__bottom">
+																														<div class="news-one__button">
+																															<a href="news-details.html">Voir Plus</a>
+																														</div>
+																														<div class="news-one__comment">
+																															<a href="news-details.html">
+																																<i class="fas fa-comments"></i>02</a>
+																														</div>
+																													</div>
+																												</div> #}
+						{# </div>
+					</div>
+				</div> #}
+				<!--news One Single End-->
+			{# </div>
+		</div>
+	</section> #}
+	<!--News Three End-->
+
+	<section>
+		<div class="container pt-5">
+			<div class="row">
+				<div class="col-xl-12" style="text-align: center;z-index: 9999;">
+					<h2 class="section-title__title"> {{"éQUIPE  Riad Al Foutouh"|trans({},"front")}}</h2>
+					<p>Notre succès repose sur notre équipe dévouée de professionnels qualifiés. 
+					Spécialisés dans la vente, la location et l'évaluation de biens immobiliers, ils sont le cœur battant de Riad Al Foutouh, apportant expertise et passion à chaque projet.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!--About Three Start-->
+	<section class="about-three" id="about">
+		<div class="about-three__shape-2 float-bob-y"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-6">
+					<div class="about-three__left">
+						<div class="about-three__img-box">
+							<div class="about-three__img-1">
+								<img src="{{asset('front/images/resources/equipe_home2.png')}}" alt="">
+							</div>
+							<div class="about-three__img-2">
+								<img src="{{asset('front/images/resources/equipe_home1.png')}}" alt="">
+							</div>
+							<div class="about-three__shape-1"></div>
+							<div class="about-two__big-text" dir="rtl" lang="ar"> {{"alipes"|trans({},"front")}}</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6">
+					<div class="about-three__right">
+						<div
+							class="section-title text-left" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+							{# <span class="section-title__tagline">our building overview</span> #}
+							<h2 class="section-title__title"> {{"Nos valeurs"|trans({},"front")}} 
+							</h2>
+						</div {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+						<p class="about-three__text" > {{"La passion, la transparence, la minutie, le niveau d’exigence, la recherche constante de l’excellence et le respect des engagements. Ce sont les valeurs principales qui nous animent et nous permettent d’établir et de maintenir une relation de confiance durable avec tous nos clients et partenaires."|trans({},"front")}} 
+						</p>
+
+					</div>
+					<div class="about-three__right">
+						<div
+							class="section-title text-left" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+							{# <span class="section-title__tagline">our building overview</span> #}
+							<h2 class="section-title__title pt-5"> {{"Nos engagements"|trans({},"front")}} 
+							</h2>
+						</div>
+						
+						<ul class="b" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+							<li> {{"En assurant la gestion complète de nos projets, depuis leur conception jusqu à leur mise sur le marché, nous nous engageons à respecter nos promesses, en mettant toujours en priorité la satisfaction totale de nos clients."|trans({},"front")}} </li>
+							<li> {{"Élaborer un espace de vie minutieusement conçu."|trans({},"front")}} </li>
+							<li> {{"Offrir un service après-vente authentique."|trans({},"front")}} </li>
+							<li> {{"Garantir la ponctualité des livraisons prévues."|trans({},"front")}}</li>
+							<li> {{"Maintenir une stricte conformité aux normes tout au long de la réalisation de nos projets."|trans({},"front")}} </li>
+							<li> {{"Améliorer la gestion des copropriétés."|trans({},"front")}} </li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--About Three End-->
+
+	
+	<!--New Concept start-->
+	<section class="new-concept" id="services">
+		<div class="new-concept__shape-1 float-bob-y">
+			<img src="{{asset('front/img/new-concept-shape-1.png')}}" alt="">
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-5 col-lg-6" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+					<div class="new-concept-left">
+						<div class="section-title text-left">
+							<span class="section-title__tagline"> {{"à PROPOS DE RIAD AL FOUTOUH"|trans({},"front")}} </span>
+							<h2 class="section-title__title"> {{"Ce que nous assurons"|trans({},"front")}}</h2>
+						</div>
+						<ul class="new-concept__points list-unstyled">
+							<li>
+								<div class="icon">
+									<span class="icon-manhattan"></span>
+								</div>
+								<div class="text">
+									<h3> {{"Qualités de logement"|trans({},"front")}} 
+									</h3>
+									<p> {{"Riad El Foutouh vous offre l opulence et le prestige pour une expérience résidentielle incomparable avec le projet Ain Borja"|trans({},"front")}} 
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="icon">
+									<span class="icon-apartment-1"></span>
+								</div>
+								<div class="text">
+									<h3> {{"Différentes offres"|trans({},"front")}} </h3>
+									<p> {{"Que vous cherchiez une escapade romantique, une aventure en famille ou une retraite bien-être, nos options variées garantissent une expérience sur mesure pour chaque visiteur."|trans({},"front")}}
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="icon">
+									<span class="icon-manhattan"></span>
+								</div>
+								<div class="text">
+									<h3> {{"Facilité de paiment"|trans({},"front")}} 
+									</h3>
+									<p> {{"Profitez de notre facilité de paiement flexible, conçue pour vous offrir une expérience sans souci."|trans({},"front")}}
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xl-7 col-lg-6">
+					<div class="new-concept__right">
+						<div class="new-concept__img-box">
+							<div class="new-concept__img">
+								<img src="{{asset('front/images/resources/pourquoi_home.png')}}" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--New Concept End-->
+
+
+	<!--Neighborhoods Start-->
+	<section class="neighborhoods">
+		<div class="neighborhoods__shape-1" style="background-image: url({{asset('/front/images/shapes/neighborhoods-shape-1.png')}});"></div>
+		<div class="container">
+			<div class="section-title text-center">
+				<span class="section-title__tagline"> {{"Localisation"|trans({},"front")}}</span>
+				<h2 {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %} class="section-title__title"> {{"Où sommes nous ?"|trans({},"front")}}</h2>
+			</div>
+			<div class="row">
+				<div class="col-xl-8 col-lg-7">
+					<div class="neighborhoods__left">
+						<div class="neighborhoods__img-box">
+							<div
+								class="neighborhoods__img">
+								{# <img src="{{asset('front/img/neighborhoods-img-1.jpg')}}" alt=""> #}
+								<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3324.433660644452!2d-7.620728999999999!3d33.568087999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDM0JzA1LjEiTiA3wrAzNycxNC42Ilc!5e0!3m2!1sfr!2sma!4v1704379793747!5m2!1sfr!2sma" width="1150" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div>
+							<div class="neighborhoods__location-1">
+								<div class="neighborhoods__map-markar"></div>
+								<div class="neighborhoods__popup-box">
+									<div class="neighborhoods__popup">
+										<div class="neighborhoods__popup-inner">
+											<h5 class="neighborhoods__popup-title">{{"Shoppping centers"|trans({},"front")}}</h5>
+											<span class="neighborhoods__popup-km">{{"13.5KM"|trans({},"front")}}</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="neighborhoods__location-1 neighborhoods__location-2">
+								<div class="neighborhoods__map-markar neighborhoods__map-markar-2"></div>
+								<div class="neighborhoods__popup-box">
+									<div class="neighborhoods__popup">
+										<div class="neighborhoods__popup-inner">
+											<h5 class="neighborhoods__popup-title">Central park</h5>
+											<span class="neighborhoods__popup-km">13.5KM</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="neighborhoods__location-1 neighborhoods__location-3">
+								<div class="neighborhoods__map-markar neighborhoods__map-markar-3"></div>
+								<div class="neighborhoods__popup-box">
+									<div class="neighborhoods__popup">
+										<div class="neighborhoods__popup-inner">
+											<h5 class="neighborhoods__popup-title">Restauant</h5>
+											<span class="neighborhoods__popup-km">13.5KM</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="neighborhoods__location-1 neighborhoods__location-4">
+								<div class="neighborhoods__map-markar neighborhoods__map-markar-4"></div>
+								<div class="neighborhoods__popup-box">
+									<div class="neighborhoods__popup">
+										<div class="neighborhoods__popup-inner">
+											<h5 class="neighborhoods__popup-title">Hospitals</h5>
+											<span class="neighborhoods__popup-km">13.5KM</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{# <div class="col-xl-4 col-lg-5">
+					<div class="neighborhoods__right">
+						<div class="neighborhoods__faq">
+							<div class="accrodion-grp" data-grp-name="faq-one-accrodion">
+								<div class="accrodion active">
+									<div class="accrodion-title">
+										<h4 dir="rtl" lang="ar">{{"Restaurants"|trans({},"front")}}  </h4>
+									</div>
+									<div class="accrodion-content">
+										<div class="inner" dir="rtl" lang="ar">
+											<p>{{"Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod"|trans({},"front")}} 
+																																																												                                                    tempor inci simply free.</p>
+										</div>
+										<!-- /.inner -->
+									</div>
+								</div>
+								<div class="accrodion">
+									<div class="accrodion-title">
+										<h4 dir="rtl" lang="ar">{{"Central park"|trans({},"front")}} </h4>
+									</div>
+									<div class="accrodion-content">
+										<div class="inner">
+											<p dir="rtl" lang="ar">{{"Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod"|trans({},"front")}}
+																																																												                                                    tempor inci simply free.</p>
+										</div>
+										<!-- /.inner -->
+									</div>
+								</div>
+								<div class="accrodion">
+									<div class="accrodion-title">
+										<h4>Shopping center</h4>
+									</div>
+									<div class="accrodion-content">
+										<div class="inner">
+											<p>Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod
+																																																												                                                    tempor inci simply free.</p>
+										</div>
+										<!-- /.inner -->
+									</div>
+								</div>
+								<div class="accrodion">
+									<div class="accrodion-title">
+										<h4>Hospitals</h4>
+									</div>
+									<div class="accrodion-content">
+										<div class="inner">
+											<p>Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod
+																																																												                                                    tempor inci simply free.</p>
+										</div>
+										<!-- /.inner -->
+									</div>
+								</div>
+								<div class="accrodion last-child">
+									<div class="accrodion-title">
+										<h4>Play grounds</h4>
+									</div>
+									<div class="accrodion-content">
+										<div class="inner">
+											<p>Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor inci simply free.</p>
+										</div>
+										<!-- /.inner -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> #}
+			</div>
+		</div>
+	</section>
+	<!--Neighborhoods End-->
+
+	<!--News Three Start-->
+	<section class="news-three" id="news">
+		<div class="container">
+			<div class="news-three__top">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6">
+						<div
+							class="section-title text-left" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+							{# <span class="section-title__tagline">What’s Happening</span> #}
+							<h2 class="section-title__title"> {{"Profitez de nos offres diversifiées"|trans({},"front")}}</h2>
+						</div>
+					</div>
+					<div
+						class="col-xl-6 col-lg-6">{# <p class="news-three__text"></p> #}
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<!--news One Single Start-->
+				<div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+					<a class="text-center" href="{{path('residence')}}"><h2 class="pb-2">Appartements</h2></a>
+					<div class="news-one__single">
+						<div class="news-one__img-box">
+							<a class="text-center" href="{{path('residence')}}">
+								<div class="news-one__img">
+									<img src="{{asset('front/images/resources/offre1.png')}}" alt="">
+								</div>
+							</a>
+							{# <div class="news-one__date" dir="rtl" lang="ar">
+								<p> {{"20 Sep"|trans({},"front")}} </p>
+							</div> #}
+							{# <div class="news-one__content">
+																													<ul class="news-one__meta list-unstyled">
+																														<li>
+																															<a href="news-details.html">
+																																<i class="fas fa-tag"></i>Apartment</a>
+																														</li>
+																														<li>
+																															<a href="news-details.html">
+																																<i class="fas fa-user-circle"></i>
+																																by Admin</a>
+																														</li>
+																													</ul>
+																													<h3 class="news-one__title">
+																														<a href="news-details.html">the different types of
+																																									                                            luxury spaces</a>
+																													</h3>
+																													<div class="news-one__bottom">
+																														<div class="news-one__button">
+																															<a href="news-details.html">Voir Plus</a>
+																														</div>
+																														<div class="news-one__comment">
+																															<a href="news-details.html">
+																																<i class="fas fa-comments"></i>02</a>
+																														</div>
+																													</div>
+																												</div> #}
+						</div>
+					</div>
+				</div>
+				<!--news One Single End-->
+				<!--news One Single Start-->
+				<div class="col-xl-4 col-lg-4 wow fadeInUp pt-3" data-wow-delay="200ms">
+					<br>
+					<div class="news-one__single">
+						<div class="news-one__img-box">
+							<div class="news-one__img">
+								<img src="{{asset('front/images/resources/logo_offre.png')}}" alt="">
+							</div>
+							{# <div class="news-one__date">
+								<p>20 Sep</p>
+							</div> #}
+							{# <div class="news-one__content">
+																													<ul class="news-one__meta list-unstyled">
+																														<li>
+																															<a href="news-details.html">
+																																<i class="fas fa-tag"></i>Apartment</a>
+																														</li>
+																														<li>
+																															<a href="news-details.html">
+																																<i class="fas fa-user-circle"></i>
+																																by Admin</a>
+																														</li>
+																													</ul>
+																													<h3 class="news-one__title">
+																														<a href="news-details.html">Lorem ipsum dolor sit amet,
+																																									                                            consectetur</a>
+																													</h3>
+																													<div class="news-one__bottom">
+																														<div class="news-one__button">
+																															<a href="news-details.html">Voir Plus</a>
+																														</div>
+																														<div class="news-one__comment">
+																															<a href="news-details.html">
+																																<i class="fas fa-comments"></i>02</a>
+																														</div>
+																													</div>
+																												</div> #}
+						</div>
+					</div>
+				</div>
+				<!--news One Single End-->
+				<!--news One Single Start-->
+					<div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
+						<a class="text-center" href="{{path('locauxcommerciaux')}}"><h2 class="pb-2">Locaux commerciauxnn</h2></a>
+						<div class="news-one__single">
+							<div class="news-one__img-box">
+							<a href="{{path('locauxcommerciaux')}}">
+								<div class="news-one__img">
+									<img src="{{asset('front/images/resources/offre3.png')}}" alt=""/>
+								</div>
+							</a>
+							{# <div class="news-one__date">
+								<p>20 Sep</p>
+							</div> #}
+							{# <div class="news-one__content">
+																													<ul class="news-one__meta list-unstyled">
+																														<li>
+																															<a href="news-details.html">
+																																<i class="fas fa-tag"></i>Apartment</a>
+																														</li>
+																														<li>
+																															<a href="news-details.html">
+																																<i class="fas fa-user-circle"></i>
+																																by Admin</a>
+																														</li>
+																													</ul>
+																													<h3 class="news-one__title">
+																														<a href="news-details.html">Nullam dolor est, interdum a
+																																									                                            faucibus</a>
+																													</h3>
+																													<div class="news-one__bottom">
+																														<div class="news-one__button">
+																															<a href="news-details.html">Voir Plus</a>
+																														</div>
+																														<div class="news-one__comment">
+																															<a href="news-details.html">
+																																<i class="fas fa-comments"></i>02</a>
+																														</div>
+																													</div>
+																												</div> #}
+							</div>
+						</div>
+					</div>
+				<!--news One Single End-->
+			</div>
+		</div>
+	</section>
+	<!--News Three End-->
+
+	<!--Gallery Three Start-->
+	<section class="gallery-three">
+		<div class="container"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+			<div class="gallery-three__title">
+				<h3>{{"Voir la galerie de photos"|trans({},"front")}}</h3>
+			</div>
+			<div class="row">
+				<!--Gallery Three Single Start-->
+				<div class="col-xl-2 col-lg-3 col-md-6">
+					<div class="gallery-three__single">
+						<div class="gallery-three__img">
+							<img src="{{asset('front/images/resources/galerie1_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+							{# <div class="gallery-three__img-icon">
+								<a href="#">
+									<span class="fab fa-instagram"></span>
+								</a>
+							</div> #}
+						</div>
+					</div>
+				</div>
+				<!--Gallery Three Single End-->
+				<!--Gallery Three Single Start-->
+				<div class="col-xl-2 col-lg-3 col-md-6">
+					<div class="gallery-three__single">
+						<div class="gallery-three__img">
+							<img src="{{asset('front/images/resources/galerie2_ain_borja.png')}}" alt="Ain_Borja-Riad-al-Foutouh-cuisine-appartement">
+							{# <div class="gallery-three__img-icon">
+								<a href="#">
+									<span class="fab fa-instagram"></span>
+								</a>
+							</div> #}
+						</div>
+					</div>
+				</div>
+				<!--Gallery Three Single End-->
+				<!--Gallery Three Single Start-->
+				<div class="col-xl-2 col-lg-3 col-md-6">
+					<div class="gallery-three__single">
+						<div class="gallery-three__img">
+							<img src="{{asset('front/images/resources/galerie3_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
+							{# <div class="gallery-three__img-icon">
+								<a href="#">
+									<span class="fab fa-instagram"></span>
+								</a>
+							</div> #}
+						</div>
+					</div>
+				</div>
+				<!--Gallery Three Single End-->
+				<!--Gallery Three Single Start-->
+				<div class="col-xl-2 col-lg-3 col-md-6">
+					<div class="gallery-three__single">
+						<div class="gallery-three__img">
+							<img src="{{asset('front/images/resources/galerie4_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
+							{# <div class="gallery-three__img-icon">
+								<a href="#">
+									<span class="fab fa-instagram"></span>
+								</a>
+							</div> #}
+						</div>
+					</div>
+				</div>
+				<!--Gallery Three Single End-->
+				<!--Gallery Three Single Start-->
+				<div class="col-xl-2 col-lg-3 col-md-6">
+					<div class="gallery-three__single">
+						<div class="gallery-three__img">
+							<img src="{{asset('front/images/resources/galerie5_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-cuisine-appartements-Casablanca">
+							{# <div class="gallery-three__img-icon">
+								<a href="#">
+									<span class="fab fa-instagram"></span>
+								</a>
+							</div> #}
+						</div>
+					</div>
+				</div>
+				<!--Gallery Three Single End-->
+				<!--Gallery Three Single Start-->
+				<div class="col-xl-2 col-lg-3 col-md-6">
+					<div class="gallery-three__single">
+						<div class="gallery-three__img">
+							<img src="{{asset('front/images/resources/galerie6_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salle-de-bain-appartements-Casablanca">
+							{# <div class="gallery-three__img-icon">
+								<a href="#">
+									<span class="fab fa-instagram"></span>
+								</a>
+							</div> #}
+						</div>
+					</div>
+				</div>
+				<!--Gallery Three Single End-->
+			</div>
+		</div>
+	</section>
+	<!--Gallery Three End-->
+
+	<!--CTA Three End-->
+	<section class="cta-three">
+		<div class="cta-three__shape-1 float-bob-x">
+			<img src="{{asset('front/img/cta-three-shape-1.png')}}" alt="">
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-6 col-lg-8">
+					<div class="cta-three__left">
+						<p class="cta-three__sub-title" dir="rtl" lang="ar">{{"Pour plus d'informations "|trans({},"front")}} </p>
+						{# <h3 class="cta-three__title" dir="rtl" lang="ar">{{"Make an appointment now"|trans({},"front")}} </h3> #}
+					</div>
+				</div>
+				<div class="col-xl-6 col-lg-4">
+					<div class="cta-three__btn-box">
+						<a href="{{path('app_contact')}}" class="thm-btn cta-three__btn" dir="rtl" lang="ar">{{"Contactez nous"|trans({},"front")}}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--CTA Three End-->
+
+
+{% endblock %}
+
+{% block javascripts %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+		$(document).ready(function() {
+		  $("#toggle").click(function() {
+		    var elem = $("#toggle").text();
+		    if (elem == "Voir Plus") {
+		      //Stuff to do when btn is in the Voir Plus state
+		      $("#toggle").text("Voir Moins");
+		      $("#text").slideDown();
+		    } else {
+		      //Stuff to do when btn is in the read less state
+		      $("#toggle").text("Voir Plus");
+		      $("#text").slideUp();
+		    }
+		  });
+		});													
+	</script>
+{% endblock %}

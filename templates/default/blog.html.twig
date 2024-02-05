@@ -1,0 +1,204 @@
+{% extends 'base.html.twig' %}
+
+
+{% block stylesheets %}
+	<style>
+		.paragraph {
+			text-align: justify;
+			text-justify: inter-word;
+		}
+	</style>
+{% endblock %}
+{% block body %}
+
+	<!--Page Header Start-->
+	<section class="page-header">
+		<div class="page-header-bg" style="background-image: url({{asset('front/images/resources/banner_blog.png')}});"></div>
+		<div class="page-header__overly"></div>
+		<div class="container">
+			<div class="page-header__inner" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+				<ul class="thm-breadcrumb list-unstyled">
+					<li>
+						<a href="index.html">{{"actualités"|trans({},"front")}}</a>
+					</li>
+					<li>
+						<span>/</span>
+					</li>
+					<li>{{"tendances"|trans({},"front")}}</li>
+				</ul>
+				<h2>{{"blog"|trans({},"front")}}</h2>
+			</div>
+		</div>
+	</section>
+	<!--Page Header End-->
+
+	<!--News Sidebar Start-->
+	<div class="news-sidebar">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-8 col-lg-7">
+					<div class="news-sidebar__left">
+						<div class="news-sidebar__content">
+							{% for blog in blogs  %}
+								{% if blog.id in [1,2,3] %}
+									<div class="news-sidebar__single">
+										<div class="news-sidebar__img">
+											<img src="{{asset('/front/images/resources')}}/{{blog.image}}" alt="achat-d-un-bien-locatif-blog">
+											<div class="news-sidebar__date">
+												<p>blog</p>
+											</div>
+										</div>
+										<div class="news-sidebar__content-box">
+											<ul class="list-unstyled news-sidebar__meta" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+												<li>
+													<a>
+														<i class="fas fa-tag"></i>
+														{{"Appartements"|trans({},"front")}}</a>
+												</li>
+											</ul>
+											<h3 class="news-sidebar__title">
+												<a href="{{path('local_blog', {id: blog.id}) }}">{{blog.title | trans({},"front")}}</a>
+											</h3>
+											<p class="news-sidebar__text paragraph">{{blog.description|slice(0,300)|trans({},"front")}}
+												...</p>
+											<div class="news-sidebar__bottom">
+												<a href="{{path('local_blog', {id: blog.id}) }}" class="news-sidebar__read-more">{{"Voir Plus"|trans({},"front")}}<span class="icon-right-arrow"></span>
+												</a>
+											</div>
+										</div>
+									</div>
+								{% endif %}
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-lg-5">
+					<div class="sidebar">
+						<div class="sidebar__single sidebar__search">
+							<form action="#" class="sidebar__search-form">
+								<input type="search" placeholder="recherche">
+								<button type="submit">
+									<i class="icon-magnifying-glass"></i>
+								</button>
+							</form>
+						</div>
+
+						<div class="sidebar__single sidebar__post" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+							<h3 class="sidebar__title">{{"consulter aussi"|trans({},"front")}}</h3>
+							<ul class="sidebar__post-list list-unstyled">
+								{% for blog in blogs  %}
+									{% if blog.id in [4,5,6] %}
+										<li>
+											<div class="sidebar__post-image">
+												<img src="{{asset('/front/images/resources')}}/{{blog.image}}" alt="blog-astuces-economiser-de-l'argent-achat-propriété">
+											</div>
+											<div class="sidebar__post-content" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+												<h3>
+													<span class="sidebar__post-content-meta">
+														<i class="fas fa-user-circle"></i>
+														{{"Astuces"|trans({},"front")}}</span>
+													<a href="{{path('local_blog', {id: blog.id}) }}">{{blog.title|trans({},"front")}}</a>
+												</h3>
+											</div>
+										</li>
+									{% endif %}
+								{% endfor %}
+							</ul>
+						</div>
+						<div class="sidebar__single sidebar__category" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+							<h3 class="sidebar__title">{{"Catégories"|trans({},"front")}}</h3>
+							<ul class="sidebar__category-list list-unstyled">
+								<li>
+									<a>{{"Haut Standing"|trans({},"front")}}
+									</a>
+								</li>
+								<li class="">
+									<a>{{"Moyen Standing"|trans({},"front")}}
+									</a>
+								</li>
+								<li>
+									<a>{{"Logement Social"|trans({},"front")}}
+									</a>
+								</li>
+								{# <li>
+																									<a href="news-details.html">
+																										Deluxe Room<span class="icon-right-arrow"></span>
+																									</a>
+																								</li>
+																								<li>
+																									<a href="news-details.html">Property<span class="icon-right-arrow"></span>
+																									</a>
+																								</li> #}
+							</ul>
+						</div>
+						<div class="sidebar__single sidebar__tags" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+							<h3 class="sidebar__title">{{"Tags"|trans({},"front")}}</h3>
+							<div class="sidebar__tags-list">
+								<a href="{{path('residence')}}">{{"Residences"|trans({},"front")}}</a>
+								<a href="{{path('locauxcommerciaux')}}">{{"offres proffessionnelles"|trans({},"front")}}</a>
+								<a href="{{path('app_contact')}}">{{"contact"|trans({},"front")}}</a>
+								{# <a href="#">rooms</a>
+																								<a href="#">Luxury</a>
+																								<a href="#">Single property</a> #}
+							</div>
+						</div>
+						{# <div class="sidebar__single sidebar__comments">
+																			<h3 class="sidebar__title">Comments</h3>
+																			<ul class="sidebar__comments-list list-unstyled">
+																				<li>
+																					<div class="sidebar__comments-icon">
+																						<i class="fas fa-comment"></i>
+																					</div>
+																					<div class="sidebar__comments-text-box">
+																						<p>A Wordpress Commenter
+																							<br>
+																							on Launch New Mobile App</p>
+																					</div>
+																				</li>
+																				<li>
+																					<div class="sidebar__comments-icon">
+																						<i class="fas fa-comment"></i>
+																					</div>
+																					<div class="sidebar__comments-text-box">
+																						<p>
+																							<span>John Doe</span>
+																							on Template:
+																							<br>
+																							Comments</p>
+																					</div>
+																				</li>
+																				<li>
+																					<div class="sidebar__comments-icon">
+																						<i class="fas fa-comment"></i>
+																					</div>
+																					<div class="sidebar__comments-text-box">
+																						<p>A Wordpress Commenter on
+																							<br>
+																							Launch New Mobile App</p>
+																					</div>
+																				</li>
+																				<li>
+																					<div class="sidebar__comments-icon">
+																						<i class="fas fa-comment"></i>
+																					</div>
+																					<div class="sidebar__comments-text-box">
+																						<p>
+																							<span>John Doe</span>
+																							on Template:
+																							<br>
+																							Comments</p>
+																					</div>
+																				</li>
+																			</ul>
+																		</div> #}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--News Sidebar End-->
+
+{% endblock %}
+{% block javascripts %}
+	 <script></script>
+{% endblock %}
