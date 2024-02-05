@@ -1,10 +1,16 @@
 <?php
 
 namespace App\Controller;
+use App\Entity\Blogs;
+use App\Repository\BlogsRepository;
 
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
+
+
 
 class HomeController extends AbstractController
 {
@@ -15,7 +21,7 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
-
+  
 
     #[Route('/{_locale}/contact', name: 'app_contact', requirements: ['_locale' => 'fr|ar',])]
     public function contact(): Response
@@ -84,14 +90,6 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/{_locale}/blog', name: 'app_blog', requirements: ['_locale' => 'fr|ar',])]
-    public function blog(): Response
-    {
-        return $this->render('default/blog.html.twig', [
-            'controller_name' => 'HomeController',
-        ]);
-    }
-
     #[Route('/{_locale}/jardinsforet', name: 'app_jardinsforet', requirements: ['_locale' => 'fr|ar',])]
     public function jardinsforet(): Response
     {
@@ -99,4 +97,34 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
+    #[Route('/{_locale}/blog', name: 'app_blog', requirements: ['_locale' => 'fr|ar',])]
+    public function blog(BlogsRepository $blogsRepoitory): Response
+    {
+        $blogs = $blogsRepoitory->findAll();
+     
+
+        return $this->render('default/blog.html.twig', [
+            'controller_name' => 'HomeController',
+            'blogs' => $blogs,
+        ]);
+    }
+
+    #[Route('/{_locale}/blog/{id}', name: 'local_blog', requirements: ['_locale' => 'fr|ar',])]
+    public function show( BlogsRepository $blogsRepoitory, $id): Response
+    {
+
+        //  dd("hello");
+         $blog = $blogsRepoitory->findOneById(["id"=>$id]);
+
+        return $this->render('default/detail_blog.html.twig', [
+            'controller_name' => 'HomeController',
+            'blog' => $blog,
+        ]);
+    }
+    
 }
+
+  
+
+
