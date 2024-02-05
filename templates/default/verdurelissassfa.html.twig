@@ -6,11 +6,11 @@
 {% block stylesheets %}
 
     <style>
-        p {
+        {# p {
             margin: 0;
             font-size: 13px;
             line-height: 17px;
-        }
+        } #}
 
         .section-title__title {
             margin: 0;
@@ -27,12 +27,18 @@
         }
 
         .services-three__single {
-            height: 35vh;
+            height: 55vh;
         }
 
         .services-one__single-inner {
             height: 50vh;
         }
+
+        @media(min-width: 1200px) {
+			.col-xl-7 {
+				margin-top: 15rem;
+			}
+		}
     </style>
 
 {% endblock %}
@@ -211,7 +217,7 @@
                                 <h2 class="section-title__title">{{"DÉCOUVREZ NOS DEMEURES ALLIANT CONFORT ET RAFFINEMENT"|trans({},"front")}}</h2>
                             </div>
                             <div class="services-one__btn-box">
-                                <a href="services.html" class="thm-btn services-one__btn">{{"planifier une visite"|trans({},"front")}}</a>
+                                <a href="{{path('app_contact')}}" class="thm-btn services-one__btn">{{"planifier une visite"|trans({},"front")}}</a>
                             </div>
                         </div>
                     </div>
@@ -219,13 +225,12 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                         <div class="services-one__single">
                             <div class="services-one__single-inner">
-                                <div class="services-one__single-bg"
-                                    style="background-image: url({{asset('front/images/backgrounds/services-one-single-bg.jpg')}});">
+                                <div class="services-one__single-bg">
                                 </div>
                                 <div class="services-one__icon">
                                     <span class="icon-residential"></span>
                                 </div>
-                                <h3 class="services-one__title"><a href="services.html">{{"Superficie"|trans({},"front")}}</a></h3>
+                                <h3 class="services-one__title">{{"Superficie"|trans({},"front")}}</h3></a>
                                 <p class="services-one__text">{{"Des appartements de 60 à 64 m²"|trans({},"front")}}</p>
                             </div>
                         </div>
@@ -235,13 +240,12 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                         <div class="services-one__single">
                             <div class="services-one__single-inner">
-                                <div class="services-one__single-bg"
-                                    style="background-image: url({{asset('front/images/backgrounds/services-one-single-bg.jpg')}});">
+                                <div class="services-one__single-bg">
                                 </div>
                                 <div class="services-one__icon">
                                     <span class="icon-sustainable"></span>
                                 </div>
-                                <h3 class="services-one__title"><a href="services.html">{{"Consistance"|trans({},"front")}}</a></h3>
+                                <h3 class="services-one__title">{{"Consistance"|trans({},"front")}}</h3></a>
                                 <p class="services-one__text">{{"3 chambres + Salon, cuisine, 2 SDB, balcon"|trans({},"front")}}</p>
                             </div>
                         </div>
@@ -251,13 +255,12 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                         <div class="services-one__single">
                             <div class="services-one__single-inner">
-                                <div class="services-one__single-bg"
-                                    style="background-image: url({{asset('front/images/backgrounds/services-one-single-bg.jpg')}});">
+                                <div class="services-one__single-bg">
                                 </div>
                                 <div class="services-one__icon">
                                     <span class="icon-home-automation"></span>
                                 </div>
-                                <h3 class="services-one__title"><a href="services.html">{{"Local commercial"|trans({},"front")}}</a></h3>
+                                <h3 class="services-one__title">{{"Local commercial"|trans({},"front")}}</h3></a>
                                 <p class="services-one__text">{{"Les commerces, dont les surfaces vont de 10 m² à 205 m², sont idéalement situés sur les principaux axes du projet."|trans({},"front")}}</p>
                             </div>
                         </div>
@@ -267,13 +270,12 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="500ms" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                         <div class="services-one__single">
                             <div class="services-one__single-inner">
-                                <div class="services-one__single-bg"
-                                    style="background-image: url({{asset('front/images/backgrounds/services-one-single-bg.jpg')}});">
+                                <div class="services-one__single-bg">
                                 </div>
                                 <div class="services-one__icon">
                                     <span class="icon-electric-appliance"></span>
                                 </div>
-                                <h3 class="services-one__title"><a href="services.html">{{"ascenseur schindler"|trans({},"front")}}</a></h3>
+                                <h3 class="services-one__title">{{"ascenseur schindler"|trans({},"front")}}</h3></a>
                                 <p class="services-one__text"></p>
                             </div>
                         </div>
@@ -283,13 +285,12 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="600ms"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                         <div class="services-one__single">
                             <div class="services-one__single-inner">
-                                <div class="services-one__single-bg"
-                                    style="background-image: url({{asset('front/images/backgrounds/services-one-single-bg.jpg')}});">
+                                <div class="services-one__single-bg">
                                 </div>
                                 <div class="services-one__icon">
                                     <span class="icon-swimming-pool"></span>
                                 </div>
-                                <h3 class="services-one__title"><a href="services.html">{{"Accessibilité totale"|trans({},"front")}}</a></h3>
+                                <h3 class="services-one__title">{{"Accessibilité totale"|trans({},"front")}}</h3></a>
                                 <p class="services-one__text">{{"Proche de toutes les commodités : écoles, mosquée, centres commerciaux, jardins…"|trans({},"front")}}</p>
                             </div>
                         </div>
@@ -308,7 +309,7 @@
                 <h3 class="cta-two__title">{{"Organisez votre visite sur place"|trans({},"front")}}</h3>
                 <p class="cta-two__text">{{"notre éQUIPE  commerciale vous acceuille 7j/7 du lundi au dimanche de 9h à 19h"|trans({},"front")}}</p>
                 <div class="cta-two__btn-box">
-                    <a href="contact.html" class="cta-two__btn thm-btn">{{"reserver maintenant"|trans({},"front")}}</a>
+                    <a href="{{path('app_contact')}}" class="cta-two__btn thm-btn">{{"reserver maintenant"|trans({},"front")}}</a>
                 </div>
             </div>
         </section>
@@ -369,11 +370,11 @@
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
 							<img src="{{asset('front/images/resources/galerie1_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
-							<div class="gallery-three__img-icon">
+							{# <div class="gallery-three__img-icon">
 								<a href="#">
 									<span class="fab fa-instagram"></span>
 								</a>
-							</div>
+							</div> #}
 						</div>
 					</div>
 				</div>
@@ -383,11 +384,11 @@
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
 							<img src="{{asset('front/images/resources/galerie2_ain_borja.png')}}" alt="Ain_Borja-Riad-al-Foutouh-cuisine-appartement">
-							<div class="gallery-three__img-icon">
+							{# <div class="gallery-three__img-icon">
 								<a href="#">
 									<span class="fab fa-instagram"></span>
 								</a>
-							</div>
+							</div> #}
 						</div>
 					</div>
 				</div>
@@ -397,11 +398,11 @@
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
 							<img src="{{asset('front/images/resources/galerie3_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
-							<div class="gallery-three__img-icon">
+							{# <div class="gallery-three__img-icon">
 								<a href="#">
 									<span class="fab fa-instagram"></span>
 								</a>
-							</div>
+							</div> #}
 						</div>
 					</div>
 				</div>
@@ -411,11 +412,11 @@
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
 							<img src="{{asset('front/images/resources/galerie4_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
-							<div class="gallery-three__img-icon">
+							{# <div class="gallery-three__img-icon">
 								<a href="#">
 									<span class="fab fa-instagram"></span>
 								</a>
-							</div>
+							</div> #}
 						</div>
 					</div>
 				</div>
@@ -425,11 +426,11 @@
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
 							<img src="{{asset('front/images/resources/galerie5_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-cuisine-appartements-Casablanca">
-							<div class="gallery-three__img-icon">
+							{# <div class="gallery-three__img-icon">
 								<a href="#">
 									<span class="fab fa-instagram"></span>
 								</a>
-							</div>
+							</div> #}
 						</div>
 					</div>
 				</div>
@@ -439,11 +440,11 @@
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
 							<img src="{{asset('front/images/resources/galerie6_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salle-de-bain-appartements-Casablanca">
-							<div class="gallery-three__img-icon">
+							{# <div class="gallery-three__img-icon">
 								<a href="#">
 									<span class="fab fa-instagram"></span>
 								</a>
-							</div>
+							</div> #}
 						</div>
 					</div>
 				</div>
