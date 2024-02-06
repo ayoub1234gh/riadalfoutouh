@@ -184,6 +184,15 @@
     		margin-top: 5px;
 		}
 
+		.video-one__bg {
+    		width: 1000px;
+		}
+
+		.video-one__img-box {
+    		width: 1000px;
+    		margin-left: 6rem;
+		}
+
 	</style>
 {% endblock %}
 
@@ -502,8 +511,9 @@
 	<!--Video One Start-->
 	<section class="video-one">
 		<div class="container">
-			<div class="video-one__img-box">
-				<div class="video-one__bg" style="background-image: url({{asset('/front/images/resources/videos_home.png')}});"></div>
+			<div class="row">
+						<div class="video-one__img-box">
+				<div class="video-one__bg" style="background-image: url({{asset('/front/images/resources/banner_video.png')}});"></div>
 				<div class="video-one__video-link">
 					<a href="https://www.youtube.com/watch?v=NXz0FOrPXv8" class="video-popup">
 						<div class="video-one__video-icon">
@@ -517,6 +527,8 @@
 						<br> {{"video tour"|trans({},"front")}} </h3>
 				</div> #}
 			</div>
+			</div>
+
 		</div>
 	</section>
 	<!--Video One End-->
