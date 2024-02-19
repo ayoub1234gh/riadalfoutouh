@@ -3,7 +3,7 @@
 
 {% block stylesheets %}
 	<style>
-		#text {
+		.text {
 			display: none;
 		}
 		.btn-container {
@@ -64,7 +64,8 @@
 							<h2 class="section-title__title">{{"AIN BORJA : l’apogée du haut standing à Casablanca"|trans({},"front")}}</h2>
 						</div>
 						<p class="values-two__text-1">{{"Riad al foutouh – Ain Borja est un projet au sein d’une résidence innovante alliant qualité et modernité à quelques minutes du centre tachefine Le projet est proche de toutes les commodités d’un lieu de vie de standing, et propose des appartements d’exception allant de 102 m² à 124 m² à partir de 780.000Dhs seulement, avec des prestations de meilleures qualités."|trans({},"front")}}</p>
-						<div class="values-two__points-box">{# <ul class="list-unstyled values-two__points">
+						<div class="values-two__points-box">
+						{# <ul class="list-unstyled values-two__points">
 																																																																																						<li>
 																																																																																							<div class="icon">
 																																																																																								<i class="fa fa-check"></i>
@@ -321,13 +322,13 @@
 							<div id="content">
 
 								<p>{{"Il était une fois, dans le cœur effervescent de Casablanca, un style de vie où l'intelligence et la technologie fusionnent pour créer une expérience de résidence incomparable. Imaginez-vous dans un appartement de haut standing, où chaque détail est soigneusement pensé pour répondre aux besoins modernes. Cette histoire n'est pas une utopie, mais la réalité d'un style de vie intelligent et high-tech"|trans({},"front")}}.</p>
-								<span id="text">{{"Pour les clients désirant trouver leur résidence de rêve à Casablanca, Riad Al Foutouh se positionne comme le partenaire idéal. 
+								<span class="text">{{"Pour les clients désirant trouver leur résidence de rêve à Casablanca, Riad Al Foutouh se positionne comme le partenaire idéal. 
 
 									Nous comprenons que l'achat d'un appartement haut de gamme va au-delà de l'aspect financier ; c'est une quête de confort, de sécurité, et d'une vie quotidienne facilitée par des technologies intelligentes.
 									Cependant, la clé ne réside pas seulement dans le nom de Riad Al Foutouh, mais dans notre engagement à comprendre les aspirations de nos clients."|trans({},"front")}}</span>
 							</div>
 							<div>
-								<button id="toggle" class="thm-btn amenities__btn">Voir Plus</button>
+								<button class="thm-btn amenities__btn toggle-btn" data-target="text">Voir Plus</button>
 							</div>
 						</div>
 					</div>
@@ -343,10 +344,10 @@
 							</h3>
 							<div id="content">
 								<p>{{"Dans le tracé effervescent de la ville de Casablanca, existe une réalité où la sélection de l'emplacement façonne l'essence même d'un style de vie urbain. Imaginez-vous dans un quartier vibrant, à proximité de toutes les commodités, où chaque ruelle raconte une histoire et chaque coin de rue offre une expérience unique. Ce récit, bien loin d'être une chimère, décrit la réalité d'un emplacement attractif à Casablanca."|trans({},"front")}}.</p>
-								<span id="text1">{{"Selon les dernières données immobilières de Casablanca, l'emplacement d'une résidence est un critère primordial pour les acheteurs avertis. La demande croissante pour des quartiers attractifs est motivée par une clientèle qui recherche un équilibre parfait entre la proximité des services essentiels, des espaces verts, et une accessibilité aisée aux principaux axes de la ville."|trans({},"front")}}</span>
+								<span class="text">{{"Selon les dernières données immobilières de Casablanca, l'emplacement d'une résidence est un critère primordial pour les acheteurs avertis. La demande croissante pour des quartiers attractifs est motivée par une clientèle qui recherche un équilibre parfait entre la proximité des services essentiels, des espaces verts, et une accessibilité aisée aux principaux axes de la ville."|trans({},"front")}}</span>
 							</div>
 							<div>
-								<button id="toggle1" class="thm-btn amenities__btn">Voir Plus</button>
+								<button class="thm-btn amenities__btn toggle-btn" data-target="text">Voir Plus</button>
 							</div>
 						</div>
 					</div>
@@ -362,10 +363,10 @@
 							</h3>
 							<div id="content">
 								<p class="amenities__text">{{"Les bâtiments éco-chic représentent une réponse à la demande croissante d’une vie haut de gamme associée à des choix écologiques. Cette tendance, observée dans le secteur immobilier, démontre un intérêt grandissant pour des résidences qui offrent à la fois le confort luxueux et une empreinte écologique réduite."|trans({},"front")}}</p>
-								<span id="text2">{{"Riad Al Foutouh se positionne comme une référence dans cette niche ! Incarner un engagement envers la durabilité et l'élégance. Notre présence discrète dans le marché immobilier témoigne d'une approche où chaque bâtiment éco-chic devient un témoignage de notre engagement envers l'environnement."|trans({},"front")}}</span>
+								<span class="text">{{"Riad Al Foutouh se positionne comme une référence dans cette niche ! Incarner un engagement envers la durabilité et l'élégance. Notre présence discrète dans le marché immobilier témoigne d'une approche où chaque bâtiment éco-chic devient un témoignage de notre engagement envers l'environnement."|trans({},"front")}}</span>
 							</div>
 							<div>
-								<button id="toggle2" class="thm-btn amenities__btn">Voir Plus</button>
+								<button class="thm-btn amenities__btn toggle-btn" data-target="text">Voir Plus</button>
 							</div>
 						</div>
 					</div>
@@ -621,47 +622,63 @@
 	{% endblock %}
 
 	{% block javascripts %} <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		 <script>
-						$(document).ready(function() {
-							
-						  $("#toggle").click(function() {
-						    var elem = $("#toggle").text();
-						    if (elem == "Voir Plus") {
-						      //Stuff to do when btn is in the Voir Plus state
-						      $("#toggle").text("Voir Moins");
-						      $("#text").slideDown();
-						    } else {
-						      //Stuff to do when btn is in the read less state
-						      $("#toggle").text("Voir Plus");
-						      $("#text").slideUp();
-						    }
-						  });
-		
-						  $("#toggle1").click(function() {
-						    var elem = $("#toggle1").text();
-						    if (elem == "Voir Plus") {
-						      //Stuff to do when btn is in the Voir Plus state
-						      $("#toggle1").text("Voir Moins");
-						      $("#text1").slideDown();
-						    } else {
-						      //Stuff to do when btn is in the read less state
-						      $("#toggle1").text("Voir Plus");
-						      $("#text1").slideUp();
-						    }
-						  });
-		
-						  $("#toggle2").click(function() {
-						    var elem = $("#toggle2").text();
-						    if (elem == "Voir Plus") {
-						      //Stuff to do when btn is in the Voir Plus state
-						      $("#toggle2").text("Voir Moins");
-						      $("#text2").slideDown();
-						    } else {
-						      //Stuff to do when btn is in the read less state
-						      $("#toggle2").text("Voir Plus");
-						      $("#text2").slideUp();
-						    }
-						  });
-						});
-								</script>
+		<script>
+
+			$(document).ready(function() {
+  				$(".toggle-btn").click(function() {
+    				var elem = $(this); // Use $(this) to refer to the clicked button
+    				var textContainer = elem.closest('.amenities__single').find('.text'); // Find .text within the same amenities__single container
+    				if (elem.text() === "Voir Plus") {
+      					// Show the text and change button text
+      					textContainer.slideDown();
+      					elem.text("Voir Moins");
+    				} else {
+      					// Hide the text and change button text
+      					textContainer.slideUp();
+      					elem.text("Voir Plus");
+    				}
+  				});
+			});
+
+
+			// $(document).ready(function() {
+				
+			//   $(".toggle-btn").click(function() {
+			//     var elem = $(".toggle-btn").text();
+			//     if (elem == "Voir Plus") {
+			//       //Stuff to do when btn is in the Voir Plus state
+			//       $(".toggle-btn").text("Voir Moins");
+			//       $(".text").slideDown();
+			//     } else {
+			//       //Stuff to do when btn is in the read less state
+			//       $(".toggle-btn").text("Voir Plus");
+			//       $(".text").slideUp();
+			//     }
+			//   });
+			//   $("#toggle1").click(function() {
+			//     var elem = $("#toggle1").text();
+			//     if (elem == "Voir Plus") {
+			//       //Stuff to do when btn is in the Voir Plus state
+			//       $("#toggle1").text("Voir Moins");
+			//       $("#text1").slideDown();
+			//     } else {
+			//       //Stuff to do when btn is in the read less state
+			//       $("#toggle1").text("Voir Plus");
+			//       $("#text1").slideUp();
+			//     }
+			//   });
+			//   $("#toggle2").click(function() {
+			//     var elem = $("#toggle2").text();
+			//     if (elem == "Voir Plus") {
+			//       //Stuff to do when btn is in the Voir Plus state
+			//       $("#toggle2").text("Voir Moins");
+			//       $("#text2").slideDown();
+			//     } else {
+			//       //Stuff to do when btn is in the read less state
+			//       $("#toggle2").text("Voir Plus");
+			//       $("#text2").slideUp();
+			//     }
+			//   });
+			// });
+		</script>
 	{% endblock %}
