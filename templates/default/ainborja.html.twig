@@ -34,7 +34,7 @@
 {% block body %}
 	<!--Page Header Start-->
 	<section class="page-header">
-		<div class="page-header-bg" style="background-image: url({{asset('front/images/resources/banner_ain_borja.png')}});"></div>
+		<div class="page-header-bg" style="background-image: url({{asset('front/images/ain-bourja/banner.jpg')}});"></div>
 		<div class="page-header__overly"></div>
 		<div class="container">
 			<div class="page-header__inner">
@@ -278,7 +278,7 @@
 		<section class="video-one video-two">
 			<div class="container" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
 				<div class="video-one__img-box">
-					<div class="video-one__bg" style="background-image: url({{asset('/front/images/resources/plan_de_masse_ain_borja.png')}});"></div>
+					<div class="video-one__bg" style="background-image: url({{asset('/front/images/ain-bourja/premier_pas.jpg')}});"></div>
 					{# <div class="video-one__video-link">
 																																																												<a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
 																																																													<div class="video-one__video-icon">
@@ -513,7 +513,7 @@
 						<div class="gallery-three__single">
 							<div class="gallery-three__img">
 								<img
-								src="{{asset('front/images/resources/galerie1_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+								src="{{asset('front/images/ain-bourja/gallerie1.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
 							{# <div class="gallery-three__img-icon">
 																<a href="#">
 																	<span class="fab fa-instagram"></span>
@@ -528,7 +528,7 @@
 						<div class="gallery-three__single">
 							<div class="gallery-three__img">
 								<img
-								src="{{asset('front/images/resources/galerie2_ain_borja.png')}}" alt="Ain_Borja-Riad-al-Foutouh-cuisine-appartement">
+								src="{{asset('front/images/ain-bourja/gallerie2.jpg')}}" alt="Ain_Borja-Riad-al-Foutouh-cuisine-appartement">
 							{# <div class="gallery-three__img-icon">
 																<a href="#">
 																	<span class="fab fa-instagram"></span>
@@ -543,7 +543,7 @@
 						<div class="gallery-three__single">
 							<div class="gallery-three__img">
 								<img
-								src="{{asset('front/images/resources/galerie3_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
+								src="{{asset('front/images/ain-bourja/gallerie3.jpg')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
 							{# <div class="gallery-three__img-icon">
 																<a href="#">
 																	<span class="fab fa-instagram"></span>
@@ -558,7 +558,7 @@
 						<div class="gallery-three__single">
 							<div class="gallery-three__img">
 								<img
-								src="{{asset('front/images/resources/galerie4_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
+								src="{{asset('front/images/ain-bourja/gallerie4.jpg')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
 							{# <div class="gallery-three__img-icon">
 																<a href="#">
 																	<span class="fab fa-instagram"></span>
@@ -573,7 +573,7 @@
 						<div class="gallery-three__single">
 							<div class="gallery-three__img">
 								<img
-								src="{{asset('front/images/resources/galerie5_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-cuisine-appartements-Casablanca">
+								src="{{asset('front/images/ain-bourja/gallerie5.jpg')}}" alt="Ain-borja-Riad-al-foutouh-cuisine-appartements-Casablanca">
 							{# <div class="gallery-three__img-icon">
 																<a href="#">
 																	<span class="fab fa-instagram"></span>
@@ -588,7 +588,7 @@
 						<div class="gallery-three__single">
 							<div class="gallery-three__img">
 								<img
-								src="{{asset('front/images/resources/galerie6_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salle-de-bain-appartements-Casablanca">
+								src="{{asset('front/images/ain-bourja/gallerie6.jpg')}}" alt="Ain-borja-Riad-al-foutouh-salle-de-bain-appartements-Casablanca">
 							{# <div class="gallery-three__img-icon">
 																<a href="#">
 																	<span class="fab fa-instagram"></span>
@@ -604,13 +604,13 @@
 		<!--Gallery Three End-->
 
 		<section class="cta-two">
-			<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url({{asset('/front/images/resources/contact_home.png')}});"></div>
+			<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url({{asset('/front/images/ain-bourja/contact.jpg')}});"></div>
 			<div class="cta-two__inner">
 				<h3 class="cta-two__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
 					{{"ORGANISEZ VOTRE VISITE SUR PLACE"|trans({},"front")}}
 				</h3>
 				<p {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %} class="cta-two__text">
-					{{"notre équipe  commerciale vous acceuille 7j/7 du lundi au dimanche de 9h à 19h"|trans({},"front")}}
+					{{"Notre équipe  commerciale vous acceuille 7j/7 du lundi au dimanche de 9h à 19h"|trans({},"front")}}
 				</p>
 				<div class="cta-two__btn-box" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
 					<a href="{{path('app_contact')}}" class="cta-two__btn thm-btn">
