@@ -18,8 +18,8 @@
 # Common
 --------------------------------------------------------------*/
 :root {
-  --alipes-font: 'Caviar Dreams', sans-serif;
-  --alipes-font-two: 'Caviar Dreams', sans-serif;
+  --alipes-font: 'Caviar Dreams';
+  --alipes-font-two: 'Caviar Dreams';
   --alipes-reey-font: "reeyregular";
   --alipes-gray: #827e78;
   --alipes-gray-rgb: 130, 126, 120;
