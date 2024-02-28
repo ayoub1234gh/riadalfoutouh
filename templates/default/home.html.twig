@@ -184,6 +184,7 @@
     		margin-top: 5px;
 		}
 
+
 		{# new css  #}
 
 		.sticky-icon  {
@@ -448,6 +449,16 @@
 				margin-bottom: 5%;
 			}
 		{# end css #}
+=======
+		.video-one__bg {
+    		width: 1000px;
+		}
+
+		.video-one__img-box {
+    		width: 1000px;
+    		margin-left: 6rem;
+		}
+
 
 	</style>
 {% endblock %}
@@ -455,19 +466,13 @@
 {% block body %}
 
 	<section class="main-slider-three clearfix" id="home">
-		<div
-			class="swiper-container thm-swiper__slider" data-swiper-options='{"slidesPerView": 1, "loop": true,"effect": "fade",
-												  "pagination": {
-												  "el": "#main-slider-pagination",
-												  "type": "bullets",
-												  "clickable": true
-												  },"navigation": {"nextEl": "#main-slider__swiper-button-next","prevEl": "#main-slider__swiper-button-prev"}, "autoplay": { "delay": 5000}}'>
-			{# >>>>>>> dev #}
+		<div class="swiper-container thm-swiper__slider" data-swiper-options='{"slidesPerView": 1, "loop": true,"effect": "fade","pagination": {"el": "#main-slider-pagination","type": "bullets","clickable": true},"navigation": {"nextEl": "#main-slider__swiper-button-next","prevEl": "#main-slider__swiper-button-prev"}, "autoplay": { "delay": 5000}}'>
+	
 			<div class="swiper-wrapper">
 
 				<div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="image-layer-three" style="background-image: url({{asset('front/images/resources/slider1.png')}});"></div>
-					<!-- /.image-layer -->
+					
 					<div class="main-slider-three__shape-1">
 						<img src="{{asset('front/img/main-slider-three-shape-1.png')}}" alt="Riad-AL-Foutouh-agence-immobilière-Casablanca">
 					</div>
@@ -508,7 +513,7 @@
 
 				<div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="image-layer-three" style="background-image: url({{asset('front/images/resources/slider2.png')}});"></div>
-					<!-- /.image-layer -->
+				
 					<div class="main-slider-three__shape-1">
 						<img src="{{asset('front/img/main-slider-three-shape-1.png')}}" alt="Riad-AL-Foutouh-agence-immobilière-Casablanca">
 					</div>
@@ -549,7 +554,7 @@
 
 				<div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="image-layer-three" style="background-image: url({{asset('front/images/resources/slider3.png')}});"></div>
-					<!-- /.image-layer -->
+					
 					<div class="main-slider-three__shape-1">
 						<img src="{{asset('front/img/main-slider-three-shape-1.png')}}" alt="Riad-AL-Foutouh-agence-immobilière-Casablanca">
 					</div>
@@ -558,7 +563,6 @@
 							<div class="col-xl-12">
 								<div class="main-slider-three__content">
 									<h2 class="main-slider-three__title">{{"Riad Al Foutouh :"|trans({},"front")}} 
-
 										<br>
 										 {{"Des projets"|trans({},"front")}} 
 										<br>
@@ -590,7 +594,7 @@
 				
 			</div>
 
-			<!-- If we need navigation buttons -->
+			
 			<div class="main-slider-three__nav">
 				<div class="swiper-button-prev" id="main-slider__swiper-button-next">
 					<i class="icon-left-arrow"></i>
@@ -600,7 +604,7 @@
 				</div>
 			</div>
 
-			<!--Start Sticky Icon--> 
+			
 <div class="sticky-icon">
   <a href="{{path('app_contact')}}" class="Google"><i class="fa fa-phone"> </i>  Appels </a>
    <a href="https://www.instagram.com/riadalfoutouh/?igsh=MTFqamVybms4ZTgxaw%3D%3D" class="Instagram"><i class="fab fa-instagram"></i> Instagram </a>
@@ -608,11 +612,11 @@
    <a href="https://www.youtube.com/@riadalfoutouh" class="Youtube"><i class="fab fa-youtube"></i> Youtube </a>
    <a href="#" class="Twitter"><i class="fab fa-whatsapp"> </i> WhatsApp </a>   
 </div>
-<!--End Sticky Icon-->
+
 
 		</div>
 	</section>
-	<!--About Three Start-->
+	
 	<section class="about-three" id="about">
 		<div class="about-three__shape-2 float-bob-y"></div>
 		<div class="container">
@@ -634,7 +638,7 @@
 				<div class="col-xl-6">
 					<div class="about-three__right"{% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 						<div class="section-title text-left">
-							<span class="section-title__tagline">{{"A PROPOS DE RIAD AL FOUTOUH"|trans({},"front")}} </span>
+							<span class="section-title__tagline">{{"à PROPOS DE RIAD AL FOUTOUH"|trans({},"front")}} </span>
 							<h2 class="section-title__title"> {{"Qui sommes-nous ?"|trans({},"front")}}</h2>
 						</div>
 						<div id="content">
@@ -644,7 +648,7 @@
 						{# <a href=""><p class="about-three__text text-decoration-underline"> 
 						</p></a> #}
 						<div class="pt-3">
-							<button id="toggle" class="thm-btn amenities__btn">Read More</button>
+							<button id="toggle" class="thm-btn amenities__btn">Voir Plus</button>
 						</div>
 						<h2 class="section-title__title pt-3"> {{"Riad al foutouh : Des projets de vie"|trans({},"front")}}</h2>
 						<ul class="about-three__points list-unstyled" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
@@ -653,7 +657,11 @@
 									<span class="far fa-check-circle"></span>
 								</div>
 								<div class="text">
+
 									<p> {{"Projet Salam"|trans({},"front")}}</p>
+
+									<a href="{{path('app_salam')}}"><p> {{"Projet Salam"|trans({},"front")}} </p></a>
+
 								</div>
 							</li>
 							<li>
@@ -661,7 +669,7 @@
 									<span class="far fa-check-circle"></span>
 								</div>
 								<div class="text">
-									<p> {{"Projet les Jardins de la Rocade"|trans({},"front")}}</p>
+									<a href="{{path('jardinrocad')}}"><p> {{"Projet les Jardins de la Rocade"|trans({},"front")}}</p></a>
 								</div>
 							</li>
 							<li>
@@ -669,7 +677,7 @@
 									<span class="far fa-check-circle"></span>
 								</div>
 								<div class="text">
-									<p> {{"Projet Naim"|trans({},"front")}}</p>
+									<a href="{{path('naim')}}"><p> {{"Projet Naim"|trans({},"front")}}</p></a>
 								</div>
 							</li>
 							<li>
@@ -677,8 +685,7 @@
 									<span class="far fa-check-circle"></span>
 								</div>
 								<div class="text">
-									<p> {{"Projet Ain borja"|trans({},"front")}} 
-									</p>
+									<a href="{{path('app_ainborja')}}"><p> {{"Projet Ain borja"|trans({},"front")}} </p></a>
 								</div>
 							</li>
 							<li>
@@ -686,7 +693,7 @@
 									<span class="far fa-check-circle"></span>
 								</div>
 								<div class="text">
-									<p> {{"Projet les Jardins de la Forêt"|trans({},"front")}}</p>
+									<a href="{{path('app_jardinsforet')}}"><p> {{"Projet les Jardins de la Forêt"|trans({},"front")}}</p></a>
 								</div>
 							</li>
 							<li>
@@ -694,7 +701,7 @@
 									<span class="far fa-check-circle"></span>
 								</div>
 								<div class="text">
-									<p> {{"Projet la Verdure de Lissassfa"|trans({},"front")}}</p>
+									<a href="{{path('verdurelissassfa')}}"><p> {{"Projet la Verdure de Lissassfa"|trans({},"front")}}</p></a>
 								</div>
 							</li>
 						</ul>
@@ -711,7 +718,8 @@
 			<img src="{{asset('front/img/counter-two-shape-1.png')}}" alt="">
 		</div>
 		<div
-			class="container">{# <div class="row">
+			class="container">
+			{# <div class="row">
 																<div class="col-xl-12">
 																	<div class="counter-two__inner">
 																		<ul class="list-unstyled counter-two__list">
@@ -763,9 +771,15 @@
 	<section class="cta-two mt-5">
 		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url({{asset('/front/images/resources/contact_home.png')}});"></div>
 		<div class="cta-two__inner">
+
 			<h3 class="cta-two__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}> {{"Découvrez la meilleure agence immobilière à Casablanca"|trans({},"front")}}
 			</h3>
 			<p {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %} class="cta-two__text"> {{"pour des conseils d experts et des transactions immobilières réussies."|trans({},"front")}} </p>
+
+			<h3 class="cta-two__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}> {{"Découvrez Le meilleur promoteur immobilier à Casablanca"|trans({},"front")}}
+			</h3>
+			<p {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %} class="cta-two__text"> {{"pour un investissement immoblier réussi."|trans({},"front")}} </p>
+
 			<div class="cta-two__btn-box" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 				<a href="{{path('app_contact')}}" class="cta-two__btn thm-btn"> {{"Contactez nous"|trans({},"front")}}</a>
 			</div>
@@ -776,8 +790,9 @@
 	<!--Video One Start-->
 	<section class="video-one">
 		<div class="container">
-			<div class="video-one__img-box">
-				<div class="video-one__bg" style="background-image: url({{asset('/front/images/backgrounds/video-one-bg-img-1.jpg')}});"></div>
+			<div class="row">
+						<div class="video-one__img-box">
+				<div class="video-one__bg" style="background-image: url({{asset('/front/images/resources/banner_video.png')}});"></div>
 				<div class="video-one__video-link">
 					<a href="https://www.youtube.com/watch?v=NXz0FOrPXv8" class="video-popup">
 						<div class="video-one__video-icon">
@@ -786,11 +801,13 @@
 						</div>
 					</a>
 				</div>
-				<div class="video-one__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+				{# <div class="video-one__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<h3> {{"Our building"|trans({},"front")}} 
 						<br> {{"video tour"|trans({},"front")}} </h3>
-				</div>
+				</div> #}
 			</div>
+			</div>
+
 		</div>
 	</section>
 	<!--Video One End-->
@@ -809,7 +826,7 @@
 						<div
 							class="section-title text-left">
 							<span class="section-title__tagline">What’s Happening</span>
-							<h2 class="section-title__title"> {{"Equipe Riad Al Foutouh"|trans({},"front")}}</h2>
+							<h2 class="section-title__title"> {{"éQUIPE  Riad Al Foutouh"|trans({},"front")}}</h2>
 						</div>
 					</div>
 					<div
@@ -824,7 +841,7 @@
 					<div class="news-one__single">
 						<div class="news-one__img-box">
 							<div class="news-one__img">
-								<img src="{{asset('/front/images/resources/equipe_1.png')}}" alt="Omar sefrioui PDG Riad Al Foutouh">
+								<img src="{{asset('/front/images/resources/éQUIPE _1.png')}}" alt="Omar sefrioui PDG Riad Al Foutouh">
 							</div> #}
 							{# <div class="news-one__date"> #}
 								{# <p dir="rtl" lang="ar"> {{"20 Sep"|trans({},"front")}}</p>
@@ -847,7 +864,7 @@
 																													</h3>
 																													<div class="news-one__bottom">
 																														<div class="news-one__button">
-																															<a href="news-details.html">Read More</a>
+																															<a href="news-details.html">Voir Plus</a>
 																														</div>
 																														<div class="news-one__comment">
 																															<a href="news-details.html">
@@ -887,7 +904,7 @@
 																													</h3>
 																													<div class="news-one__bottom">
 																														<div class="news-one__button">
-																															<a href="news-details.html">Read More</a>
+																															<a href="news-details.html">Voir Plus</a>
 																														</div>
 																														<div class="news-one__comment">
 																															<a href="news-details.html">
@@ -927,7 +944,7 @@
 																													</h3>
 																													<div class="news-one__bottom">
 																														<div class="news-one__button">
-																															<a href="news-details.html">Read More</a>
+																															<a href="news-details.html">Voir Plus</a>
 																														</div>
 																														<div class="news-one__comment">
 																															<a href="news-details.html">
@@ -948,8 +965,14 @@
 		<div class="container pt-5">
 			<div class="row">
 				<div class="col-xl-12" style="text-align: center;z-index: 9999;">
+
 					<h2 class="section-title__title"> {{"Equipe Riad Al Foutouh"|trans({},"front")}}</h2>
 					<p>{{"Notre succès repose sur notre équipe dévouée de professionnels qualifiés.Spécialisés dans la vente, la location et l’évaluation de biens immobiliers, ils sont le cœur battant de Riad Al Foutouh, apportant expertise et passion à chaque projet."|trans({},"front")}}</p>
+
+					<h2 class="section-title__title"> {{"éQUIPE  Riad Al Foutouh"|trans({},"front")}}</h2>
+					<p>Notre succès repose sur notre équipe dévouée de professionnels qualifiés. 
+					Spécialisés dans la vente, la location et l'évaluation de biens immobiliers, ils sont le cœur battant de Riad Al Foutouh, apportant expertise et passion à chaque projet.</p>
+
 				</div>
 			</div>
 		</div>
@@ -965,10 +988,10 @@
 					<div class="about-three__left">
 						<div class="about-three__img-box">
 							<div class="about-three__img-1">
-								<img src="{{asset('front/images/resources/a_propos_2.png')}}" alt="">
+								<img src="{{asset('front/images/resources/equipe_home2.png')}}" alt="">
 							</div>
 							<div class="about-three__img-2">
-								<img src="{{asset('front/images/resources/a_propos_1.png')}}" alt="">
+								<img src="{{asset('front/images/resources/equipe_home1.png')}}" alt="">
 							</div>
 							<div class="about-three__shape-1"></div>
 							<div class="about-two__big-text" dir="rtl" lang="ar"> {{"alipes"|trans({},"front")}}</div>
@@ -1022,7 +1045,7 @@
 				<div class="col-xl-5 col-lg-6" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="new-concept-left">
 						<div class="section-title text-left">
-							<span class="section-title__tagline"> {{"A PROPOS DE RIAD AL FOUTOUH"|trans({},"front")}} </span>
+							<span class="section-title__tagline"> {{"à PROPOS DE RIAD AL FOUTOUH"|trans({},"front")}} </span>
 							<h2 class="section-title__title"> {{"Ce que nous assurons"|trans({},"front")}}</h2>
 						</div>
 						<ul class="new-concept__points list-unstyled">
@@ -1221,7 +1244,7 @@
 						<div
 							class="section-title text-left" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 							{# <span class="section-title__tagline">What’s Happening</span> #}
-							<h2 class="section-title__title"> {{"Profitez de nos offres diversifiees"|trans({},"front")}}</h2>
+							<h2 class="section-title__title"> {{"Profitez de nos offres diversifiées"|trans({},"front")}}</h2>
 						</div>
 					</div>
 					<div
@@ -1235,9 +1258,11 @@
 					<a class="text-center" href="{{path('residence')}}"><h2 class="pb-2">{{"APPARTEMENTS"|trans({},"front")}}</h2></a>
 					<div class="news-one__single">
 						<div class="news-one__img-box">
-							<div class="news-one__img">
-								<img src="{{asset('front/images/resources/offre1.png')}}" alt="">
-							</div>
+							<a class="text-center" href="{{path('residence')}}">
+								<div class="news-one__img">
+									<img src="{{asset('front/images/resources/offre1.png')}}" alt="">
+								</div>
+							</a>
 							{# <div class="news-one__date" dir="rtl" lang="ar">
 								<p> {{"20 Sep"|trans({},"front")}} </p>
 							</div> #}
@@ -1259,7 +1284,7 @@
 																													</h3>
 																													<div class="news-one__bottom">
 																														<div class="news-one__button">
-																															<a href="news-details.html">Read More</a>
+																															<a href="news-details.html">Voir Plus</a>
 																														</div>
 																														<div class="news-one__comment">
 																															<a href="news-details.html">
@@ -1272,7 +1297,7 @@
 				</div>
 				<!--news One Single End-->
 				<!--news One Single Start-->
-				<div class="col-xl-4 col-lg-4 wow fadeInUp pt-2" data-wow-delay="200ms">
+				<div class="col-xl-4 col-lg-4 wow fadeInUp pt-3" data-wow-delay="200ms">
 					<br>
 					<div class="news-one__single">
 						<div class="news-one__img-box">
@@ -1300,7 +1325,7 @@
 																													</h3>
 																													<div class="news-one__bottom">
 																														<div class="news-one__button">
-																															<a href="news-details.html">Read More</a>
+																															<a href="news-details.html">Voir Plus</a>
 																														</div>
 																														<div class="news-one__comment">
 																															<a href="news-details.html">
@@ -1313,6 +1338,7 @@
 				</div>
 				<!--news One Single End-->
 				<!--news One Single Start-->
+
 				<div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
 					<a class="text-center" href="{{path('locauxcommerciaux')}}"><h2 class="pb-2">{{"Locaux commerciaux"|trans({},"front")}}</h2></a>
 					<div class="news-one__single">
@@ -1320,6 +1346,17 @@
 							<div class="news-one__img">
 								<img src="{{asset('front/images/resources/offre3.png')}}" alt="">
 							</div>
+
+					<div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
+						<a class="text-center" href="{{path('locauxcommerciaux')}}"><h2 class="pb-2">Locaux commerciaux</h2></a>
+						<div class="news-one__single">
+							<div class="news-one__img-box">
+							<a href="{{path('locauxcommerciaux')}}">
+								<div class="news-one__img">
+									<img src="{{asset('front/images/resources/offre3.png')}}" alt=""/>
+								</div>
+							</a>
+
 							{# <div class="news-one__date">
 								<p>20 Sep</p>
 							</div> #}
@@ -1341,7 +1378,7 @@
 																													</h3>
 																													<div class="news-one__bottom">
 																														<div class="news-one__button">
-																															<a href="news-details.html">Read More</a>
+																															<a href="news-details.html">Voir Plus</a>
 																														</div>
 																														<div class="news-one__comment">
 																															<a href="news-details.html">
@@ -1349,9 +1386,9 @@
 																														</div>
 																													</div>
 																												</div> #}
+							</div>
 						</div>
 					</div>
-				</div>
 				<!--news One Single End-->
 			</div>
 		</div>
@@ -1370,11 +1407,11 @@
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
 							<img src="{{asset('front/images/resources/galerie1_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
-							<div class="gallery-three__img-icon">
+							{# <div class="gallery-three__img-icon">
 								<a href="#">
 									<span class="fab fa-instagram"></span>
 								</a>
-							</div>
+							</div> #}
 						</div>
 					</div>
 				</div>
@@ -1384,11 +1421,11 @@
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
 							<img src="{{asset('front/images/resources/galerie2_ain_borja.png')}}" alt="Ain_Borja-Riad-al-Foutouh-cuisine-appartement">
-							<div class="gallery-three__img-icon">
+							{# <div class="gallery-three__img-icon">
 								<a href="#">
 									<span class="fab fa-instagram"></span>
 								</a>
-							</div>
+							</div> #}
 						</div>
 					</div>
 				</div>
@@ -1398,11 +1435,11 @@
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
 							<img src="{{asset('front/images/resources/galerie3_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
-							<div class="gallery-three__img-icon">
+							{# <div class="gallery-three__img-icon">
 								<a href="#">
 									<span class="fab fa-instagram"></span>
 								</a>
-							</div>
+							</div> #}
 						</div>
 					</div>
 				</div>
@@ -1412,11 +1449,11 @@
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
 							<img src="{{asset('front/images/resources/galerie4_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
-							<div class="gallery-three__img-icon">
+							{# <div class="gallery-three__img-icon">
 								<a href="#">
 									<span class="fab fa-instagram"></span>
 								</a>
-							</div>
+							</div> #}
 						</div>
 					</div>
 				</div>
@@ -1426,11 +1463,11 @@
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
 							<img src="{{asset('front/images/resources/galerie5_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-cuisine-appartements-Casablanca">
-							<div class="gallery-three__img-icon">
+							{# <div class="gallery-three__img-icon">
 								<a href="#">
 									<span class="fab fa-instagram"></span>
 								</a>
-							</div>
+							</div> #}
 						</div>
 					</div>
 				</div>
@@ -1440,11 +1477,11 @@
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
 							<img src="{{asset('front/images/resources/galerie6_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salle-de-bain-appartements-Casablanca">
-							<div class="gallery-three__img-icon">
+							{# <div class="gallery-three__img-icon">
 								<a href="#">
 									<span class="fab fa-instagram"></span>
 								</a>
-							</div>
+							</div> #}
 						</div>
 					</div>
 				</div>
@@ -1531,13 +1568,13 @@
 		$(document).ready(function() {
 		  $("#toggle").click(function() {
 		    var elem = $("#toggle").text();
-		    if (elem == "Read More") {
-		      //Stuff to do when btn is in the read more state
-		      $("#toggle").text("Read Less");
+		    if (elem == "Voir Plus") {
+		      //Stuff to do when btn is in the Voir Plus state
+		      $("#toggle").text("Voir Moins");
 		      $("#text").slideDown();
 		    } else {
 		      //Stuff to do when btn is in the read less state
-		      $("#toggle").text("Read More");
+		      $("#toggle").text("Voir Plus");
 		      $("#text").slideUp();
 		    }
 		  });

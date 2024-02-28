@@ -103,7 +103,7 @@ h6 {
   font-family: var(--alipes-font-two);
   color: var(--alipes-black);
   margin: 0;
-  letter-spacing: var(--alipes-letter-spacing);
+  /* letter-spacing: var(--alipes-letter-spacing); */
 }
 
 p {
@@ -252,7 +252,7 @@ ul {
   color: var(--alipes-white);
   font-size: 16px;
   font-weight: 500;
-  letter-spacing: var(--alipes-letter-spacing);
+  /* letter-spacing: var(--alipes-letter-spacing); */
   font-family: var(--alipes-font-two);
   text-transform: uppercase;
   padding: 13px 59px 9px;
@@ -768,7 +768,7 @@ ul {
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   font-weight: 300;
-  letter-spacing: 0.1em;
+  /* letter-spacing: 0.1em; */
   font-family: var(--alipes-font-two);
 }
 
@@ -911,7 +911,7 @@ ul {
   position: absolute;
   top: 50%;
   right: 20px;
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Manrope', sans-serif;
   font-weight: 900;
   content: "\f105";
   font-size: 14px;
@@ -1862,7 +1862,7 @@ ul {
   color: var(--alipes-white);
   font-weight: 400;
   line-height: 90px;
-  letter-spacing: 0.1em;
+  /* letter-spacing: 0.1em; */
   text-transform: uppercase;
   margin-bottom: 9px;
   opacity: 0;
@@ -2068,7 +2068,7 @@ ul {
   line-height: 150px;
   font-weight: 300;
   color: var(--alipes-white);
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 5px;
   opacity: 0;
@@ -2089,7 +2089,7 @@ ul {
   line-height: 30px;
   font-weight: 500;
   font-family: var(--alipes-font-two);
-  letter-spacing: var(--alipes-letter-spacing);
+  /* letter-spacing: var(--alipes-letter-spacing); */
   text-transform: uppercase;
   opacity: 0;
   visibility: hidden;
@@ -2251,7 +2251,7 @@ ul {
   color: var(--alipes-white);
   font-weight: 800;
   line-height: 75px;
-  letter-spacing: -0.04em;
+  /* letter-spacing: -0.04em; */
   font-family: var(--alipes-font);
   opacity: 0;
   visibility: hidden;
@@ -2277,7 +2277,7 @@ ul {
   background-color: var(--alipes-white);
   font-family: var(--alipes-font-two);
   text-transform: uppercase;
-  letter-spacing: var(--alipes-letter-spacing);
+  /* letter-spacing: var(--alipes-letter-spacing); */
   color: var(--alipes-base);
   padding-left: 50px;
   padding-right: 70px;
@@ -3209,7 +3209,7 @@ ul {
   background-color: var(--alipes-base);
   padding: 23px 50px 19px;
   font-weight: 400;
-  letter-spacing: 0.1em;
+  /* letter-spacing: 0.1em; */
   text-transform: uppercase;
   cursor: pointer;
   font-family: var(--alipes-font-two);
@@ -3327,7 +3327,7 @@ ul {
   color: var(--alipes-black);
   text-transform: uppercase;
   font-family: var(--alipes-font-two);
-  letter-spacing: var(--alipes-letter-spacing);
+   letter-spacing: var(--alipes-letter-spacing);
   position: relative;
   display: flex;
   align-items: center;
@@ -3755,7 +3755,7 @@ ul {
   line-height: 18px;
   text-transform: uppercase;
   font-family: var(--alipes-font-two);
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
 }
 
 .testimonial-one__quote {
@@ -4139,7 +4139,7 @@ ul {
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
   font-family: var(--alipes-font-two);
   margin-top: 2px;
   margin-left: 54px;
@@ -4200,7 +4200,7 @@ ul {
   font-weight: 400;
   text-transform: uppercase;
   font-family: var(--alipes-font-two);
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
 }
 
 .contact-one__points li .content h4 {
@@ -4403,7 +4403,7 @@ ul {
   color: var(--alipes-white);
   line-height: 30px;
   font-weight: 500;
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
   text-transform: uppercase;
 }
 
@@ -4895,7 +4895,7 @@ ul {
   color: var(--alipes-white);
   margin-top: 6px;
   text-transform: uppercase;
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
 }
 
 /*--------------------------------------------------------------
@@ -5337,7 +5337,7 @@ ul {
   line-height: 26px;
   text-transform: uppercase;
   font-family: var(--alipes-font-two);
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
 }
 
 /*--------------------------------------------------------------
@@ -5523,7 +5523,7 @@ ul {
   color: var(--alipes-black);
   font-family: var(--alipes-font-two);
   text-transform: uppercase;
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
 }
 
 .measurement__bottom-points-two {
@@ -5667,7 +5667,7 @@ ul {
   background-color: var(--alipes-base);
   padding: 6px 30px 1px;
   font-family: var(--alipes-font-two);
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
 }
 
 .gallery-two__title {
@@ -6036,7 +6036,7 @@ ul {
   font-weight: 400;
   line-height: 27px;
   font-family: var(--alipes-font-two);
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
   text-transform: uppercase;
 }
 
@@ -6321,7 +6321,7 @@ ul {
   font-weight: 500;
   line-height: 24px;
   text-transform: uppercase;
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
   font-family: var(--alipes-font-two);
   padding-bottom: 20px;
 }
@@ -6825,7 +6825,7 @@ ul {
   line-height: 14px;
   display: block;
   font-family: var(--alipes-font-two);
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
   margin-top: 3px;
 }
 
@@ -7010,7 +7010,7 @@ ul {
   position: relative;
   display: inline-block;
   text-align: center;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.01em;
 }
 
 .gallery-three__title h3:before {
@@ -7135,7 +7135,7 @@ ul {
   line-height: 30px;
   text-transform: uppercase;
   font-family: var(--alipes-font-two);
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
   color: var(--alipes-white);
 }
 
@@ -7233,7 +7233,7 @@ ul {
   transition: all 500ms ease;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
   font-family: var(--alipes-font-two);
   color: rgba(var(--alipes-white-rgb), .60);
 }
@@ -7306,7 +7306,7 @@ ul {
   color: var(--alipes-white);
   line-height: 24px;
   text-transform: uppercase;
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
   font-family: var(--alipes-font-two);
 }
 
@@ -7402,7 +7402,7 @@ ul {
   font-weight: 500;
   font-family: var(--alipes-font-two);
   text-transform: uppercase;
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
 }
 
 .news-details__tags a {
@@ -7417,7 +7417,7 @@ ul {
   transition: all 500ms ease;
   text-transform: uppercase;
   font-family: var(--alipes-font-two);
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
 }
 
 .news-details__tags a:hover {
@@ -7530,7 +7530,7 @@ ul {
   padding-right: 60px;
   padding-top: 55px;
   padding-bottom: 50px;
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
   font-family: var(--alipes-font-two);
   text-transform: uppercase;
 }
@@ -7947,7 +7947,7 @@ ul {
   margin-left: 7px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
   font-family: var(--alipes-font-two);
 }
 
@@ -8084,7 +8084,7 @@ ul {
   color: var(--alipes-white);
   line-height: 24px;
   text-transform: uppercase;
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
   font-family: var(--alipes-font-two);
 }
 
@@ -8900,7 +8900,7 @@ ul {
   color: var(--alipes-black);
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
   font-family: var(--alipes-font-two);
 }
 
@@ -9310,7 +9310,7 @@ ul {
 .testimonial-two__client-sub-title {
   font-family: var(--alipes-font-two);
   text-transform: uppercase;
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
   line-height: 16px;
 }
 
@@ -10412,7 +10412,7 @@ ul {
   cursor: pointer;
   padding: 5px 20px 0px;
   border-radius: 0;
-  letter-spacing: 0.1em;
+  /* letter-spacing: 0.1em; */
   font-family: var(--alipes-font-two);
 }
 
@@ -10678,7 +10678,7 @@ ul {
   font-weight: 500;
   color: var(--alipes-gray);
   font-family: var(--alipes-font-two);
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
   line-height: 16px;
 }
 
@@ -11284,7 +11284,7 @@ ul {
   padding-bottom: 21px;
   font-family: var(--alipes-font-two);
   text-transform: uppercase;
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
 }
 
 .cart-table thead th:last-child {
@@ -11312,7 +11312,7 @@ ul {
   padding-right: 0;
   font-family: var(--alipes-font-two);
   text-transform: uppercase;
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
 }
 
 .cart-table tbody td:last-child {
@@ -11472,7 +11472,7 @@ ul {
   font-size: 18px;
   font-weight: 500;
   font-family: var(--alipes-font-two);
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
 }
 
 .cart-total li+li {
@@ -11487,7 +11487,7 @@ ul {
   font-weight: 500;
   width: 135px;
   text-align: right;
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
   font-family: var(--alipes-font-two);
   text-transform: uppercase;
 }
@@ -11780,7 +11780,7 @@ ul {
   font-weight: 500;
   text-transform: uppercase;
   font-family: var(--alipes-font-two);
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
   margin: 0;
   padding: 24px 0 19px;
 }
@@ -11808,7 +11808,7 @@ ul {
   font-weight: 500;
   text-transform: uppercase;
   font-family: var(--alipes-font-two);
-  letter-spacing: var(--alipes-letter-spacing);
+    letter-spacing: var(--alipes-letter-spacing);
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }

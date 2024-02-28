@@ -4,404 +4,417 @@
 {% endblock %}
 
 {% block stylesheets %}
-    <style>
-        p {
-            margin: 0;
-            font-size: 13px;
-            line-height: 17px;
-        }
+	<style>
+		{
+			# p {
+				margin: 0;
+				font-size: 13px;
+				line-height: 17px;
+			} #
+		}
 
-        .section-title__title {
-            margin: 0;
-            color: var(--alipes-black);
-            font-size: 23px;
-            line-height: 50px;
-            font-weight: 500;
-            margin-top: 0px;
-            text-transform: uppercase;
-        }
+		.section-title__title {
+			margin: 0;
+			color: var(--alipes-black);
+			font-size: 23px;
+			line-height: 50px;
+			font-weight: 500;
+			text-transform: uppercase;
+		}
 
-        .services-three__list li .icon {
-            width: 60px;
-        }
+		.services-three__list li .icon {
+			width: 60px;
+		}
 
-        .services-three__single {
-            height: 35vh;
-        }
+		.services-three__single {
+			height: 55vh;
+		}
 
-        .services-one__single-inner {
-            height: 50vh;
-        }
+		.services-one__single-inner {
+			height: 50vh;
+		}
 
-    </style>
-    
+		@media(min-width: 1200px) {
+			.col-xl-7 {
+				margin-top: 15rem;
+			}
+		}
+	</style>
+
 
 {% endblock %}
 
 {% block body %}
 
-        <!--Page Header Start-->
-        <section class="page-header">
-            <div class="page-header-bg" style="background-image: url({{asset('front/images/resources/banner_naim.png')}});">
-            </div>
-            <div class="page-header__overly"></div>
-            <div class="container" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-                <div class="page-header__inner">
-                    <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">{{"Résidences"|trans({},"front")}}</a></li>
-                        <li><span>/</span></li>
-                        <li>{{"LOGEMENT SOCIAL"|trans({},"front")}}</li>
-                    </ul>
-                    <h2>{{"HAY NAIM"|trans({},"front")}}</h2>
-                </div>
-            </div>
-        </section>
-        <!--Page Header End-->
+	<!--Page Header Start-->
+	<section class="page-header">
+		<div class="page-header-bg" style="background-image: url({{asset('front/images/naim/banner.jpg')}});"></div>
+		<div class="page-header__overly"></div>
+		<div class="container" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+			<div class="page-header__inner">
+				<ul class="thm-breadcrumb list-unstyled">
+					<li>
+						<a href="index.html">{{"Résidences"|trans({},"front")}}</a>
+					</li>
+					<li>
+						<span>/</span>
+					</li>
+					<li>{{"LOGEMENT SOCIAL"|trans({},"front")}}</li>
+				</ul>
+				<h2>{{"HAY NAIM"|trans({},"front")}}</h2>
+			</div>
+		</div>
+	</section>
+	<!--Page Header End-->
 
-        <!--New Concept Two Start-->
-        <section class="new-concept-two">
-            <div class="new-concept-two__shape-1 float-bob-y">
-                <img src="{{asset('front/images/shapes/new-concept-two-shape-1.png')}}" alt="">
-            </div>
-            <div class="new-concept-two__shape-2 float-bob-x">
-                <img src="{{asset('front/images/shapes/new-concept-two-shape-2.png')}}" alt="">
-            </div>
-            <div class="container">
-                <div class="row"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-                    <div class="col-xl-5 col-lg-6">
-                        <div class="new-concept-two__left">
-                            <div class="section-title text-left">
-                                <span class="section-title__tagline">{{"BY RIAD AL FOUTOUH"|trans({},"front")}}</span>
-                                <h2 class="section-title__title" style="font-size:">{{"HAY NAIM : EN DEHORS DE LA VILLE AU CŒUR DE LA VIE !"|trans({},"front")}}</h2>
-                            </div>
-                            <p class="new-concept__text">{{"Hay Naim est un quartier d’habitation situé aux alentours de Casablanca jouissant d’une position stratégique sur la route nationale N9 et d’un environnement d’exception. Le projet comprend une offre composée d’appartements prêts à être livrés de 3 chambres+ salon avec parking sous-sol et dans des résidences surveillées 24/24H, le tout dans un environnement exceptionnel et entouré de divers équipements de proximité : Marché central, une mosquée, des écoles, des crèches, hammam…."|trans({},"front")}}</p>
-                            <ul class="new-concept__points list-unstyled">
-                                <li>
-                                    <div class="icon">
-                                        <span class="icon-manhattan"></span>
-                                    </div>
-                                    <div class="text">
-                                        <h3>{{"SÉCURITÉ ET HARMONIE NATURELLE :"|trans({},"front")}}</h3>
-                                        <p>{{"Ce projet immobilier propose des logements neufs de standing moyen à Tit Mellil Casablanca, offrant une résidence élégante et moderne."|trans({},"front")}}</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <span class="icon-apartment-1"></span>
-                                    </div>
-                                    <div class="text">
-                                        <h3>{{"Standing Moyen Élégant :"|trans({},"front")}}</h3>
-                                        <p>{{"La résidence se distingue par son caractère fermé et sécurisé, assurant la tranquillité d’esprit des résidents. En plus de cela, elle offre un cadre de vie reposant, établissant un équilibre parfait entre le rythme citadin et la proximité avec la nature. Cette harmonie entre sécurité et nature crée une atmosphère résidentielle unique et agréable."|trans({},"front")}} 
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-7 col-lg-6">
-                        <div class="new-concept-two__right">
-                            <div class="new-concept-two__img">
-                                <img src="{{asset('front/images/resources/project_naim.png')}}" alt="Naim-Riad-al-Foutouh-Chambre-appartement-Casablanca">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--New Concept Two End-->
-        <section>
-            <div class="container text-center p-4"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-                <p>{{"La résidence vous offre des appartements avec une architecture moderne et optimisée, répondant aux normes de construction et de finition."|trans({},"front")}}</p>
-            </div>
-        </section>
-        <!--Brand One Start-->
-        {# <section class="brand-one brand-three">
-            <div class="brand-one__wrap">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="brand-one__inner">
-                                <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 100, "slidesPerView": 5, "autoplay": { "delay": 5000 }, "breakpoints": {
-                        "0": {
-                            "spaceBetween": 30,
-                            "slidesPerView": 2
-                        },
-                        "375": {
-                            "spaceBetween": 30,
-                            "slidesPerView": 2
-                        },
-                        "575": {
-                            "spaceBetween": 30,
-                            "slidesPerView": 3
-                        },
-                        "767": {
-                            "spaceBetween": 50,
-                            "slidesPerView": 4
-                        },
-                        "991": {
-                            "spaceBetween": 50,
-                            "slidesPerView": 5
-                        },
-                        "1199": {
-                            "spaceBetween": 100,
-                            "slidesPerView": 6
-                        }
-                    }}'>
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <img src="{{asset('front/images/brand/brand-1-1.png')}}" alt="">
-                                        </div><!-- /.swiper-slide -->
-                                        <div class="swiper-slide">
-                                            <img src="{{asset('front/images/brand/brand-1-2.png')}}" alt="">
-                                        </div><!-- /.swiper-slide -->
-                                        <div class="swiper-slide">
-                                            <img src="{{asset('front/images/brand/brand-1-3.png')}}" alt="">
-                                        </div><!-- /.swiper-slide -->
-                                        <div class="swiper-slide">
-                                            <img src="{{asset('front/images/brand/brand-1-4.png')}}" alt="">
-                                        </div><!-- /.swiper-slide -->
-                                        <div class="swiper-slide">
-                                            <img src="{{asset('front/images/brand/brand-1-5.png')}}" alt="">
-                                        </div><!-- /.swiper-slide -->
-                                        <div class="swiper-slide">
-                                            <img src="{{asset('front/images/brand/brand-1-6.png')}}" alt="">
-                                        </div><!-- /.swiper-slide -->
-                                        <div class="swiper-slide">
-                                            <img src="{{asset('front/images/brand/brand-1-1.png')}}" alt="">
-                                        </div><!-- /.swiper-slide -->
-                                        <div class="swiper-slide">
-                                            <img src="{{asset('front/images/brand/brand-1-2.png')}}" alt="">
-                                        </div><!-- /.swiper-slide -->
-                                        <div class="swiper-slide">
-                                            <img src="{{asset('front/images/brand/brand-1-3.png')}}" alt="">
-                                        </div><!-- /.swiper-slide -->
-                                        <div class="swiper-slide">
-                                            <img src="{{asset('front/images/brand/brand-1-4.png')}}" alt="">
-                                        </div><!-- /.swiper-slide -->
-                                        <div class="swiper-slide">
-                                            <img src="{{asset('front/images/brand/brand-1-5.png')}}" alt="">
-                                        </div><!-- /.swiper-slide -->
-                                        <div class="swiper-slide">
-                                            <img src="{{asset('front/images/brand/brand-1-6.png')}} " alt="">
-                                        </div><!-- /.swiper-slide -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> #}
-        <!--Brand One End-->    
+	<!--New Concept Two Start-->
+	<section class="new-concept-two">
+		<div class="new-concept-two__shape-1 float-bob-y">
+			<img src="{{asset('front/images/shapes/new-concept-two-shape-1.png')}}" alt="">
+		</div>
+		<div class="new-concept-two__shape-2 float-bob-x">
+			<img src="{{asset('front/images/shapes/new-concept-two-shape-2.png')}}" alt="">
+		</div>
+		<div class="container">
+			<div class="row" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+				<div class="col-xl-5 col-lg-6">
+					<div class="new-concept-two__left">
+						<div class="section-title text-left">
+							<span class="section-title__tagline">{{"Projet signé : Riad al foutouh"|trans({},"front")}}</span>
+							<h2 class="section-title__title" style="font-size:">{{"HAY NAIM : EN DEHORS DE LA VILLE AU CŒUR DE LA VIE !"|trans({},"front")}}</h2>
+						</div>
+						<p class="new-concept__text">{{"Hay Naim est un quartier d’habitation situé aux alentours de Casablanca jouissant d’une position stratégique sur la route nationale N9 et d’un environnement d’exception. Le projet comprend une offre composée d’appartements prêts à être livrés de 3 chambres+ salon avec parking sous-sol et dans des résidences surveillées 24/24H, le tout dans un environnement exceptionnel et entouré de divers équipements de proximité : Marché central, une mosquée, des écoles, des crèches, hammam…."|trans({},"front")}}</p>
+						<ul class="new-concept__points list-unstyled">
+							<li>
+								<div class="icon">
+									<span class="icon-manhattan"></span>
+								</div>
+								<div class="text">
+									<h3>{{"SÉCURITÉ ET HARMONIE NATURELLE :"|trans({},"front")}}</h3>
+									<p>{{"Ce projet immobilier propose des logements neufs de standing moyen à Tit Mellil Casablanca, offrant une résidence élégante et moderne."|trans({},"front")}}</p>
+								</div>
+							</li>
+							<li>
+								<div class="icon">
+									<span class="icon-apartment-1"></span>
+								</div>
+								<div class="text">
+									<h3>{{"Standing Moyen Élégant :"|trans({},"front")}}</h3>
+									<p>{{"La résidence se distingue par son caractère fermé et sécurisé, assurant la tranquillité d’esprit des résidents. En plus de cela, elle offre un cadre de vie reposant, établissant un équilibre parfait entre le rythme citadin et la proximité avec la nature. Cette harmonie entre sécurité et nature crée une atmosphère résidentielle unique et agréable."|trans({},"front")}}
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xl-7 col-lg-6">
+					<div class="new-concept-two__right">
+						<div class="new-concept-two__img">
+							<img src="{{asset('front/images/naim/project_naim.jpg')}}" alt="Naim-Riad-al-Foutouh-Chambre-appartement-Casablanca">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--New Concept Two End-->
+	<section>
+		<div class="container text-center p-4" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+			<p>{{"La résidence vous offre des appartements avec une architecture moderne et optimisée, répondant aux normes de construction et de finition."|trans({},"front")}}</p>
+		</div>
+	</section>
+	<!--Brand One Start-->
+	{# <section class="brand-one brand-three">
+		            <div class="brand-one__wrap">
+		                <div class="container">
+		                    <div class="row">
+		                        <div class="col-xl-12">
+		                            <div class="brand-one__inner">
+		                                <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 100, "slidesPerView": 5, "autoplay": { "delay": 5000 }, "breakpoints": {
+		                        "0": {
+		                            "spaceBetween": 30,
+		                            "slidesPerView": 2
+		                        },
+		                        "375": {
+		                            "spaceBetween": 30,
+		                            "slidesPerView": 2
+		                        },
+		                        "575": {
+		                            "spaceBetween": 30,
+		                            "slidesPerView": 3
+		                        },
+		                        "767": {
+		                            "spaceBetween": 50,
+		                            "slidesPerView": 4
+		                        },
+		                        "991": {
+		                            "spaceBetween": 50,
+		                            "slidesPerView": 5
+		                        },
+		                        "1199": {
+		                            "spaceBetween": 100,
+		                            "slidesPerView": 6
+		                        }
+		                    }}'>
+		                                    <div class="swiper-wrapper">
+		                                        <div class="swiper-slide">
+		                                            <img src="{{asset('front/images/brand/brand-1-1.png')}}" alt="">
+		                                        </div><!-- /.swiper-slide -->
+		                                        <div class="swiper-slide">
+		                                            <img src="{{asset('front/images/brand/brand-1-2.png')}}" alt="">
+		                                        </div><!-- /.swiper-slide -->
+		                                        <div class="swiper-slide">
+		                                            <img src="{{asset('front/images/brand/brand-1-3.png')}}" alt="">
+		                                        </div><!-- /.swiper-slide -->
+		                                        <div class="swiper-slide">
+		                                            <img src="{{asset('front/images/brand/brand-1-4.png')}}" alt="">
+		                                        </div><!-- /.swiper-slide -->
+		                                        <div class="swiper-slide">
+		                                            <img src="{{asset('front/images/brand/brand-1-5.png')}}" alt="">
+		                                        </div><!-- /.swiper-slide -->
+		                                        <div class="swiper-slide">
+		                                            <img src="{{asset('front/images/brand/brand-1-6.png')}}" alt="">
+		                                        </div><!-- /.swiper-slide -->
+		                                        <div class="swiper-slide">
+		                                            <img src="{{asset('front/images/brand/brand-1-1.png')}}" alt="">
+		                                        </div><!-- /.swiper-slide -->
+		                                        <div class="swiper-slide">
+		                                            <img src="{{asset('front/images/brand/brand-1-2.png')}}" alt="">
+		                                        </div><!-- /.swiper-slide -->
+		                                        <div class="swiper-slide">
+		                                            <img src="{{asset('front/images/brand/brand-1-3.png')}}" alt="">
+		                                        </div><!-- /.swiper-slide -->
+		                                        <div class="swiper-slide">
+		                                            <img src="{{asset('front/images/brand/brand-1-4.png')}}" alt="">
+		                                        </div><!-- /.swiper-slide -->
+		                                        <div class="swiper-slide">
+		                                            <img src="{{asset('front/images/brand/brand-1-5.png')}}" alt="">
+		                                        </div><!-- /.swiper-slide -->
+		                                        <div class="swiper-slide">
+		                                            <img src="{{asset('front/images/brand/brand-1-6.png')}} " alt="">
+		                                        </div><!-- /.swiper-slide -->
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </section> #}
+	<!--Brand One End-->
 
-                <!--Services One Start-->
-        <section class="services-one">
-            <div class="services-one__shape-1 float-bob-x">
-                <img src="{{asset('front/images/shapes/services-one-shape-1.png')}}" alt="">
-            </div>
-            <div class="services-one__shape-2 float-bob-x">
-                <img src="{{asset('front/images/shapes/services-one-shape-2.png')}}" alt="">
-            </div>
-            <div class="container"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-                <div class="row">
-                    <div class="col-xl-6 col-lg-12">
-                        <div class="services-one__left">
-                            <div class="section-title text-left">
-                                <span class="section-title__tagline">{{"Équipements"|trans({},"front")}}</span>
-                                <h2 class="section-title__title">{{"Résidences Harmonieuses : Accessibilité, Confort et Qualité de Vie Exceptionnels"|trans({},"front")}}</h2>
-                            </div>
-                            <div class="services-one__btn-box">
-                                <a href="services.html" class="thm-btn services-one__btn">{{"planifier une visite"|trans({},"front")}}</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Services One Single Start-->
-                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                        <div class="services-one__single"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-                            <div class="services-one__single-inner">
-                                <div class="services-one__single-bg"
-                                    style="background-image: url({{asset('front/images/backgrounds/services-one-single-bg.jpg')}});">
-                                </div>
-                                <div class="services-one__icon">
-                                    <span class="icon-residential"></span>
-                                </div>
-                                <h3 class="services-one__title"><a href="services.html">{{"Superficie"|trans({},"front")}}</a></h3>
-                                <p class="services-one__text">{{"Des appartements de 51 à 74 m²"|trans({},"front")}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Services One Single End-->
-                    <!--Services One Single Start-->
-                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="services-one__single"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-                            <div class="services-one__single-inner">
-                                <div class="services-one__single-bg"
-                                    style="background-image: url({{asset('front/images/backgrounds/services-one-single-bg.jpg')}});">
-                                </div>
-                                <div class="services-one__icon">
-                                    <span class="icon-sustainable"></span>
-                                </div>
-                                <h3 class="services-one__title"><a href="services.html">{{"Consistance"|trans({},"front")}}</a></h3>
-                                <p class="services-one__text">{{"3 chambres + Salon, cuisine, 2 SDB, balcon"|trans({},"front")}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Services One Single End-->
-                    <!--Services One Single Start-->
-                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="services-one__single"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-                            <div class="services-one__single-inner">
-                                <div class="services-one__single-bg"
-                                    style="background-image: url({{asset('front/images/backgrounds/services-one-single-bg.jpg')}});">
-                                </div>
-                                <div class="services-one__icon">
-                                    <span class="icon-world"></span>
-                                </div>
-                                <h3 class="services-one__title"><a href="services.html">{{"Parking"|trans({},"front")}}</a></h3>
-                                <p class="services-one__text">{{"la garantie d’une sécurité optimale pour votre véhicule, alliée à la praticité d’un espace bien aménagé."|trans({},"front")}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Services One Single End-->
-                    <!--Services One Single Start-->
-                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                        <div class="services-one__single"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-                            <div class="services-one__single-inner">
-                                <div class="services-one__single-bg"
-                                    style="background-image: url({{asset('front/images/backgrounds/services-one-single-bg.jpg')}});">
-                                </div>
-                                <div class="services-one__icon">
-                                    <span class="icon-home-automation"></span>
-                                </div>
-                                <h3 class="services-one__title"><a href="services.html">{{"Local commercial"|trans({},"front")}}</a></h3>
-                                <p class="services-one__text">{{"Magasin d’une superficie minimale de 39 m²"|trans({},"front")}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Services One Single End-->
-                    <!--Services One Single Start-->
-                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="500ms">
-                        <div class="services-one__single"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-                            <div class="services-one__single-inner">
-                                <div class="services-one__single-bg"
-                                    style="background-image: url({{asset('front/images/backgrounds/services-one-single-bg.jpg')}});">
-                                </div>
-                                <div class="services-one__icon">
-                                    <span class="icon-electric-appliance"></span>
-                                </div>
-                                <h3 class="services-one__title"><a href="services.html">{{"Cuisine équipée"|trans({},"front")}}</a></h3>
-                                <p class="services-one__text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Services One Single End-->
-                    <!--Services One Single Start-->
-                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="600ms">
-                        <div class="services-one__single"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-                            <div class="services-one__single-inner">
-                                <div class="services-one__single-bg"
-                                    style="background-image: url({{asset('front/images/backgrounds/services-one-single-bg.jpg')}});">
-                                </div>
-                                <div class="services-one__icon">
-                                    <span class="icon-swimming-pool"></span>
-                                </div>
-                                <h3 class="services-one__title"><a href="services.html">{{"Accessibilité totale"|trans({},"front")}}</a></h3>
-                                <p class="services-one__text">{{"Proche de toutes les commodités : écoles, mosquée, centres commerciaux, jardins…"|trans({},"front")}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Services One Single End-->
-                </div>
-            </div>
-        </section>
-        <!--Services One End-->
+	<!--Services One Start-->
+		<section class="services-one"> <div class="services-one__shape-1 float-bob-x">
+			<img src="{{asset('front/images/shapes/services-one-shape-1.png')}}" alt="">
+		</div>
+		<div class="services-one__shape-2 float-bob-x">
+			<img src="{{asset('front/images/shapes/services-one-shape-2.png')}}" alt="">
+		</div>
+		<div class="container" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+			<div class="row">
+				<div class="col-xl-6 col-lg-12">
+					<div class="services-one__left">
+						<div class="section-title text-left">
+							<span class="section-title__tagline">{{"Équipements"|trans({},"front")}}</span>
+							<h2 class="section-title__title">{{"Résidences Harmonieuses : Accessibilité, Confort et Qualité de Vie Exceptionnels"|trans({},"front")}}</h2>
+						</div>
+						<div class="services-one__btn-box">
+							<a href="{{path('app_contact')}}" class="thm-btn services-one__btn">{{"planifier une visite"|trans({},"front")}}</a>
+						</div>
+					</div>
+				</div>
+				<!--Services One Single Start-->
+				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+					<div class="services-one__single" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+						<div class="services-one__single-inner">
+							<div class="services-one__single-bg"></div>
+							<div class="services-one__icon">
+								<span class="icon-residential"></span>
+							</div>
+							<h3 class="services-one__title">
+								<a>{{"Superficie"|trans({},"front")}}</a>
+							</h3>
+							<p class="services-one__text">{{"Des appartements de 51 à 74 m²"|trans({},"front")}}</p>
+						</div>
+					</div>
+				</div>
+				<!--Services One Single End-->
+				<!--Services One Single Start-->
+				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+					<div class="services-one__single" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+						<div class="services-one__single-inner">
+							<div class="services-one__single-bg"></div>
+							<div class="services-one__icon">
+								<span class="icon-sustainable"></span>
+							</div>
+							<h3 class="services-one__title">
+								<a>{{"Consistance"|trans({},"front")}}</a>
+							</h3>
+							<p class="services-one__text">{{"3 chambres + Salon, cuisine, 2 SDB, balcon"|trans({},"front")}}</p>
+						</div>
+					</div>
+				</div>
+				<!--Services One Single End-->
+				<!--Services One Single Start-->
+				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+					<div class="services-one__single" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+						<div class="services-one__single-inner">
+							<div class="services-one__single-bg"></div>
+							<div class="services-one__icon">
+								<span class="icon-world"></span>
+							</div>
+							<h3 class="services-one__title">
+								<a>{{"Parking"|trans({},"front")}}</a>
+							</h3>
+							<p class="services-one__text">{{"la garantie d’une sécurité optimale pour votre véhicule, alliée à la praticité d’un espace bien aménagé."|trans({},"front")}}</p>
+						</div>
+					</div>
+				</div>
+				<!--Services One Single End-->
+				<!--Services One Single Start-->
+				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+					<div class="services-one__single" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+						<div class="services-one__single-inner">
+							<div class="services-one__single-bg"></div>
+							<div class="services-one__icon">
+								<span class="icon-home-automation"></span>
+							</div>
+							<h3 class="services-one__title">
+								<a>{{"Local commercial"|trans({},"front")}}</a>
+							</h3>
+							<p class="services-one__text">{{"Magasin d’une superficie minimale de 39 m²"|trans({},"front")}}</p>
+						</div>
+					</div>
+				</div>
+				<!--Services One Single End-->
+				<!--Services One Single Start-->
+				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="500ms">
+					<div class="services-one__single" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+						<div class="services-one__single-inner">
+							<div class="services-one__single-bg"></div>
+							<div class="services-one__icon">
+								<span class="icon-electric-appliance"></span>
+							</div>
+							<h3 class="services-one__title">
+								<a>{{"Cuisine équipée"|trans({},"front")}}</a>
+							</h3>
+							<p class="services-one__text"></p>
+						</div>
+					</div>
+				</div>
+				<!--Services One Single End-->
+				<!--Services One Single Start-->
+				<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="600ms">
+					<div class="services-one__single" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+						<div class="services-one__single-inner">
+							<div class="services-one__single-bg"></div>
+							<div class="services-one__icon">
+								<span class="icon-swimming-pool"></span>
+							</div>
+							<h3 class="services-one__title">
+								<a>{{"Accessibilité totale"|trans({},"front")}}</a>
+							</h3>
+							<p class="services-one__text">{{"Proche de toutes les commodités : écoles, mosquée, centres commerciaux, jardins…"|trans({},"front")}}</p>
+						</div>
+					</div>
+				</div>
+				<!--Services One Single End-->
+			</div>
+		</div>
+	</section>
+	<!--Services One End-->
 
-                <!--CTA Two Start-->
-        <section class="cta-two cta-four">
-            <div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-                style="background-image: url({{asset('front/images/resources/reservation_naim.png')}});"></div>
-            <div class="cta-two__inner"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-                <h3 class="cta-two__title">{{"Organisez votre visite sur place"|trans({},"front")}}</h3>
-                <p class="cta-two__text">{{"notre equipe commerciale vous acceuille 7j/7 du lundi au dimanche de 9h à 19h"|trans({},"front")}}</p>
-                <div class="cta-two__btn-box">
-                    <a href="contact.html" class="cta-two__btn thm-btn">{{"reserver maintenant"|trans({},"front")}}</a>
-                </div>
-            </div>
-        </section>
-        <!--CTA Two End-->
-        
-                <!--Services Three Start-->
-        <section class="services-three">
-            <div class="container">
-                <div class="section-title text-center"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-                    <span class="section-title__tagline"{{"OFFRES PROFESSIONNELLES"|trans({},"front")}}></span>
-                    <h2 class="section-title__title">{{"Des commerces pour investir !"|trans({},"front")}}</h2>
-                </div>
-                <div class="row">
-                    <!--Services Three Single Start-->
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                        <div class="services-three__single">
-                            {# <h3 class="services-three__title"><a href="services.html">Smart living</a></h3> #}
-                            <ul class=""{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-                                <li>
-                                    <div class="text"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-                                        <p>{{"Le projet les jardins de la forêt de Riad Al foutouh vous propose également votre futur local commercial à Mohammedia d’une superficie minimale de 27 m²."|trans({},"front")}}</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!--Services Three Single End-->
-                    <!--Services Three Single Start-->
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="services-three__single">
-                            {# <h3 class="services-three__title"><a href="services.html">All amenities</a></h3> #}
-                            <ul class="" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-                                <li>
-                                    <div class="text">
-                                        <p>{{"À l’entrée de Mohammedia et à seulement 5 min de la forêt, Les jardins de la forêt, se situe dans un quartier dynamique et en plein essor qui garantira la prospérité de votre activité."|trans({},"front")}}</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!--Services Three Single End-->
-                    <!--Services Three Single Start-->
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="services-three__single">
-                            {# <h3 class="services-three__title"><a href="services.html">Modern technology</a></h3> #}
-                            <ul class=""{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-                                <li>
-                                    <div class="text">
-                                        <p>{{"Qu’il s’agisse des magasins situés sur le boulevard ou sur l’allée piétonne, cœur battant du projet, ils bénéficieront tous d’un flux de clientèle important et viendront répondre à la demande élevée de commerces de proximité pour les futurs résidents du projet les jardins de la forêt."|trans({},"front")}}</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!--Services Three Single End-->
-                </div>
-            </div>
-        </section>
-        <!--Services Three End-->
+	<!--CTA Two Start-->
+	<section class="cta-two cta-four">
+		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url({{asset('front/images/naim/reservation_naim.jpg')}});"></div>
+		<div class="cta-two__inner" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+			<h3 class="cta-two__title">{{"Organisez votre visite sur place"|trans({},"front")}}</h3>
+			<p class="cta-two__text">{{"notre équipe commerciale vous acceuille 7j/7 du lundi au dimanche de 9h à 19h"|trans({},"front")}}</p>
+			<div class="cta-two__btn-box">
+				<a href="{{path('app_contact')}}" class="cta-two__btn thm-btn">{{"reserver maintenant"|trans({},"front")}}</a>
+			</div>
+		</div>
+	</section>
+	<!--CTA Two End-->
 
-            	<!--Gallery Three Start-->
-	        <section class="gallery-three mt-5">
-		        <div class="container"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+	<!--Services Three Start-->
+	<section class="services-three">
+		<div class="container">
+			<div class="section-title text-center" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+				<span class="section-title__tagline" {{"OFFRES PROFESSIONNELLES"|trans({} ,"front" )}}></span>
+				<h2 class="section-title__title">{{"Des commerces pour investir !"|trans({},"front")}}</h2>
+			</div>
+			<div
+				class="row">
+				<!--Services Three Single Start-->
+				<div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+					<div
+						class="services-three__single">
+						{# <h3 class="services-three__title"><a href="services.html">Smart living</a></h3> #}
+						<ul class="" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+							<li>
+								<div class="text" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+									<p>{{"Le projet les jardins de la forêt de Riad Al foutouh vous propose également votre futur local commercial à Mohammedia d’une superficie minimale de 27 m²."|trans({},"front")}}</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--Services Three Single End-->
+				<!--Services Three Single Start-->
+				<div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+					<div
+						class="services-three__single">
+						{# <h3 class="services-three__title"><a href="services.html">All amenities</a></h3> #}
+						<ul class="" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+							<li>
+								<div class="text">
+									<p>{{"À l’entrée de Mohammedia et à seulement 5 min de la forêt, Les jardins de la forêt, se situe dans un quartier dynamique et en plein essor qui garantira la prospérité de votre activité."|trans({},"front")}}</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--Services Three Single End-->
+				<!--Services Three Single Start-->
+				<div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+					<div
+						class="services-three__single">
+						{# <h3 class="services-three__title"><a href="services.html">Modern technology</a></h3> #}
+						<ul class="" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+							<li>
+								<div class="text">
+									<p>{{"Qu’il s’agisse des magasins situés sur le boulevard ou sur l’allée piétonne, cœur battant du projet, ils bénéficieront tous d’un flux de clientèle important et viendront répondre à la demande élevée de commerces de proximité pour les futurs résidents du projet les jardins de la forêt."|trans({},"front")}}</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--Services Three Single End-->
+			</div>
+		</div>
+	</section>
+	<!--Services Three End-->
+
+	<!--Gallery Three Start-->
+	<section class="gallery-three mt-5">
+		<div class="container" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
 			<div class="gallery-three__title">
 				<h3>{{"Voir la galerie de photos"|trans({},"front")}}</h3>
 			</div>
-			<div class="row">
+			<div
+				class="row">
 				<!--Gallery Three Single Start-->
 				<div class="col-xl-2 col-lg-3 col-md-6">
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
-							<img src="{{asset('front/images/resources/galerie1_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
-							<div class="gallery-three__img-icon">
-								<a href="#">
-									<span class="fab fa-instagram"></span>
-								</a>
-							</div>
+							<img
+							src="{{asset('front/images/naim/gallerie1.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+						{# <div class="gallery-three__img-icon">
+																				<a href="#">
+																					<span class="fab fa-instagram"></span>
+																				</a>
+																			</div> #}
 						</div>
 					</div>
 				</div>
@@ -410,12 +423,13 @@
 				<div class="col-xl-2 col-lg-3 col-md-6">
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
-							<img src="{{asset('front/images/resources/galerie2_ain_borja.png')}}" alt="Ain_Borja-Riad-al-Foutouh-cuisine-appartement">
-							<div class="gallery-three__img-icon">
-								<a href="#">
-									<span class="fab fa-instagram"></span>
-								</a>
-							</div>
+							<img
+							src="{{asset('front/images/naim/gallerie2.jpg')}}" alt="Ain_Borja-Riad-al-Foutouh-cuisine-appartement">
+						{# <div class="gallery-three__img-icon">
+																				<a href="#">
+																					<span class="fab fa-instagram"></span>
+																				</a>
+																			</div> #}
 						</div>
 					</div>
 				</div>
@@ -424,12 +438,13 @@
 				<div class="col-xl-2 col-lg-3 col-md-6">
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
-							<img src="{{asset('front/images/resources/galerie3_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
-							<div class="gallery-three__img-icon">
-								<a href="#">
-									<span class="fab fa-instagram"></span>
-								</a>
-							</div>
+							<img
+							src="{{asset('front/images/naim/gallerie3.jpg')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
+						{# <div class="gallery-three__img-icon">
+																				<a href="#">
+																					<span class="fab fa-instagram"></span>
+																				</a>
+																			</div> #}
 						</div>
 					</div>
 				</div>
@@ -438,12 +453,13 @@
 				<div class="col-xl-2 col-lg-3 col-md-6">
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
-							<img src="{{asset('front/images/resources/galerie4_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
-							<div class="gallery-three__img-icon">
-								<a href="#">
-									<span class="fab fa-instagram"></span>
-								</a>
-							</div>
+							<img
+							src="{{asset('front/images/naim/gallerie4.jpg')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
+						{# <div class="gallery-three__img-icon">
+																				<a href="#">
+																					<span class="fab fa-instagram"></span>
+																				</a>
+																			</div> #}
 						</div>
 					</div>
 				</div>
@@ -452,12 +468,13 @@
 				<div class="col-xl-2 col-lg-3 col-md-6">
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
-							<img src="{{asset('front/images/resources/galerie5_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-cuisine-appartements-Casablanca">
-							<div class="gallery-three__img-icon">
-								<a href="#">
-									<span class="fab fa-instagram"></span>
-								</a>
-							</div>
+							<img
+							src="{{asset('front/images/naim/gallerie5.jpg')}}" alt="Ain-borja-Riad-al-foutouh-cuisine-appartements-Casablanca">
+						{# <div class="gallery-three__img-icon">
+																				<a href="#">
+																					<span class="fab fa-instagram"></span>
+																				</a>
+																			</div> #}
 						</div>
 					</div>
 				</div>
@@ -466,19 +483,20 @@
 				<div class="col-xl-2 col-lg-3 col-md-6">
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
-							<img src="{{asset('front/images/resources/galerie6_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salle-de-bain-appartements-Casablanca">
-							<div class="gallery-three__img-icon">
-								<a href="#">
-									<span class="fab fa-instagram"></span>
-								</a>
-							</div>
+							<img
+							src="{{asset('front/images/naim/gallerie6.jpg')}}" alt="Ain-borja-Riad-al-foutouh-salle-de-bain-appartements-Casablanca">
+						{# <div class="gallery-three__img-icon">
+																				<a href="#">
+																					<span class="fab fa-instagram"></span>
+																				</a>
+																			</div> #}
 						</div>
 					</div>
 				</div>
 				<!--Gallery Three Single End-->
 			</div>
-		    </div>
-	        </section>
-	    <!--Gallery Three End-->
+		</div>
+	</section>
+	<!--Gallery Three End-->
 
 {% endblock %}
