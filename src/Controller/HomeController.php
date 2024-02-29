@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controller;
+
 use App\Entity\Blogs;
 use App\Repository\BlogsRepository;
 
@@ -21,7 +22,7 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
-  
+
 
     #[Route('/{_locale}/contact', name: 'app_contact', requirements: ['_locale' => 'fr|ar',])]
     public function contact(): Response
@@ -102,7 +103,7 @@ class HomeController extends AbstractController
     public function blog(BlogsRepository $blogsRepoitory): Response
     {
         $blogs = $blogsRepoitory->findAll();
-     
+
 
         return $this->render('default/blog.html.twig', [
             'controller_name' => 'HomeController',
@@ -111,20 +112,15 @@ class HomeController extends AbstractController
     }
 
     #[Route('/{_locale}/blog/{id}', name: 'local_blog', requirements: ['_locale' => 'fr|ar',])]
-    public function show( BlogsRepository $blogsRepoitory, $id): Response
+    public function show(BlogsRepository $blogsRepoitory, $id): Response
     {
 
         //  dd("hello");
-         $blog = $blogsRepoitory->findOneById(["id"=>$id]);
+        $blog = $blogsRepoitory->findOneById(["id" => $id]);
 
         return $this->render('default/detail_blog.html.twig', [
             'controller_name' => 'HomeController',
             'blog' => $blog,
         ]);
     }
-    
 }
-
-  
-
-
