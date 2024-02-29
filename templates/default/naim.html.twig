@@ -79,8 +79,8 @@
 			<div class="row" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
 				<div class="col-xl-5 col-lg-6">
 					<div class="new-concept-two__left">
-						<div class="section-title text-left">
-							<span class="section-title__tagline">{{"Projet signé : Riad al foutouh"|trans({},"front")}}</span>
+						<div  {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+							<span class="section-title__tagline">{{"PROJET SIGNÉ : RIAD AL FOUTOUH"|trans({},"front")}}</span>
 							<h2 class="section-title__title" style="font-size:">{{"HAY NAIM : EN DEHORS DE LA VILLE AU CŒUR DE LA VIE !"|trans({},"front")}}</h2>
 						</div>
 						<p class="new-concept__text">{{"Hay Naim est un quartier d’habitation situé aux alentours de Casablanca jouissant d’une position stratégique sur la route nationale N9 et d’un environnement d’exception. Le projet comprend une offre composée d’appartements prêts à être livrés de 3 chambres+ salon avec parking sous-sol et dans des résidences surveillées 24/24H, le tout dans un environnement exceptionnel et entouré de divers équipements de proximité : Marché central, une mosquée, des écoles, des crèches, hammam…."|trans({},"front")}}</p>
@@ -214,7 +214,7 @@
 			<div class="row">
 				<div class="col-xl-6 col-lg-12">
 					<div class="services-one__left">
-						<div class="section-title text-left">
+						<div {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
 							<span class="section-title__tagline">{{"Équipements"|trans({},"front")}}</span>
 							<h2 class="section-title__title">{{"Résidences Harmonieuses : Accessibilité, Confort et Qualité de Vie Exceptionnels"|trans({},"front")}}</h2>
 						</div>
@@ -329,7 +329,7 @@
 		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url({{asset('front/images/naim/reservation_naim.jpg')}});"></div>
 		<div class="cta-two__inner" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
 			<h3 class="cta-two__title">{{"Organisez votre visite sur place"|trans({},"front")}}</h3>
-			<p class="cta-two__text">{{"notre équipe commerciale vous acceuille 7j/7 du lundi au dimanche de 9h à 19h"|trans({},"front")}}</p>
+			<p class="cta-two__text">{{"notre éQUIPE  commerciale vous acceuille 7j/7 du lundi au dimanche de 9h à 19h"|trans({},"front")}}</p>
 			<div class="cta-two__btn-box">
 				<a href="{{path('app_contact')}}" class="cta-two__btn thm-btn">{{"reserver maintenant"|trans({},"front")}}</a>
 			</div>

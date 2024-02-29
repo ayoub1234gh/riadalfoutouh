@@ -309,11 +309,12 @@ ul {
 .section-title__title {
   margin: 0;
   color: var(--alipes-black);
-  font-size: 30px;
+  font-size: 24px;
   line-height: 50px;
   font-weight: 500;
   margin-top: 5px;
   text-transform: uppercase;
+  
 }
 
 .bootstrap-select .btn-light:not(:disabled):not(.disabled).active,
@@ -755,7 +756,7 @@ ul {
 
 .main-menu .main-menu__list>li>a,
 .stricky-header .main-menu__list>li>a {
-  font-size: 20px;
+  font-size: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5956,7 +5957,7 @@ ul {
 # Counter Two
 --------------------------------------------------------------*/
 .counter-two {
-  position: relative;
+  /* position: relative; */
   display: block;
   padding-bottom: 120px;
   margin-top: -126px;
