@@ -75,8 +75,8 @@
                 <div class="row">
                     <div class="col-xl-5 col-lg-6"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                         <div class="new-concept-two__left">
-                            <div class="section-title text-left">
-                                <span class="section-title__tagline">{{"Projet signé : Riad al foutouh"|trans({},"front")}}</span>
+                            <div {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+                                <span class="section-title__tagline">{{"PROJET SIGNÉ : RIAD AL FOUTOUH"|trans({},"front")}}</span>
                                 <h2 class="section-title__title" style="font-size:">{{"LA VERDURE DE LISSASFA : EN DEHORS DE LA VILLE AU CŒUR DE LA VIE !"|trans({},"front")}}</h2>
                             </div>
                             <p class="new-concept__text">{{"La verdure de Lissasfa est un projet d’habitat social doté d’une conception innovante et d’un design moderne. Situé à Casablanca, à 10 minutes du quartier Lissasfa sur la route d’El Jadida, La verdure de Lissasfa a été conçu pour répondre à toutes vos exigences de confort à proximité de toutes les commodités."|trans({},"front")}}</p>
@@ -212,7 +212,7 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-12"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                         <div class="services-one__left">
-                            <div class="section-title text-left">
+                            <div {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                                 <span class="section-title__tagline">{{"Équipements"|trans({},"front")}}</span>
                                 <h2 class="section-title__title">{{"DÉCOUVREZ NOS DEMEURES ALLIANT CONFORT ET RAFFINEMENT"|trans({},"front")}}</h2>
                             </div>
@@ -307,7 +307,7 @@
                 style="background-image: url({{asset('front/images/verdure-lissasfa/reservation_verdure.jpg')}});"></div>
             <div class="cta-two__inner"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                 <h3 class="cta-two__title">{{"Organisez votre visite sur place"|trans({},"front")}}</h3>
-                <p class="cta-two__text">{{"notre équipe  commerciale vous acceuille 7j/7 du lundi au dimanche de 9h à 19h"|trans({},"front")}}</p>
+                <p class="cta-two__text">{{"notre éQUIPE  commerciale vous acceuille 7j/7 du lundi au dimanche de 9h à 19h"|trans({},"front")}}</p>
                 <div class="cta-two__btn-box">
                     <a href="{{path('app_contact')}}" class="cta-two__btn thm-btn">{{"reserver maintenant"|trans({},"front")}}</a>
                 </div>
