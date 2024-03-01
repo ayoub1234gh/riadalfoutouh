@@ -59,9 +59,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-6 col-lg-6">
-					<div class="values-two__left" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
-						<div class="section-title text-left">
-							<span class="section-title__tagline">{{"à PROPOS DU PROJET"|trans({},"front")}}</span>
+					<div  {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+						<div {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+							<span class="section-title__tagline">{{"À PROPOS DU PROJET"|trans({},"front")}}</span>
 							<h2 class="section-title__title">{{"AIN BORJA : l’apogée du haut standing à Casablanca"|trans({},"front")}}</h2>
 						</div>
 						<p class="values-two__text-1">{{"Riad al foutouh – Ain Borja est un projet au sein d’une résidence innovante alliant qualité et modernité à quelques minutes du centre tachefine Le projet est proche de toutes les commodités d’un lieu de vie de standing, et propose des appartements d’exception allant de 102 m² à 124 m² à partir de 780.000Dhs seulement, avec des prestations de meilleures qualités."|trans({},"front")}}</p>
@@ -262,9 +262,9 @@
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-6" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
-						<div class="about-building__right">
-							<div class="section-title text-left">
-								<span class="section-title__tagline">{{"à PROPOS DU PROJET"|trans({},"front")}}</span>
+						<div {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+							<div {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
+								<span class="section-title__tagline">{{"À PROPOS DU PROJET"|trans({},"front")}}</span>
 								<h2 class="section-title__title">{{"Des appartements conçus pour votre confort et bien-être ! "|trans({},"front")}}</h2>
 							</div>
 							<p class="about-building__text-1">{{"Le projet est proche de toutes les commodités d’un lieu de vie de haut standing, et propose des appartements d’exception allant de 102 m² à 124 m² à partir de 780.000Dhs seulement, avec des prestations de meilleures qualités."|trans({},"front")}}</p>
@@ -325,15 +325,15 @@
 								<p>{{"Il était une fois, dans le cœur effervescent de Casablanca, un style de vie où l’intelligence et la technologie fusionnent pour créer une expérience de résidence incomparable. Imaginez-vous dans un appartement de haut standing, où chaque détail est soigneusement pensé pour répondre aux besoins modernes. Cette histoire n’est pas une utopie, mais la réalité d’un style de vie intelligent et high-tech."|trans({},"front")}}.</p>
 								<span id="text">{{"Pour les clients désirant trouver leur résidence de rêve à Casablanca, Riad Al Foutouh se positionne comme le partenaire idéal. Nous comprenons que l’achat d’un appartement haut de gamme va au-delà de l’aspect financier ; c’est une quête de confort, de sécurité, et d’une vie quotidienne facilitée par des technologies intelligentes. Cependant, la clé ne réside pas seulement dans le nom de Riad Al Foutouh, mais dans notre engagement à comprendre les aspirations de nos clients."|trans({},"front")}}</span>
 
-								<p>{{"Il était une fois, dans le cœur effervescent de Casablanca, un style de vie où l'intelligence et la technologie fusionnent pour créer une expérience de résidence incomparable. Imaginez-vous dans un appartement de haut standing, où chaque détail est soigneusement pensé pour répondre aux besoins modernes. Cette histoire n'est pas une utopie, mais la réalité d'un style de vie intelligent et high-tech"|trans({},"front")}}.</p>
+								{# <p>{{"Il était une fois, dans le cœur effervescent de Casablanca, un style de vie où l'intelligence et la technologie fusionnent pour créer une expérience de résidence incomparable. Imaginez-vous dans un appartement de haut standing, où chaque détail est soigneusement pensé pour répondre aux besoins modernes. Cette histoire n'est pas une utopie, mais la réalité d'un style de vie intelligent et high-tech"|trans({},"front")}}.</p>
 								<span class="text">{{"Pour les clients désirant trouver leur résidence de rêve à Casablanca, Riad Al Foutouh se positionne comme le partenaire idéal. 
 
 									Nous comprenons que l'achat d'un appartement haut de gamme va au-delà de l'aspect financier ; c'est une quête de confort, de sécurité, et d'une vie quotidienne facilitée par des technologies intelligentes.
-									Cependant, la clé ne réside pas seulement dans le nom de Riad Al Foutouh, mais dans notre engagement à comprendre les aspirations de nos clients."|trans({},"front")}}</span>
+									Cependant, la clé ne réside pas seulement dans le nom de Riad Al Foutouh, mais dans notre engagement à comprendre les aspirations de nos clients."|trans({},"front")}}</span> #}
 
 							</div>
 							<div>
-								<button class="thm-btn amenities__btn toggle-btn" data-target="text">Voir Plus</button>
+								<button class="thm-btn amenities__btn toggle-btn" data-target="text">{{"Voir Plus"|trans({},"front")}}</button>
 							</div>
 						</div>
 					</div>
@@ -352,12 +352,12 @@
 								<p>{{"Dans le tracé effervescent de la ville de Casablanca, existe une réalité où la sélection de l’emplacement façonne l’essence même d’un style de vie urbain. Imaginez-vous dans un quartier vibrant, à proximité de toutes les commodités, où chaque ruelle raconte une histoire et chaque coin de rue offre une expérience unique. Ce récit, bien loin d’être une chimère, décrit la réalité d’un emplacement attractif à Casablanca."|trans({},"front")}}.</p>
 								<span id="text1">{{"Selon les dernières données immobilières de Casablanca, l’emplacement d’une résidence est un critère primordial pour les acheteurs avertis. La demande croissante pour des quartiers attractifs est motivée par une clientèle qui recherche un équilibre parfait entre la proximité des services essentiels, des espaces verts, et une accessibilité aisée aux principaux axes de la ville."|trans({},"front")}}</span>
 
-								<p>{{"Dans le tracé effervescent de la ville de Casablanca, existe une réalité où la sélection de l'emplacement façonne l'essence même d'un style de vie urbain. Imaginez-vous dans un quartier vibrant, à proximité de toutes les commodités, où chaque ruelle raconte une histoire et chaque coin de rue offre une expérience unique. Ce récit, bien loin d'être une chimère, décrit la réalité d'un emplacement attractif à Casablanca."|trans({},"front")}}.</p>
-								<span class="text">{{"Selon les dernières données immobilières de Casablanca, l'emplacement d'une résidence est un critère primordial pour les acheteurs avertis. La demande croissante pour des quartiers attractifs est motivée par une clientèle qui recherche un équilibre parfait entre la proximité des services essentiels, des espaces verts, et une accessibilité aisée aux principaux axes de la ville."|trans({},"front")}}</span>
+								{# <p>{{"Dans le tracé effervescent de la ville de Casablanca, existe une réalité où la sélection de l'emplacement façonne l'essence même d'un style de vie urbain. Imaginez-vous dans un quartier vibrant, à proximité de toutes les commodités, où chaque ruelle raconte une histoire et chaque coin de rue offre une expérience unique. Ce récit, bien loin d'être une chimère, décrit la réalité d'un emplacement attractif à Casablanca."|trans({},"front")}}.</p>
+								<span class="text">{{"Selon les dernières données immobilières de Casablanca, l'emplacement d'une résidence est un critère primordial pour les acheteurs avertis. La demande croissante pour des quartiers attractifs est motivée par une clientèle qui recherche un équilibre parfait entre la proximité des services essentiels, des espaces verts, et une accessibilité aisée aux principaux axes de la ville."|trans({},"front")}}</span> #}
 
 							</div>
 							<div>
-								<button class="thm-btn amenities__btn toggle-btn" data-target="text">Voir Plus</button>
+								<button class="thm-btn amenities__btn toggle-btn" data-target="text">{{"Voir Plus"|trans({},"front")}}</button>
 							</div>
 						</div>
 					</div>
@@ -377,11 +377,9 @@
 								<span id="text2">{{"Riad Al Foutouh se positionne comme une référence dans cette niche ! Incarner un engagement envers la durabilité et l’élégance. Notre présence discrète dans le marché immobilier témoigne d’une approche où chaque bâtiment éco-chic devient un témoignage de notre engagement envers l’environnement."|trans({},"front")}}</span>
                             </div>
 
-								<span class="text">{{"Riad Al Foutouh se positionne comme une référence dans cette niche ! Incarner un engagement envers la durabilité et l'élégance. Notre présence discrète dans le marché immobilier témoigne d'une approche où chaque bâtiment éco-chic devient un témoignage de notre engagement envers l'environnement."|trans({},"front")}}</span>
-							</div>
 
 							<div>
-								<button class="thm-btn amenities__btn toggle-btn" data-target="text">Voir Plus</button>
+								<button class="thm-btn amenities__btn toggle-btn" data-target="text">{{"Voir Plus"|trans({},"front")}}</button>
 							</div>
 						</div>
 					</div>
@@ -404,7 +402,7 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-12" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                         <div class="services-one__left">
-                            <div class="section-title text-left">
+                            <div {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
                                 <span class="section-title__tagline">{{"Équipements"|trans({},"front")}}</span>
                                 <h2 class="section-title__title">{{"APPARTEMENTS LUXUEUX ET ÉPOUSTOUFLANTS, CONÇUS POUR LA VIE"|trans({},"front")}}</h2>
                             </div>
@@ -515,7 +513,7 @@
         <!--Services One End-->
 
 		<!--Services One Start-->
-		<section class="services-one">
+		{# <section class="services-one">
 			<div class="services-one__shape-1 float-bob-x">
 				<img src="{{asset('/front/images/shapes/new-concept-two-shape-1.png')}}" alt="">
 			</div>
@@ -634,7 +632,7 @@
 					<!--Services One Single End-->
 				</div>
 			</div>
-		</section>
+		</section> #}
 		<!--Services One End-->
 
 
@@ -743,15 +741,7 @@
 		<!--Gallery Three End-->
 
 
-			<section class="cta-two">
-		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url(assets/images/resources/cta-two-bg-img-1.jpg);"></div>
-		<div class="cta-two__inner">
-			<h3 class="cta-two__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}> {{"ORGANISEZ VOTRE VISITE SUR PLACE"|trans({},"front")}}
-			</h3>
-			<p {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %} class="cta-two__text"> {{"notre equipe commerciale vous acceuille 7j/7 du lundi au dimanche de 9h à 19h"|trans({},"front")}} </p>
-			<div class="cta-two__btn-box" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-				<a href="{{path('app_contact')}}" class="cta-two__btn thm-btn"> {{"Contactez nous"|trans({},"front")}}</a>
-
+			
 		<section class="cta-two">
 			<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url({{asset('/front/images/ain-bourja/contact.jpg')}});"></div>
 			<div class="cta-two__inner">
@@ -759,7 +749,7 @@
 					{{"ORGANISEZ VOTRE VISITE SUR PLACE"|trans({},"front")}}
 				</h3>
 				<p {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %} class="cta-two__text">
-					{{"Notre équipe  commerciale vous acceuille 7j/7 du lundi au dimanche de 9h à 19h"|trans({},"front")}}
+					{{"notre éQUIPE  commerciale vous acceuille 7j/7 du lundi au dimanche de 9h à 19h"|trans({},"front")}}
 				</p>
 				<div class="cta-two__btn-box" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar" {% endif %}>
 					<a href="{{path('app_contact')}}" class="cta-two__btn thm-btn">

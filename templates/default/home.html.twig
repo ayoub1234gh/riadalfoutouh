@@ -458,7 +458,10 @@
     		width: 1000px;
     		margin-left: 6rem;
 		}
-
+		.pb-2{
+			padding-bottom: 0.5rem !important;
+			text-transform: uppercase;
+		}
 
 	</style>
 {% endblock %}
@@ -637,7 +640,7 @@
 				</div>
 				<div class="col-xl-6">
 					<div class="about-three__right"{% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-						<div class="section-title text-left">
+						<div {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 							<span class="section-title__tagline">{{"à PROPOS DE RIAD AL FOUTOUH"|trans({},"front")}} </span>
 							<h2 class="section-title__title"> {{"Qui sommes-nous ?"|trans({},"front")}}</h2>
 						</div>
@@ -648,7 +651,7 @@
 						{# <a href=""><p class="about-three__text text-decoration-underline"> 
 						</p></a> #}
 						<div class="pt-3">
-							<button id="toggle" class="thm-btn amenities__btn">Voir Plus</button>
+							<button id="toggle" class="thm-btn amenities__btn">{{"Voir Plus"|trans({},"font")}}</button>
 						</div>
 						<h2 class="section-title__title pt-3"> {{"Riad al foutouh : Des projets de vie"|trans({},"front")}}</h2>
 						<ul class="about-three__points list-unstyled" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
@@ -657,11 +660,7 @@
 									<span class="far fa-check-circle"></span>
 								</div>
 								<div class="text">
-
-									<p> {{"Projet Salam"|trans({},"front")}}</p>
-
 									<a href="{{path('app_salam')}}"><p> {{"Projet Salam"|trans({},"front")}} </p></a>
-
 								</div>
 							</li>
 							<li>
@@ -680,6 +679,7 @@
 									<a href="{{path('naim')}}"><p> {{"Projet Naim"|trans({},"front")}}</p></a>
 								</div>
 							</li>
+							
 							<li>
 								<div class="">
 									<span class="far fa-check-circle"></span>
@@ -775,10 +775,6 @@
 			<h3 class="cta-two__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}> {{"Découvrez la meilleure agence immobilière à Casablanca"|trans({},"front")}}
 			</h3>
 			<p {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %} class="cta-two__text"> {{"pour des conseils d experts et des transactions immobilières réussies."|trans({},"front")}} </p>
-
-			<h3 class="cta-two__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}> {{"Découvrez Le meilleur promoteur immobilier à Casablanca"|trans({},"front")}}
-			</h3>
-			<p {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %} class="cta-two__text"> {{"pour un investissement immoblier réussi."|trans({},"front")}} </p>
 
 			<div class="cta-two__btn-box" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 				<a href="{{path('app_contact')}}" class="cta-two__btn thm-btn"> {{"Contactez nous"|trans({},"front")}}</a>
@@ -968,11 +964,6 @@
 
 					<h2 class="section-title__title"> {{"Equipe Riad Al Foutouh"|trans({},"front")}}</h2>
 					<p>{{"Notre succès repose sur notre équipe dévouée de professionnels qualifiés.Spécialisés dans la vente, la location et l’évaluation de biens immobiliers, ils sont le cœur battant de Riad Al Foutouh, apportant expertise et passion à chaque projet."|trans({},"front")}}</p>
-
-					<h2 class="section-title__title"> {{"éQUIPE  Riad Al Foutouh"|trans({},"front")}}</h2>
-					<p>Notre succès repose sur notre équipe dévouée de professionnels qualifiés. 
-					Spécialisés dans la vente, la location et l'évaluation de biens immobiliers, ils sont le cœur battant de Riad Al Foutouh, apportant expertise et passion à chaque projet.</p>
-
 				</div>
 			</div>
 		</div>
@@ -1000,19 +991,15 @@
 				</div>
 				<div class="col-xl-6">
 					<div class="about-three__right">
-						<div
-							class="section-title text-left" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-							{# <span class="section-title__tagline">our building overview</span> #}
-							<h2 class="section-title__title"> {{"Nos valeurs"|trans({},"front")}} 
-							</h2>
+						<div {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+							<h2 class="section-title__title"> {{"Nos valeurs"|trans({},"front")}} </h2>
 						</div {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 						<p class="about-three__text" > {{"La passion, la transparence, la minutie, le niveau d’exigence, la recherche constante de l’excellence et le respect des engagements. Ce sont les valeurs principales qui nous animent et nous permettent d’établir et de maintenir une relation de confiance durable avec tous nos clients et partenaires."|trans({},"front")}} 
 						</p>
 
 					</div>
 					<div class="about-three__right">
-						<div
-							class="section-title text-left" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+						<div {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 							{# <span class="section-title__tagline">our building overview</span> #}
 							<h2 class="section-title__title pt-5"> {{"Nos engagements"|trans({},"front")}} 
 							</h2>
@@ -1044,7 +1031,7 @@
 			<div class="row">
 				<div class="col-xl-5 col-lg-6" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 					<div class="new-concept-left">
-						<div class="section-title text-left">
+						<div {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 							<span class="section-title__tagline"> {{"à PROPOS DE RIAD AL FOUTOUH"|trans({},"front")}} </span>
 							<h2 class="section-title__title"> {{"Ce que nous assurons"|trans({},"front")}}</h2>
 						</div>
@@ -1241,8 +1228,7 @@
 			<div class="news-three__top">
 				<div class="row">
 					<div class="col-xl-6 col-lg-6">
-						<div
-							class="section-title text-left" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+						<div {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 							{# <span class="section-title__tagline">What’s Happening</span> #}
 							<h2 class="section-title__title"> {{"Profitez de nos offres diversifiées"|trans({},"front")}}</h2>
 						</div>
@@ -1347,48 +1333,7 @@
 								<img src="{{asset('front/images/resources/offre3.png')}}" alt="">
 							</div>
 
-					<div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
-						<a class="text-center" href="{{path('locauxcommerciaux')}}"><h2 class="pb-2">Locaux commerciaux</h2></a>
-						<div class="news-one__single">
-							<div class="news-one__img-box">
-							<a href="{{path('locauxcommerciaux')}}">
-								<div class="news-one__img">
-									<img src="{{asset('front/images/resources/offre3.png')}}" alt=""/>
-								</div>
-							</a>
-
-							{# <div class="news-one__date">
-								<p>20 Sep</p>
-							</div> #}
-							{# <div class="news-one__content">
-																													<ul class="news-one__meta list-unstyled">
-																														<li>
-																															<a href="news-details.html">
-																																<i class="fas fa-tag"></i>Apartment</a>
-																														</li>
-																														<li>
-																															<a href="news-details.html">
-																																<i class="fas fa-user-circle"></i>
-																																by Admin</a>
-																														</li>
-																													</ul>
-																													<h3 class="news-one__title">
-																														<a href="news-details.html">Nullam dolor est, interdum a
-																																									                                            faucibus</a>
-																													</h3>
-																													<div class="news-one__bottom">
-																														<div class="news-one__button">
-																															<a href="news-details.html">Voir Plus</a>
-																														</div>
-																														<div class="news-one__comment">
-																															<a href="news-details.html">
-																																<i class="fas fa-comments"></i>02</a>
-																														</div>
-																													</div>
-																												</div> #}
-							</div>
-						</div>
-					</div>
+					
 				<!--news One Single End-->
 			</div>
 		</div>
