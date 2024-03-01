@@ -7,5 +7,5 @@
 /var/
 /vendor/
 composer.lock
-.env
+/.env
 ###< symfony/framework-bundle ###
