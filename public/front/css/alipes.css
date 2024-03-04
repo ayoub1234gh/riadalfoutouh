@@ -7195,7 +7195,7 @@ ul {
 
 .page-header__overly {
   position: absolute;
-  top: 40px;
+  /* top: 40px; */
   left: 0;
   right: 0;
   height: 420px;
