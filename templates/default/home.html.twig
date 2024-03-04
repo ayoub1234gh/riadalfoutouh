@@ -772,9 +772,10 @@
 		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url({{asset('/front/images/resources/contact_home.png')}});"></div>
 		<div class="cta-two__inner">
 
-			<h3 class="cta-two__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}> {{"Découvrez la meilleure agence immobilière à Casablanca"|trans({},"front")}}
+			<h3 class="cta-two__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}> {{"Découvrez la meilleure promoteur"|trans({},"front")}}
+			</h3><h3 class="cta-two__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}> {{"immobilier à Casablanca"|trans({},"front")}}
 			</h3>
-			<p {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %} class="cta-two__text"> {{"pour des conseils d experts et des transactions immobilières réussies."|trans({},"front")}} </p>
+			<p {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %} class="cta-two__text"> {{"pour un large choix de projets immobiliers de différents standings ."|trans({},"front")}} </p>
 
 			<div class="cta-two__btn-box" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 				<a href="{{path('app_contact')}}" class="cta-two__btn thm-btn"> {{"Contactez nous"|trans({},"front")}}</a>
@@ -1351,7 +1352,7 @@
 				<div class="col-xl-2 col-lg-3 col-md-6">
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
-							<img src="{{asset('front/images/resources/galerie1_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+							<img src="{{asset('front/images/resources/im111.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
 							{# <div class="gallery-three__img-icon">
 								<a href="#">
 									<span class="fab fa-instagram"></span>
@@ -1365,7 +1366,7 @@
 				<div class="col-xl-2 col-lg-3 col-md-6">
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
-							<img src="{{asset('front/images/resources/galerie2_ain_borja.png')}}" alt="Ain_Borja-Riad-al-Foutouh-cuisine-appartement">
+							<img src="{{asset('front/images/resources/im222.jpg')}}" alt="Ain_Borja-Riad-al-Foutouh-cuisine-appartement">
 							{# <div class="gallery-three__img-icon">
 								<a href="#">
 									<span class="fab fa-instagram"></span>
@@ -1379,7 +1380,7 @@
 				<div class="col-xl-2 col-lg-3 col-md-6">
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
-							<img src="{{asset('front/images/resources/galerie3_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
+							<img src="{{asset('front/images/resources/im666.jpg')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
 							{# <div class="gallery-three__img-icon">
 								<a href="#">
 									<span class="fab fa-instagram"></span>
@@ -1393,7 +1394,7 @@
 				<div class="col-xl-2 col-lg-3 col-md-6">
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
-							<img src="{{asset('front/images/resources/galerie4_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
+							<img src="{{asset('front/images/resources/im444.jpg')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
 							{# <div class="gallery-three__img-icon">
 								<a href="#">
 									<span class="fab fa-instagram"></span>
@@ -1407,7 +1408,7 @@
 				<div class="col-xl-2 col-lg-3 col-md-6">
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
-							<img src="{{asset('front/images/resources/galerie5_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-cuisine-appartements-Casablanca">
+							<img src="{{asset('front/images/resources/im555.jpg')}}" alt="Ain-borja-Riad-al-foutouh-cuisine-appartements-Casablanca">
 							{# <div class="gallery-three__img-icon">
 								<a href="#">
 									<span class="fab fa-instagram"></span>
@@ -1421,7 +1422,7 @@
 				<div class="col-xl-2 col-lg-3 col-md-6">
 					<div class="gallery-three__single">
 						<div class="gallery-three__img">
-							<img src="{{asset('front/images/resources/galerie6_ain_borja.png')}}" alt="Ain-borja-Riad-al-foutouh-salle-de-bain-appartements-Casablanca">
+							<img src="{{asset('front/images/resources/im777.jpg')}}" alt="Ain-borja-Riad-al-foutouh-salle-de-bain-appartements-Casablanca">
 							{# <div class="gallery-three__img-icon">
 								<a href="#">
 									<span class="fab fa-instagram"></span>
@@ -1442,7 +1443,7 @@
           <div class="form-group">
             <label for="amount">Somme d'argent</label>
             <div class="input-group">
-              <div class="input-group-addon">DRH</div>
+              <div class="input-group-addon">MAD</div>
               <input type="number" step="0.001" class="form-control validate" id="amount" placeholder="Entrer le montant" required>
             </div>
           </div>
@@ -1467,7 +1468,7 @@
             <input class="slider" type="range" min="1" max="24" value="10">
 
           </div>
-          <button type="submit" class="btn btn-primary btn-block">Calculate</button>
+          <button type="submit" class="btn btn-primary btn-block">Calculer</button>
 
         </form>
         <h3 class="results">Paiement mensuel: <span class="month-pay"></span><br>
@@ -1494,7 +1495,7 @@
 				</div>
 				<div class="col-xl-6 col-lg-4">
 					<div class="cta-three__btn-box">
-						<a href="{{path('app_contact')}}" class="thm-btn cta-three__btn" dir="rtl" lang="ar">{{"Contactez nous"|trans({},"front")}}</a>
+						<a href="{{path('app_contact')}}" class="thm-btn cta-three__btn" dir="rtl" lang="ar">{{"Contactez-nous"|trans({},"front")}}</a>
 					</div>
 				</div>
 			</div>

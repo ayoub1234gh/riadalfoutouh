@@ -215,6 +215,10 @@ ul {
   z-index: 999991;
 }
 
+.btn-primary{
+  background-color: #cd8c66 !important;
+}
+
 .custom-cursor__cursor-two {
   width: 10px;
   height: 10px;
@@ -6070,7 +6074,7 @@ ul {
 }
 
 .cta-two__title {
-  font-size: 60px;
+  font-size: 25px;
   font-weight: 400;
   line-height: 70px;
   color: var(--alipes-white);
