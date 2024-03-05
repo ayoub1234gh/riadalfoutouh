@@ -20,7 +20,7 @@
 :root {
   --alipes-font: 'Caviar Dreams';
   --alipes-font-two: 'Caviar Dreams';
-  --alipes-reey-font: "reeyregular";
+  --alipes-reey-font: "Caviar Dreams";
   --alipes-gray: #827e78;
   --alipes-gray-rgb: 130, 126, 120;
   --alipes-white: #ffffff;
@@ -32,8 +32,27 @@
   --alipes-primary: #f6f4f1;
   --alipes-primary-rgb: 246, 244, 241;
   --alipes-letter-spacing: 0.1em;
+}
+@font-face {
+  font-family: 'Caviar Dreams';
+  src: url('/front/font/CaviarDreams.ttf') format('woff2'), /* Modern Browsers */
+
+  /* src: url('path/to/font-file.woff2') format('woff2'), 
+  url('path/to/font-file.woff') format('woff'); */
 
 }
+
+
+@font-face {
+  font-family: 'CaviarDreams_Bold.ttf';
+  src: url('/front/font/CaviarDreams_Bold.ttf') format('woff2'), /* Modern Browsers */
+
+  /* src: url('path/to/font-file.woff2') format('woff2'), 
+  url('path/to/font-file.woff') format('woff'); */
+
+}
+
+
 
 .row {
   --bs-gutter-x: 30px;
@@ -44,7 +63,7 @@
 }
 
 body {
-  font-family: var(--alipes-font);
+  font-family: 'Caviar Dreams';
   color: var(--alipes-gray);
   font-size: 16px;
   line-height: 30px;
@@ -100,7 +119,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--alipes-font-two);
+  font-family: 'CaviarDreams_Bold.ttf';
   color: var(--alipes-black);
   margin: 0;
   /* letter-spacing: var(--alipes-letter-spacing); */
@@ -4913,6 +4932,7 @@ ul {
   padding: 120px 0 90px;
   overflow: hidden;
   z-index: 1;
+  margin-bottom: 3%;
 }
 
 .services-one__shape-1 {
