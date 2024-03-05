@@ -39,6 +39,51 @@
 				margin-top: 15rem;
 			}
 		}
+
+                						{# new css slider #}
+		
+          *{padding:0;margin:0;box-sizing:border-box;}
+.wraper{width:100%; height:100vh; display:flex; align-items:center; padding:40px;} 
+.owl-theme img{width:100%;min-height:200px;}
+.owl-carousel .owl-prev, .owl-carousel .owl-next{position:absolute; top:40%; transform:translateY(-50%); background-color:#fff !important; color:#000 !important; font-size:1.5em !important; width:40px; height:40px; border-radius:100% !important; font-weight:bold; padding:15px !important; text-align:center; box-shadow:0px 0px 10px 0px #000;}
+.owl-carousel .owl-prev:hover, .owl-carousel .owl-next:hover{box-shadow:0px 0px 0px 0px #000; background-color:red !important; color:#fff !important;}
+.owl-carousel .owl-prev{left:-30px;}
+.owl-carousel .owl-next{right:-30px;}
+.owl-theme .owl-dots .owl-dot.active span{background:#d49c7b !important; width:25px; transition:0.2s ease-in-out;}
+.owl-theme .owl-dots .owl-dot:hover span{background:#d49c7b !important; transition:0.2s ease-in-out;}
+.owl-theme .owl-nav [class*=owl-]{
+    color: #FFF;
+    font-size: 14px;
+    margin: 37px;
+    padding: 4px 7px;
+    background: #D6D6D6;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.owl-carousel .owl-prev:hover, .owl-carousel .owl-next:hover {	
+    box-shadow: 0px 0px 0px 0px #000;
+    background-color: #d49c7b !important;
+    color: #fff !important;
+}
+
+
+
+/* Responsive design custom css */
+@media only screen and (max-width:480px){
+  .owl-theme .owl-dots .owl-dot{display:none;}
+  .owl-carousel .owl-prev, .owl-carousel .owl-next{width:30px; height:30px; font-size:14px !important; top:45%; box-shadow:0px 0px 0px 0px #000;}
+  .owl-carousel .owl-prev{left:0px;}
+.owl-carousel .owl-next{right:0px;}
+}
+.gallery-three__title {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-bottom: 36px;
+    line-height: 14px;
+    margin-top: 3%;
+}
     </style>
 
 {% endblock %}
@@ -358,100 +403,65 @@
         </section>
         <!--Services Three End-->
 
-            	<!--Gallery Three Start-->
-	        <section class="gallery-three mt-5">
-		        <div class="container"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+            
+     <section class="gallery-three">
+		<div class="container"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 			<div class="gallery-three__title">
 				<h3>{{"Voir la galerie de photos"|trans({},"front")}}</h3>
 			</div>
 			<div class="row">
-				<!--Gallery Three Single Start-->
-				<div class="col-xl-2 col-lg-3 col-md-6">
-					<div class="gallery-three__single">
-						<div class="gallery-three__img">
-							<img src="{{asset('front/images/verdure-lissasfa/ww.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
-							{# <div class="gallery-three__img-icon">
-								<a href="#">
-									<span class="fab fa-instagram"></span>
-								</a>
-							</div> #}
-						</div>
-					</div>
-				</div>
-				<!--Gallery Three Single End-->
-				<!--Gallery Three Single Start-->
-				<div class="col-xl-2 col-lg-3 col-md-6">
-					<div class="gallery-three__single">
-						<div class="gallery-three__img">
-							<img src="{{asset('front/images/verdure-lissasfa/wx.jpg')}}" alt="Ain_Borja-Riad-al-Foutouh-cuisine-appartement">
-							{# <div class="gallery-three__img-icon">
-								<a href="#">
-									<span class="fab fa-instagram"></span>
-								</a>
-							</div> #}
-						</div>
-					</div>
-				</div>
-				<!--Gallery Three Single End-->
-				<!--Gallery Three Single Start-->
-				<div class="col-xl-2 col-lg-3 col-md-6">
-					<div class="gallery-three__single">
-						<div class="gallery-three__img">
-							<img src="{{asset('front/images/verdure-lissasfa/wh.jpg')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
-							{# <div class="gallery-three__img-icon">
-								<a href="#">
-									<span class="fab fa-instagram"></span>
-								</a>
-							</div> #}
-						</div>
-					</div>
-				</div>
-				<!--Gallery Three Single End-->
-				<!--Gallery Three Single Start-->
-				<div class="col-xl-2 col-lg-3 col-md-6">
-					<div class="gallery-three__single">
-						<div class="gallery-three__img">
-							<img src="{{asset('front/images/verdure-lissasfa/wv.jpg')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
-							{# <div class="gallery-three__img-icon">
-								<a href="#">
-									<span class="fab fa-instagram"></span>
-								</a>
-							</div> #}
-						</div>
-					</div>
-				</div>
-				<!--Gallery Three Single End-->
-				<!--Gallery Three Single Start-->
-				<div class="col-xl-2 col-lg-3 col-md-6">
-					<div class="gallery-three__single">
-						<div class="gallery-three__img">
-							<img src="{{asset('front/images/verdure-lissasfa/wb.jpg')}}" alt="Ain-borja-Riad-al-foutouh-cuisine-appartements-Casablanca">
-							{# <div class="gallery-three__img-icon">
-								<a href="#">
-									<span class="fab fa-instagram"></span>
-								</a>
-							</div> #}
-						</div>
-					</div>
-				</div>
-				<!--Gallery Three Single End-->
-				<!--Gallery Three Single Start-->
-				<div class="col-xl-2 col-lg-3 col-md-6">
-					<div class="gallery-three__single">
-						<div class="gallery-three__img">
-							<img src="{{asset('front/images/verdure-lissasfa/wn.jpg')}}" alt="Ain-borja-Riad-al-foutouh-salle-de-bain-appartements-Casablanca">
-							{# <div class="gallery-three__img-icon">
-								<a href="#">
-									<span class="fab fa-instagram"></span>
-								</a>
-							</div> #}
-						</div>
-					</div>
-				</div>
-				<!--Gallery Three Single End-->
+				 
+      <div class="owl-carousel owl-theme image-slider1">
+        <div class="item">
+        <img src="{{asset('front/images/verdure-lissasfa/ww.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+        </div>
+        <div class="item">
+        <img src="{{asset('front/images/verdure-lissasfa/wx.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+        </div>
+         <div class="item">
+        <img src="{{asset('front/images/verdure-lissasfa/wb.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+        </div>
+         <div class="item">
+          	<img src="{{asset('front/images/verdure-lissasfa/wn.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+        </div>
+         <div class="item">
+           	<img src="{{asset('front/images/verdure-lissasfa/wv.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+        </div>
+        <div class="item">
+          	<img src="{{asset('front/images/verdure-lissasfa/wh.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+        </div>
+      </div>
+       
 			</div>
-		    </div>
-	        </section>
-	    <!--Gallery Three End-->
+		</div>
+	</section>
 
+{% endblock %}
+
+{% block javascripts %}
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+		$(document).ready(function() {				
+				$(".image-slider1").owlCarousel({
+			margin:10,
+			loop:true,
+			autoplay:true,
+			nav:true,
+			navText:["←","→"],
+			responsive:{
+					0:{
+						items:1
+					},
+					600:{
+						items:3.5,
+						merge:true,
+											
+					},
+					1000:{
+						items:5
+					}
+			}
+			});
+		});
+	</script>
 {% endblock %}

@@ -462,6 +462,42 @@
 			padding-bottom: 0.5rem !important;
 			text-transform: uppercase;
 		}
+		{# new css slider #}
+		
+          *{padding:0;margin:0;box-sizing:border-box;}
+.wraper{width:100%; height:100vh; display:flex; align-items:center; padding:40px;} 
+.owl-theme img{width:100%;min-height:200px;}
+.owl-carousel .owl-prev, .owl-carousel .owl-next{position:absolute; top:40%; transform:translateY(-50%); background-color:#fff !important; color:#000 !important; font-size:1.5em !important; width:40px; height:40px; border-radius:100% !important; font-weight:bold; padding:15px !important; text-align:center; box-shadow:0px 0px 10px 0px #000;}
+.owl-carousel .owl-prev:hover, .owl-carousel .owl-next:hover{box-shadow:0px 0px 0px 0px #000; background-color:red !important; color:#fff !important;}
+.owl-carousel .owl-prev{left:-30px;}
+.owl-carousel .owl-next{right:-30px;}
+.owl-theme .owl-dots .owl-dot.active span{background:#d49c7b !important; width:25px; transition:0.2s ease-in-out;}
+.owl-theme .owl-dots .owl-dot:hover span{background:#d49c7b !important; transition:0.2s ease-in-out;}
+.owl-theme .owl-nav [class*=owl-]{
+    color: #FFF;
+    font-size: 14px;
+    margin: 37px;
+    padding: 4px 7px;
+    background: #D6D6D6;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.owl-carousel .owl-prev:hover, .owl-carousel .owl-next:hover {	
+    box-shadow: 0px 0px 0px 0px #000;
+    background-color: #d49c7b !important;
+    color: #fff !important;
+}
+
+
+
+/* Responsive design custom css */
+@media only screen and (max-width:480px){
+  .owl-theme .owl-dots .owl-dot{display:none;}
+  .owl-carousel .owl-prev, .owl-carousel .owl-next{width:30px; height:30px; font-size:14px !important; top:45%; box-shadow:0px 0px 0px 0px #000;}
+  .owl-carousel .owl-prev{left:0px;}
+.owl-carousel .owl-next{right:0px;}
+}
 
 	</style>
 {% endblock %}
@@ -474,7 +510,7 @@
 			<div class="swiper-wrapper">
 
 				<div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-					<div class="image-layer-three" style="background-image: url({{asset('front/images/resources/slider1.png')}});"></div>
+			<div class="image-layer-three" style="background-image: url({{asset('front/images/resources/aaaa.png')}});"></div>
 					
 					<div class="main-slider-three__shape-1">
 						<img src="{{asset('front/img/main-slider-three-shape-1.png')}}" alt="Riad-AL-Foutouh-agence-immobilière-Casablanca">
@@ -512,90 +548,91 @@
 							</div>
 						</div>
 					</div>
-				</div>
-
-				<div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-					<div class="image-layer-three" style="background-image: url({{asset('front/images/resources/slider2.png')}});"></div>
-				
-					<div class="main-slider-three__shape-1">
-						<img src="{{asset('front/img/main-slider-three-shape-1.png')}}" alt="Riad-AL-Foutouh-agence-immobilière-Casablanca">
-					</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-xl-12">
-								<div class="main-slider-three__content">
-									<h2 class="main-slider-three__title">{{"Riad Al Foutouh :"|trans({},"front")}} 
-
-										<br>
-										 {{"Des projets"|trans({},"front")}} 
-										<br>
-										 {{"immobiliers d’envergure"|trans({},"front")}} </h2>
-									<div class="main-slider-three__details-box">
-										<h5 class="main-slider-three__details-sub-title">
-											 {{"Dotés de toutes les commodités"|trans({},"front")}} 
-										</h5>
-										<div class="main-slider-three__details">
-											<div class="main-slider-three__details-icon">
-												<span class="icon-apartment"></span>
-											</div>
-											<div
-												class="main-slider-three__details-content">
-												{# <h3 class="odometer" data-count="37400"></h3> #}
-												<p class="main-slider-three__details-text"> {{"0662686868"|trans({},"front")}} 
-													<br>
-													 {{"ou"|trans({},"front")}} 
-													<br>
-													 {{"0661832910"|trans({},"front")}} </p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-					<div class="image-layer-three" style="background-image: url({{asset('front/images/resources/slider3.png')}});"></div>
-					
-					<div class="main-slider-three__shape-1">
-						<img src="{{asset('front/img/main-slider-three-shape-1.png')}}" alt="Riad-AL-Foutouh-agence-immobilière-Casablanca">
-					</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-xl-12">
-								<div class="main-slider-three__content">
-									<h2 class="main-slider-three__title">{{"Riad Al Foutouh :"|trans({},"front")}} 
-										<br>
-										 {{"Des projets"|trans({},"front")}} 
-										<br>
-										 {{"immobiliers d’envergure"|trans({},"front")}} </h2>
-									<div class="main-slider-three__details-box">
-										<h5 class="main-slider-three__details-sub-title">
-											 {{"Dotés de toutes les commodités"|trans({},"front")}} 
-										</h5>
-										<div class="main-slider-three__details">
-											<div class="main-slider-three__details-icon">
-												<span class="icon-apartment"></span>
-											</div>
-											<div
-												class="main-slider-three__details-content">
-												{# <h3 class="odometer" data-count="37400"></h3> #}
-												<p class="main-slider-three__details-text"> {{"0662686868"|trans({},"front")}} 
-													<br>
-													 {{"ou"|trans({},"front")}} 
-													<br>
-													 {{"0661832910"|trans({},"front")}} </p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
 			</div>
+
+			{# <div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+				<div class="image-layer-three" style="background-image: url({{asset('front/images/resources/slider2.png')}});"></div>
+					
+						<div class="main-slider-three__shape-1">
+							<img src="{{asset('front/img/main-slider-three-shape-1.png')}}" alt="Riad-AL-Foutouh-agence-immobilière-Casablanca">
+						</div>
+						<div class="container">
+							<div class="row">
+								<div class="col-xl-12">
+									<div class="main-slider-three__content">
+										<h2 class="main-slider-three__title">{{"Riad Al Foutouh :"|trans({},"front")}} 
+
+											<br>
+											{{"Des projets"|trans({},"front")}} 
+											<br>
+											{{"immobiliers d’envergure"|trans({},"front")}} </h2>
+										<div class="main-slider-three__details-box">
+											<h5 class="main-slider-three__details-sub-title">
+												{{"Dotés de toutes les commodités"|trans({},"front")}} 
+											</h5>
+											<div class="main-slider-three__details">
+												<div class="main-slider-three__details-icon">
+													<span class="icon-apartment"></span>
+												</div>
+												<div
+													class="main-slider-three__details-content">
+													
+													<p class="main-slider-three__details-text"> {{"0662686868"|trans({},"front")}} 
+														<br>
+														{{"ou"|trans({},"front")}} 
+														<br>
+														{{"0661832910"|trans({},"front")}} </p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div> #}
+			
+
+			{# <div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}> #}
+			{# <div class="image-layer-three" style="background-image: url({{asset('front/images/resources/slider3.png')}});"></div>
+					
+					<div class="main-slider-three__shape-1">
+						<img src="{{asset('front/img/main-slider-three-shape-1.png')}}" alt="Riad-AL-Foutouh-agence-immobilière-Casablanca">
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-12">
+								<div class="main-slider-three__content">
+									<h2 class="main-slider-three__title">{{"Riad Al Foutouh :"|trans({},"front")}} 
+										<br>
+										 {{"Des projets"|trans({},"front")}} 
+										<br>
+										 {{"immobiliers d’envergure"|trans({},"front")}} </h2>
+									<div class="main-slider-three__details-box">
+										<h5 class="main-slider-three__details-sub-title">
+											 {{"Dotés de toutes les commodités"|trans({},"front")}} 
+										</h5>
+										<div class="main-slider-three__details">
+											<div class="main-slider-three__details-icon">
+												<span class="icon-apartment"></span>
+											</div>
+											<div
+												class="main-slider-three__details-content">
+												
+												<p class="main-slider-three__details-text"> {{"0662686868"|trans({},"front")}} 
+													<br>
+													 {{"ou"|trans({},"front")}} 
+													<br>
+													 {{"0661832910"|trans({},"front")}} </p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div> #}
 
 			
 			<div class="main-slider-three__nav">
@@ -608,13 +645,13 @@
 			</div>
 
 			
-<div class="sticky-icon">
-  <a href="{{path('app_contact')}}" class="Google"><i class="fa fa-phone"> </i>  Appels </a>
-   <a href="https://www.instagram.com/riadalfoutouh/?igsh=MTFqamVybms4ZTgxaw%3D%3D" class="Instagram"><i class="fab fa-instagram"></i> Instagram </a>
-   <a href="https://www.facebook.com/Riadalfoutouhofficial?mibextid=ZbWKwL" class="Facebook"><i class="fab fa-facebook-f"> </i> Facebook </a>
-   <a href="https://www.youtube.com/@riadalfoutouh" class="Youtube"><i class="fab fa-youtube"></i> Youtube </a>
-   <a href="#" class="Twitter"><i class="fab fa-whatsapp"> </i> WhatsApp </a>   
-</div>
+				<div class="sticky-icon">
+					<a href="{{path('app_contact')}}" class="Google"><i class="fa fa-phone"> </i>  Appeler </a>
+					<a href="https://www.instagram.com/riadalfoutouh/?igsh=MTFqamVybms4ZTgxaw%3D%3D" class="Instagram"><i class="fab fa-instagram"></i> Instagram </a>
+					<a href="https://www.facebook.com/Riadalfoutouhofficial?mibextid=ZbWKwL" class="Facebook"><i class="fab fa-facebook-f"> </i> Facebook </a>
+					<a href="https://www.youtube.com/@riadalfoutouh" class="Youtube"><i class="fab fa-youtube"></i> Youtube </a>
+					<a href="#" class="Twitter"><i class="fab fa-whatsapp"> </i> WhatsApp </a>   
+				</div>
 
 
 		</div>
@@ -769,13 +806,13 @@
 
 	<!--CTA Two Start-->
 	<section class="cta-two mt-5">
-		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url({{asset('/front/images/resources/contact_home.png')}});"></div>
+		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url({{asset('/front/images/resources/ttt.jpg')}});"></div>
 		<div class="cta-two__inner">
 
 			<h3 class="cta-two__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}> {{"Découvrez le meilleur promoteur"|trans({},"front")}}
 			</h3><h3 class="cta-two__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}> {{"immobilier à Casablanca"|trans({},"front")}}
 			</h3>
-			<p {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %} class="cta-two__text"> {{"pour un large choix de projets immobiliers de différents standings ."|trans({},"front")}} </p>
+			<p {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %} class="cta-two__text"> {{"Pour un large choix de projets immobiliers de différents standings ."|trans({},"front")}} </p>
 
 			<div class="cta-two__btn-box" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 				<a href="{{path('app_contact')}}" class="cta-two__btn thm-btn"> {{"Contactez-nous"|trans({},"front")}}</a>
@@ -1348,93 +1385,34 @@
 				<h3>{{"Voir la galerie de photos"|trans({},"front")}}</h3>
 			</div>
 			<div class="row">
-				<!--Gallery Three Single Start-->
-				<div class="col-xl-2 col-lg-3 col-md-6">
-					<div class="gallery-three__single">
-						<div class="gallery-three__img">
-							<img src="{{asset('front/images/resources/im111.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
-							{# <div class="gallery-three__img-icon">
-								<a href="#">
-									<span class="fab fa-instagram"></span>
-								</a>
-							</div> #}
-						</div>
-					</div>
-				</div>
-				<!--Gallery Three Single End-->
-				<!--Gallery Three Single Start-->
-				<div class="col-xl-2 col-lg-3 col-md-6">
-					<div class="gallery-three__single">
-						<div class="gallery-three__img">
-							<img src="{{asset('front/images/resources/im222.jpg')}}" alt="Ain_Borja-Riad-al-Foutouh-cuisine-appartement">
-							{# <div class="gallery-three__img-icon">
-								<a href="#">
-									<span class="fab fa-instagram"></span>
-								</a>
-							</div> #}
-						</div>
-					</div>
-				</div>
-				<!--Gallery Three Single End-->
-				<!--Gallery Three Single Start-->
-				<div class="col-xl-2 col-lg-3 col-md-6">
-					<div class="gallery-three__single">
-						<div class="gallery-three__img">
-							<img src="{{asset('front/images/resources/im666.jpg')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
-							{# <div class="gallery-three__img-icon">
-								<a href="#">
-									<span class="fab fa-instagram"></span>
-								</a>
-							</div> #}
-						</div>
-					</div>
-				</div>
-				<!--Gallery Three Single End-->
-				<!--Gallery Three Single Start-->
-				<div class="col-xl-2 col-lg-3 col-md-6">
-					<div class="gallery-three__single">
-						<div class="gallery-three__img">
-							<img src="{{asset('front/images/resources/im444.jpg')}}" alt="Ain-borja-Riad-al-foutouh-salon-appartement-Casablanca">
-							{# <div class="gallery-three__img-icon">
-								<a href="#">
-									<span class="fab fa-instagram"></span>
-								</a>
-							</div> #}
-						</div>
-					</div>
-				</div>
-				<!--Gallery Three Single End-->
-				<!--Gallery Three Single Start-->
-				<div class="col-xl-2 col-lg-3 col-md-6">
-					<div class="gallery-three__single">
-						<div class="gallery-three__img">
-							<img src="{{asset('front/images/resources/im555.jpg')}}" alt="Ain-borja-Riad-al-foutouh-cuisine-appartements-Casablanca">
-							{# <div class="gallery-three__img-icon">
-								<a href="#">
-									<span class="fab fa-instagram"></span>
-								</a>
-							</div> #}
-						</div>
-					</div>
-				</div>
-				<!--Gallery Three Single End-->
-				<!--Gallery Three Single Start-->
-				<div class="col-xl-2 col-lg-3 col-md-6">
-					<div class="gallery-three__single">
-						<div class="gallery-three__img">
-							<img src="{{asset('front/images/resources/im777.jpg')}}" alt="Ain-borja-Riad-al-foutouh-salle-de-bain-appartements-Casablanca">
-							{# <div class="gallery-three__img-icon">
-								<a href="#">
-									<span class="fab fa-instagram"></span>
-								</a>
-							</div> #}
-						</div>
-					</div>
-				</div>
-				<!--Gallery Three Single End-->
+				  {# <section class="wraper"> #}
+      <div class="owl-carousel owl-theme image-slider1">
+        <div class="item">
+        <img src="{{asset('front/images/resources/im111.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+        </div>
+        <div class="item">
+        <img src="{{asset('front/images/resources/im222.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+        </div>
+         <div class="item">
+        <img src="{{asset('front/images/resources/im777.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+        </div>
+         <div class="item">
+          	<img src="{{asset('front/images/resources/im444.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+        </div>
+         <div class="item">
+           	<img src="{{asset('front/images/resources/im555.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+        </div>
+         <div class="item">
+          	<img src="{{asset('front/images/resources/im666.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+        </div>
+      </div>
+    {# </section> #}
 			</div>
 		</div>
 	</section>
+
+  
+
 	<!--Gallery Three End-->
  <div class="container">
     <div class="row">
@@ -1503,6 +1481,7 @@
 	</section>
 	<!--CTA Three End-->
 
+    
 
 {% endblock %}
 
@@ -1523,7 +1502,27 @@
 		      $("#toggle").text("Voir Plus");
 		      $("#text").slideUp();
 		    }
-		  });
+		});
+			$(".image-slider1").owlCarousel({
+  margin:10,
+  loop:true,
+  autoplay:true,
+  nav:true,
+  navText:["←","→"],
+  responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3.5,
+            merge:true,
+                                
+        },
+        1000:{
+            items:5
+        }
+  }
+});
 		});
 
 		$(function() {
@@ -1670,6 +1669,8 @@
  
 $(function() {
 	var app = new Calc({months: 12});
-});										
+});		
+
+
 	</script>
 {% endblock %}
