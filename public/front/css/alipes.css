@@ -42,6 +42,11 @@
 
 }
 
+.apartment-one__img .img{
+  width: 100%;
+  height: 535px;
+}
+
 
 @font-face {
   font-family: 'CaviarDreams_Bold.ttf';
