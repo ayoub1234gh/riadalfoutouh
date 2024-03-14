@@ -12,6 +12,7 @@
   }
 
   function thmSwiperInit() {
+    // alert();
     // swiper slider
     if ($(".thm-swiper__slider").length) {
       $(".thm-swiper__slider").each(function () {
@@ -1045,6 +1046,11 @@ function redirectToSelectedURL() {
 	  window.location.href = selectedValue;
 	}
 }
+
+
+
+
+
 
 
 

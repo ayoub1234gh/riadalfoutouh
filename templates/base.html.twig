@@ -67,6 +67,65 @@
 			ul.link li > a::before {
 				display: none !important;
 			}
+
+			{#  new css dorpdown #}
+				
+
+				nav ul {
+					padding: 0;
+					margin: 0;
+					list-style: none;
+					position: relative;
+				}
+				{# nav ul li{
+					display: inline-block;
+					
+				} #}
+				nav a{
+					text-decoration: none !important;
+				}
+				/* Hide Dropdown by Default*/
+				nav ul ul {
+					display: none !important;
+					position:absolute !important;
+				}
+				/* hover */
+				{# nav a:hover{
+					background-color: #000000;
+				} #}
+				/* Display Dropdown on Hover */
+				nav ul li:hover > ul {
+					display:block !important;
+					z-index: 99;
+					background-color: rgb(255, 255, 255);
+					padding: 24px 20px 24px !important;
+					top: 0;
+                    left: 100%;
+					white-space: wrap !important;
+				}
+				
+				/* Fisrt Tier Dropdown */
+				nav ul ul li{
+					width: 170px;
+					position: relative;
+					float: left !important;
+					
+
+				}
+				/* ============ Second, Third and More Tiers ===========*/
+				nav ul ul ul li {
+					position: relative !important;
+				
+				}
+				/* Change this in order to change the Dropdown symbol */
+				li > a::after { content: ‘ +’;}
+				li > a:only-child::after {
+					content: "";
+				}
+
+
+				
+			{# end css #}
 		</style>
 		{% block stylesheets %}{% endblock %}
 
@@ -110,6 +169,7 @@
 				</div>
 			</div>
 			<nav class="main-menu">
+
 				<div class="main-menu__wrapper">
 					<div class="main-menu__wrapper-inner">
 						<div class="main-menu__left">
@@ -125,36 +185,30 @@
 								<li class="dropdown current megamenu">
 									<a href="{{path('app_home')}}">{{"Acceuil"|trans({},"front")}}
 									</a>
-
 								</li>
-								<li class="dropdown">
+								{# <li class="dropdown">
 									<a href="#">{{"Projets"|trans({},"front")}}</a>
 									<ul class="shadow-box">
 										<li class="dropdown">
-											<a href="#">{{"Haut standing"|trans({},"front")}}</a>
-											<ul class="link">
-												<li>
-													<a href="{{path('app_ainborja')}}">{{"AIN BORJA"|trans({},"front")}}</a>
+											<a href="#">{{"Standing"|trans({},"front")}}</a>
+										    <ul>
+										        <li><a href="{{path('app_home')}}">{{"AIN BORJA"|trans({},"front")}}</a></li>
+												<li><a href="{{path('app_home')}}">{{"SALAM"|trans({},"front")}}</a></li>
+												<li><a href="{{path('app_home')}}">{{"Naim"|trans({},"front")}}</a></li>
+												<li><a href="#">{{"LES JARDINS DE LA FORêT"|trans({},"front")}}</a>
+													<ul class="dropdown">
+														<li><a href="{{path('app_home')}}">{{"AIN BORJA"|trans({},"front")}}</a></li>
+														<li><a href="{{path('app_home')}}">{{"SALAM"|trans({},"front")}}</a></li>
+													</ul>
 												</li>
-											</ul>
+												
+									        </ul>
+													
 										</li>
-										<li>
-											<a href="#">{{"Moyen standing"|trans({},"front")}}</a>
-											<ul class="link">
-												<li>
-													<a href="{{path('app_salam')}}">{{"SALAM"|trans({},"front")}}</a>
-												</li>
-												<li>
-													<a href="{{path('app_jardinsforet')}}">{{"LES JARDINS DE LA FORêT"|trans({},"front")}}</a>
-												</li>
-												<li>
-													<a href="{{path('naim')}}">{{"Naim"|trans({},"front")}}</a>
-												</li>
-											</ul>
-
-										</li>
-										<li>
-											<a href="{{path('app_logementsocial')}}">{{"LOGEMENT SOCIAL"|trans({},"front")}}</a>
+											
+												
+										<li> 
+											<a href="{{path('app_logementsocial')}}">{{"Economique"|trans({},"front")}}</a>
 											<ul class="link">
 												<li>
 													<a href="{{path('jardinrocad')}}">{{"les jardins de la rocade"|trans({},"front")}}</a>
@@ -165,7 +219,52 @@
 											</ul>
 										</li>
 									</ul>
-								</li>
+								</li> #}
+
+								<li  class="dropdown"><a href="#">{{"Projets"|trans({},"front")}}</a>
+                
+                    
+									<ul>
+										<li  class="dropdown"><a href="#">{{"Standing"|trans({},"front")}}</a>
+						
+											<ul>
+												<li><a href="{{path('app_ainborja')}}">{{"AIN BORJA"|trans({},"front")}}</a></li>
+												<li><a href="{{path('app_salam')}}">{{"SALAM"|trans({},"front")}}</a></li>
+												<li><a href="{{path('naim')}}">{{"Naim"|trans({},"front")}}</a></li>
+												<li><a href="#">{{"LES JARDINS DE LA FORêT"|trans({},"front")}}</a>
+													
+													<ul>
+														<li>
+														   <a href="{{path('app_jardinsforet')}}">{{"LES JARDINS DE LA FORÊT1"|trans({},"front")}}</a>
+														</li>
+														<li>
+														   <a href="#">{{"LES JARDINS DE LA FORÊT2"|trans({},"front")}}</a>
+														</li>
+														<li>
+														   <a href="#">{{"LES JARDINS DE LA FORÊT3"|trans({},"front")}}</a>
+														</li>
+													</ul>
+												
+												</li>
+											
+											</ul>
+												
+										</li>
+										<li> 
+											<a href="{{path('app_logementsocial')}}">{{"Economique"|trans({},"front")}}</a>
+											<ul class="link">
+												<li>
+													<a href="{{path('jardinrocad')}}">{{"les jardins de la rocade"|trans({},"front")}}</a>
+												</li>
+												<li>
+													<a href="{{path('verdurelissassfa')}}">{{"la verdure de Lissassfa"|trans({},"front")}}</a>
+													
+												</li>
+											</ul>
+										</li>
+									</ul>
+                
+                                </li>
 								<li class="dropdown">
 									<a href="#">{{"Offres Immobilières"|trans({},"front")}}</a>
 									<ul class="shadow-box link">
@@ -175,29 +274,18 @@
 										<li>
 											<a href="{{path('locauxcommerciaux')}}">{{"Locaux Commerciaux"|trans({},"front")}}</a>
 										</li>
-
 									</ul>
 								</li>
 								<li>
 									<a href="{{path('app_blog')}}">{{"blog"|trans({},"front")}}</a>
 								</li>
-								{# <li>
-																							    	<a href="{{path('app_contact')}}">{{"contact"|trans({},"front")}}</a>
-																								</li> #}
+							
 							</ul>
 
 						</div>
 						<div class="main-menu__right">
 							<div
 								class="main-menu__search-cart-btn">
-								{# <div class="main-menu__search-cart-box">
-																									<div class="main-menu__search-box">
-																										<a href="#" class="main-menu__search search-toggler icon-magnifying-glass"></a>
-																									</div>
-																									<div class="main-menu__cart-box">
-																										<a href="cart.html" class="main-menu__cart icon-shopping-cart"></a>
-																									</div>
-																								</div> #}
 								<div class="main-menu__btn-box">
 									<a href="{{path('app_contact')}}" class="thm-btn main-menu__btn">{{"Contactez-nous"|trans({},"front")}}</a>
 								</div>
@@ -207,16 +295,13 @@
 						<select id="combo" onchange="redirectToSelectedURL()" style="background-color: #221c13; border: 1px solid rgb(197, 197, 197); border-radius: 5px; box-sizing: border-box; color: white; display: block; font-family: SourceSansPro, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 600; height: 26px; min-width: 80px; padding: 0 20px 0 16px; outline: none;">
 							<option {% if '/fr' in app.request.uri %} selected {% endif %} value="{{ path(app.request.get('_route'), {'_locale': 'fr', 'id': app.request.get('id') ?? null}) }}">FR</option>
 							<option {% if '/ar' in app.request.uri %} selected {% endif %} value="{{ path(app.request.get('_route'), {'_locale': 'ar', 'id': app.request.get('id') ?? null}) }}">AR</option>
-						</select>
-
-
-						{# <select id="combo"  onchange="redirectToSelectedURL()" style="background-color: #221c13;border: 1px solid rgb(197, 197, 197);border-radius: 5px;box-sizing: border-box;color:white;display: block;font-family: SourceSansPro, Helvetica, Arial, sans-serif;font-size: 14px;font-weight: 600;height: 26px;  min-width: 80px;padding: 0 20px 0 16px;outline: none;">
-																				<option {% if '/fr' in app.request.uri %} selected {% endif %}  value="{{ path(app.request.get('_route'), {'_locale': 'fr'}) }}">FR</option>
-																				<option {% if '/ar' in app.request.uri %} selected {% endif %}  value="{{ path(app.request.get('_route'), {'_locale': 'ar'}) }}">AR</option>
-												                        </select> #}
+						</select>																				
 					</div>
 				</div>
 			</nav>
+
+			
+			
 		</header>
 
 
@@ -366,7 +451,12 @@
 		 <script src="{{asset('front/vendors/timepicker/timePicker.js')}}"></script>
 		 <script src="{{asset('front/vendors/circleType/jquery.circleType.js')}}"></script>
 		 <script src="{{asset('front/vendors/circleType/jquery.lettering.min.js')}}"></script>
+
 		<!-- template js -->
 		 <script src="{{asset('front/js/alipes.js')}}"></script>
+
+		 <script>
+		
+		 </script>
 	</head>
 </html>
