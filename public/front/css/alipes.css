@@ -1264,10 +1264,10 @@ ul {
 }
 
 /* no menu after 2rd level dropdown */
-.mobile-nav__content .main-menu__list>li>ul>li>ul>li>a>button,
+/* .mobile-nav__content .main-menu__list>li>ul>li>ul>li>a>button,
 .mobile-nav__content .main-menu__list>li>ul>li>ul>li>ul {
   display: none !important;
-}
+} */
 
 .mobile-nav__content .main-menu__list li.cart-btn span {
   position: relative;
