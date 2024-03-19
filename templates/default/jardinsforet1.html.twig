@@ -69,7 +69,7 @@
 {% block body %}
 	<!--Page Header Start-->
 	<section class="page-header">
-		<div class="page-header-bg" style="background-image: url({{asset('front/images/resources/Lesjardins1.png')}});"></div>
+		<div class="page-header-bg" style="background-image: url({{asset('front/images/jardin1/1920x561.jpg')}});"></div>
 		<div class="page-header__overly"></div>
 		<div class="container">
 			<div class="page-header__inner" {% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
@@ -117,7 +117,7 @@
 									<h3>{{"Un projet immobilier neuf, fermé et sécurisé"|trans({},"front")}}</h3>
 									<p>{{"Des résidences de standing élevé, alliant sécurité et modernité dans un environnement fermé. L’avenir de votre confort commence ici."|trans({},"front")}}
 									</p>
-								</div>
+								</div> 
 							</li>
 							<li>
 								<div class="icon">
@@ -135,7 +135,7 @@
 				<div class="col-xl-7 col-lg-6">
 					<div class="new-concept-two__right">
 						<div class="new-concept-two__img">
-							<img src="{{asset('/front/images/resources/project_jardin_foret.png')}}" alt="">
+							<img src="{{asset('front/images/jardin1/618x4xx.jpg')}}" alt="">
 						</div>
 					</div>
 				</div>
@@ -284,7 +284,7 @@
 
 	<!--CTA Two Start-->
 	<section class="cta-two cta-four">	
-		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url({{asset('front/images/resources/jardin_foret_banner.png')}});"></div>
+		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url({{asset('/front/images/jardin1/1519x337.jpg')}});"></div>
 		<div class="cta-two__inner"{% set searchString = '/ar/' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
 			<h3 class="cta-two__title">{{"Organisez votre visite sur place"|trans({},"front")}}</h3>
 			<p class="cta-two__text">{{"Notre équipe commerciale vous acceuille 7j/7 du lundi au dimanche de 9h à 19h"|trans({},"front")}}
@@ -430,22 +430,25 @@
 				 
       <div class="owl-carousel owl-theme image-slider1">
         <div class="item">
-        <img src="{{asset('front/images/resources/gallery_jardins_foret_1.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+        <img src="{{asset('front/images/jardin1/bas.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
         </div>
         <div class="item">
-        <img src="{{asset('front/images/resources/gallery_jardins_foret_2.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+        <img src="{{asset('front/images/jardin1/bas(2).jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
         </div>
          <div class="item">
-        <img src="{{asset('front/images/resources/gallery_jardins_foret_3.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+        <img src="{{asset('front/images/jardin1/bas(3).jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
         </div>
          <div class="item">
-          	<img src="{{asset('front/images/resources/gallery_jardins_foret_4.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+          	<img src="{{asset('front/images/jardin1/bas(4).jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
         </div>
          <div class="item">
-           	<img src="{{asset('front/images/resources/gallery_jardins_foret_5.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+           	<img src="{{asset('front/images/jardin1/bas(5).jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
         </div>
         <div class="item">
-          	<img src="{{asset('front/images/resources/gallery_jardins_foret_6.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+          	<img src="{{asset('front/images/jardin1/bas(6).jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
+        </div>
+		<div class="item">
+          	<img src="{{asset('front/images/jardin1/bas(7).jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
         </div>
       </div>
        

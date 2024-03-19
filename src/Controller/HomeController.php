@@ -107,6 +107,14 @@ class HomeController extends AbstractController
         ]);
     }
 
+    #[Route('/{_locale}/jardinsforet2', name: 'app_jardinsforet2', requirements: ['_locale' => 'fr|ar',])]
+    public function jardinsforet2(): Response
+    {
+        return $this->render('default/jardinsforet2.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+
     #[Route('/{_locale}/blog', name: 'app_blog', requirements: ['_locale' => 'fr|ar',])]
     public function blog(BlogsRepository $blogsRepoitory): Response
     {
