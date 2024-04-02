@@ -550,8 +550,8 @@
 					</div>
 			</div>
 
-			{# <div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
-				<div class="image-layer-three" style="background-image: url({{asset('front/images/resources/slider2.png')}});"></div>
+			<div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
+				<div class="image-layer-three" style="background-image: url({{asset('front/images/resources/IMG5095.jpg')}});"></div>
 					
 						<div class="main-slider-three__shape-1">
 							<img src="{{asset('front/img/main-slider-three-shape-1.png')}}" alt="Riad-AL-Foutouh-agence-immobilière-Casablanca">
@@ -589,11 +589,11 @@
 								</div>
 							</div>
 						</div>
-				</div> #}
+			</div>
 			
 
-			{# <div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}> #}
-			{# <div class="image-layer-three" style="background-image: url({{asset('front/images/resources/slider3.png')}});"></div>
+			<div class="swiper-slide" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}> #}
+			<div class="image-layer-three" style="background-image: url({{asset('front/images/resources/IMG5132.jpg')}});"></div>
 					
 					<div class="main-slider-three__shape-1">
 						<img src="{{asset('front/img/main-slider-three-shape-1.png')}}" alt="Riad-AL-Foutouh-agence-immobilière-Casablanca">
@@ -632,7 +632,7 @@
 					</div>
 				</div>
 				
-			</div> #}
+			</div>
 
 			
 			<div class="main-slider-three__nav">
@@ -688,7 +688,7 @@
 						{# <a href=""><p class="about-three__text text-decoration-underline"> 
 						</p></a> #}
 						<div class="pt-3">
-							<button id="toggle" class="thm-btn amenities__btn">{{"Voir Plus"|trans({},"font")}}</button>
+							<button id="toggle" class="thm-btn amenities__btn">{{"Voir Plus"|trans({},"front")}}</button>
 						</div>
 						<h2 class="section-title__title pt-3"> {{"Riad al foutouh : Des projets de vie"|trans({},"front")}}</h2>
 						<ul class="about-three__points list-unstyled" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}>
@@ -806,7 +806,7 @@
 
 	<!--CTA Two Start-->
 	<section class="cta-two mt-5">
-		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url({{asset('/front/images/resources/ttt.jpg')}});"></div>
+		<div class="cta-two__bg" data-jarallax data-speed="0.2" data-imgposition="50% 0%" style="background-image: url({{asset('/front/images/resources/IMG5114.jpg')}});"></div>
 		<div class="cta-two__inner">
 
 			<h3 class="cta-two__title" {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %}> {{"Découvrez le meilleur promoteur"|trans({},"front")}}
@@ -1126,11 +1126,11 @@
 
 	<!--Neighborhoods Start-->
 	<section class="neighborhoods">
-		<div class="neighborhoods__shape-1" style="background-image: url({{asset('/front/images/shapes/neighborhoods-shape-1.png')}});"></div>
+		<div class="neighborhoods__shape-1" style="background-image: url({{asset('front/images/resources/IMG5127.jpg')}});"></div>
 		<div class="container">
 			<div class="section-title text-center">
-				<span class="section-title__tagline"> {{"Localisation"|trans({},"front")}}</span>
-				<h2 {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %} class="section-title__title"> {{"Où sommes nous ?"|trans({},"front")}}</h2>
+				{# <span class="section-title__tagline"> {{"Localisation"|trans({},"front")}}</span> #}
+				<h2 {% set searchString = '/ar' %} {% if searchString in app.request.uri %} dir="rtl" lang="ar"{% endif %} class="section-title__title"> {{"Localisation"|trans({},"front")}}</h2>
 			</div>
 			<div class="row">
 				<div class="col-xl-8 col-lg-7">
@@ -1385,7 +1385,7 @@
 				<h3>{{"Voir la galerie de photos"|trans({},"front")}}</h3>
 			</div>
 			<div class="row">
-				  {# <section class="wraper"> #}
+				 
       <div class="owl-carousel owl-theme image-slider1">
         <div class="item">
         <img src="{{asset('front/images/resources/im111.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
@@ -1406,20 +1406,18 @@
           	<img src="{{asset('front/images/resources/im666.jpg')}}" alt="Ain-borja-Riad-al-foutouh-chambre-appartements-Casablanca">
         </div>
       </div>
-    {# </section> #}
+       
 			</div>
 		</div>
 	</section>
-
-  
-
 	<!--Gallery Three End-->
+	
  <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3 col-sm-offset-2 col-sm-8 col-xs-12">
         <form class="credit">
           <div class="form-group">
-            <label for="amount">Somme d'argent</label>
+            <label for="amount">{{"Somme d’argent"|trans({},"front")}}</label>
             <div class="input-group">
               <div class="input-group-addon">MAD</div>
               <input type="number" step="0.001" class="form-control validate" id="amount" placeholder="Entrer le montant" required>
@@ -1435,14 +1433,14 @@
             <strong class="convert-euro text-warning pull-right"></strong>&nbsp;&nbsp;
           </div>
           <div class="form-group">
-            <label for="percent">Pour cent</label>
+            <label for="percent">{{"Pour cent"|trans({},"front")}}</label>
             <div class="input-group">
               <div class="input-group-addon">%</div>
               <input type="number" step="0.001" class="form-control validate" id="percent" placeholder="Percent" value="13" required>
             </div>
           </div>
           <div class="form-group">
-            <label><span class="rangevalue">50</span>mois</label>
+            <label><span class="rangevalue">50</span>{{"mois"|trans({},"front")}}</label>
             <input class="slider" type="range" min="1" max="24" value="10">
 
           </div>
