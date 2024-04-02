@@ -2296,7 +2296,7 @@ ul {
 .main-slider-three__details-box {
   position: relative;
   display: block;
-  margin-top: 148px;
+  margin-top: 116px;
 }
 
 .main-slider-three__details-sub-title {
@@ -6669,9 +6669,14 @@ ul {
   z-index: 1;
 }
 
+/* .new-concept__img {
+  position: relative;
+  display: block;
+} */
 .new-concept__img {
   position: relative;
   display: block;
+  top: 50px;
 }
 
 .new-concept__img img {
