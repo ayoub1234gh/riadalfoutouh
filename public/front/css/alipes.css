@@ -6684,7 +6684,7 @@ ul {
 .neighborhoods {
   position: relative;
   display: block;
-  background-color: var(--alipes-black);
+  /* background-color: var(--alipes-black); */
   overflow: hidden;
   padding: 120px 0 0;
   z-index: 1;
@@ -6699,7 +6699,7 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  opacity: 0.02;
+  opacity: 1;
   z-index: -1;
 }
 
